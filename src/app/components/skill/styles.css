@@ -48,8 +48,11 @@ img {
 
 
 @media screen and (max-width: 768px) {
-    span {
-        font-size: 14px;
+    .experience-language span {
+        font-size: 12px;
+    }
+    .experience-unit {
+        height: 30px;
     }
     .measure-1 {
         width: 30%;
