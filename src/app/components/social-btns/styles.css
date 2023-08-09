@@ -1,0 +1,23 @@
+.social {
+    align-items: center;
+    display: flex;
+    gap: 24px;
+}
+
+a {
+    align-items: center;
+    border-radius: 100%;
+    border: 1px solid white;
+    cursor: pointer;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    width: 50px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .social {
+        gap: 12px;
+    }
+  }
