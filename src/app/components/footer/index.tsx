@@ -7,7 +7,7 @@ import "./styles.css"
 export default function Footer() {
     return (
         <>
-            <a className="btnPrimary" href="mailto:feliperamosroque@gmail.com">
+            <a className="btnPrimary" href="mailto:feliperoque.dev@gmail.com">
               contact me
               <EmailIcon/>
             </a>
