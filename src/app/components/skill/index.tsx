@@ -12,13 +12,7 @@ interface SkillProps {
 export default function Skill (props : SkillProps) {
     return (
         <div className="experience-language">
-            <Image
-                src={props.image}
-                alt={`Skill ${props.technology} Logo`}
-                width={40}
-                height={40}
-                priority
-            />
+            <span>{props.technology}</span>
             <div className="experience-unit">
                 <div className={`experience-measure measure-${props.measure}`}>
                     <span>{props.years}</span>

@@ -3,7 +3,8 @@
     display: flex;
     color: black;
     gap: 8px;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%
 }
 
 img {
@@ -26,7 +27,7 @@ img {
     border-radius: 24px;
     color: black;
     display: flex;
-    font-size: 12px;
+        
     height: 30px;
     justify-content: center;
     text-align: center;
@@ -44,3 +45,19 @@ img {
 .measure-3 {
     width: 100%;
 }
+
+
+@media screen and (max-width: 768px) {
+    span {
+        font-size: 14px;
+    }
+    .measure-1 {
+        width: 30%;
+    } 
+    .measure-2 {
+        width: 60%;
+    }
+    .measure-3 {
+        width: 90%;
+    }
+  }
