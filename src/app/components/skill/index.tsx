@@ -1,10 +1,7 @@
-import Image from "next/image"
-
 import "./styles.css"
 
 interface SkillProps {
     technology: string,
-    image: string,
     years: string,
     measure: number,
 }

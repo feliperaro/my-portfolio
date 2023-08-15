@@ -8,7 +8,7 @@ export default function Info() {
             <SectionTitle text="Education"/>
             <div className="educational-info">
                 <span>🎓</span>
-                <span>{"Web Developer (2023-2024) - Certificate/Diploma Co-op  @Tamwood, Toronto"}</span>
+                <span>{"Web Development (2023-2024) - Certificate @Tamwood, Toronto"}</span>
             </div>
             <div className="educational-info">
                 <span>🎓</span>
@@ -21,7 +21,7 @@ export default function Info() {
             <SectionTitle text="Work Experience"/>
             <div className="work-info">
                 <span>🧑‍💻</span>
-                <span>{"Full-Stack Software Developer (2022-Present) @FRRTechnology, Remote"}</span>
+                <span>{"Full-Stack Software Developer and RPA Solutions (2022-Present) @FRRTechnology, Remote"}</span>
             </div>
             <div className="work-info">
                 <span>🧑‍💻</span>
@@ -35,7 +35,6 @@ export default function Info() {
             <div className="languages-info">
                 <span>{"EN - Fluent"}</span>
                 <span>{"PT-BR - Native Speaker"}</span>
-                <span>{"FR - Basic"}</span>
             </div>
       </div>
     )
