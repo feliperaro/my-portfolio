@@ -18,7 +18,7 @@ export default function Home() {
           </header>
           <main className={styles.main}>
             <AboutMe 
-              description="I'm a developer since 2019 when I started learning programming and Web Development and I got my first job in 2020 to work as a Python Developer. I've been working since then using languages like Python, JavaScript, PHP, Java, and TypeScript. Nowadays, I'm building mobile and web apps using React, Next.js, React Native, Flask, Django, and others if you need. I have great experiences creating RPA solutions with Python, I'm passionate about DevOps & Cloud Computing and AWS."
+              description="I'm a developer since 2019 when I started learning Programming and Web Development, I got my first job to work as a Python Developer in 2020. I've been working since then using languages like Python, JavaScript, TypeScript, Java, and PHP. Nowadays, I'm building mobile and web apps using React, Next.js, React Native, Flask, Django, and others if you need. I have great experiences creating RPA solutions with Python, I'm passionate about DevOps & Cloud Computing and AWS."
               subtitle="I'm looking for new opportunities to learn something new technologies and build great products for people. Always ready for the next challenge!"/>
             <Experience />
             <Info />
