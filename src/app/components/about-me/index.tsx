@@ -2,7 +2,7 @@ import "./styles.css"
 
 interface AboutMeProps {
     description: string,
-    subtitle: string,
+    subDescription: string,
 }
 
 export default function AboutMe(props: AboutMeProps) {
@@ -10,7 +10,7 @@ export default function AboutMe(props: AboutMeProps) {
         <div className="about-me">
             <h3>{"About me"}</h3>
              <p className="description">{props.description}</p>
-             <p><em>{props.subtitle}</em></p>
+             <p><em>{props.subDescription}</em></p>
         </div>
     )
 }

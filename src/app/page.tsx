@@ -9,23 +9,23 @@ import styles from './styles/page.module.css'
 
 export default function Home() {
   return (
-      <div className={styles.container}>
-          <header className={styles.header}>
-            <Header 
-              name='Felipe Roque' 
-              title='Full-Stack Web Developer & RPA Solutions'
-            />
-          </header>
-          <main className={styles.main}>
-            <AboutMe 
-              description="I'm a developer since 2019 when I started learning Programming and Web Development, I got my first job to work as a Python Developer in 2020. I've been working since then using languages like Python, JavaScript, TypeScript, Java, and PHP. Nowadays, I'm building mobile and web apps using React, Next.js, React Native, Flask, Django, and others if you need. I have great experiences creating RPA solutions with Python, I'm passionate about DevOps & Cloud Computing and AWS."
-              subtitle="I'm looking for new opportunities to learn something new technologies and build great products for people. Always ready for the next challenge!"/>
-            <Experience />
-            <Info />
-          </main>
-          <footer className={styles.footer}>
-            <Footer />
-          </footer>
+    <div className={styles.container}>
+        <header className={styles.header}>
+          <Header 
+            name='Felipe Roque' 
+            title='Full-Stack Developer & RPA Solutions'
+          />
+        </header>
+        <main className={styles.main}>
+          <AboutMe 
+            description="I started my development journey in 2019, mastering Python and web technologies. In 2020, I launched my career as a Python Developer focused in creating RPA solutions. I've since expanded my skills to Python, Java, JavaScript, TypeScript and others, I'm comfortable working with technologies like React Native, React, Node, Express.js, Python, SQL & NoSQL, and more. Great experience building RPA and I'm seeking for new business opportunities."
+            subDescription="My goal is to innovate through tech, building impactful solutions and create businesses."/>
+          <Experience />
+          <Info />
+        </main>
+        <footer className={styles.footer}>
+          <Footer />
+        </footer>
       </div>
   )
 }
