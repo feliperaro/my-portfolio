@@ -1,11 +1,9 @@
-import "./styles.css"
+import "./styles.css";
 
 interface SectionTitleProps {
-    text: string
+  text: string;
 }
 
 export default function SectionTitle({ text }: SectionTitleProps) {
-    return (
-        <h3 className="section-title">{text}</h3>
-    )
+  return <h3 className="section-title">{text}</h3>;
 }
