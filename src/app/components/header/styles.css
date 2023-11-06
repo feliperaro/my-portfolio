@@ -1,0 +1,11 @@
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.textHeader {
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+}
