@@ -4,7 +4,7 @@ import { LinkedInIcon } from "../icons/linkedin-icon";
 
 export function SocialBtns() {
   return (
-    <div className="social">
+    <div className="flex gap-5">
       <a
         href="https://www.linkedin.com/in/felipe-roque-b901a417b/"
         target="_blank"
