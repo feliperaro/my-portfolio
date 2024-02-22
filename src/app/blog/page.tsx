@@ -1,11 +1,12 @@
-import Header from "../components/header";
+import Footer from "../components/footer";
+import HeaderNav from "../components/header-nav";
 
-const BlogPage = () => {
+export default function BlogPage() {
   return (
-    <body>
-      <Header />
-    </body>
+    <div className="border border-black h-full">
+      <HeaderNav />
+      <main></main>
+      <Footer />
+    </div>
   );
-};
-
-export default BlogPage;
+}
