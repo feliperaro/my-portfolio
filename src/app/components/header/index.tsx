@@ -1,3 +1,5 @@
+import HeaderNav from "../header-nav";
+
 type HeaderProps = {
   name: string;
   title: string;
@@ -6,9 +8,12 @@ type HeaderProps = {
 export default function Header(props: HeaderProps) {
   const { name, title } = props;
   return (
-    <header className="m-10 text-center w-10/12">
-      <h1 className="font-semibold text-2xl p-1">{name}</h1>
-      <h2 className="font-normal p-1 text-xl">{title}</h2>
+    <header className="flex flex-col w-full">
+      <HeaderNav />
+      <div className="text-center">
+        <h1 className="font-semibold text-2xl p-1">{name}</h1>
+        <h2 className="font-normal p-1 text-xl">{title}</h2>
+      </div>
     </header>
   );
 }
