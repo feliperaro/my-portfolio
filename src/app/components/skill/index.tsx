@@ -1,5 +1,3 @@
-import "./styles.css";
-
 interface SkillProps {
   technology: string;
   years: string;

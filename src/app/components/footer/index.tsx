@@ -1,8 +1,6 @@
 import { EmailIcon } from "../icons/email-icon";
 import { SocialBtns } from "../social-btns";
 
-import "./styles.css";
-
 export default function Footer() {
   return (
     <>

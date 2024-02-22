@@ -2,8 +2,6 @@ import { GitHubIcon } from "../icons/github-icon";
 import { InstagramIcon } from "../icons/instagram-icon";
 import { LinkedInIcon } from "../icons/linkedin-icon";
 
-import "./styles.css";
-
 export function SocialBtns() {
   return (
     <div className="social">

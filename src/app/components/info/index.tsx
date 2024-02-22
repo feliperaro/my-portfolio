@@ -1,7 +1,5 @@
 import SectionTitle from "../section-title";
 
-import "./styles.css";
-
 export default function Info() {
   return (
     <div className="infos">
