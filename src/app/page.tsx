@@ -8,7 +8,7 @@ import styles from "./styles/page.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <body className={styles.container}>
       <Header name="Felipe Ramos Roque" title="Full Stack Software Developer" />
       <main className={styles.main}>
         <AboutMe
@@ -25,6 +25,6 @@ I'm currently looking for new opportunities to help teams as a Full-Stack Web De
       <footer className={styles.footer}>
         <Footer />
       </footer>
-    </div>
+    </body>
   );
 }
