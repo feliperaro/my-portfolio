@@ -22,9 +22,7 @@ I'm currently looking for new opportunities to help teams as a Full-Stack Web De
         />
         <Info />
       </main>
-      <footer className={styles.footer}>
-        <Footer />
-      </footer>
+      <Footer />
     </body>
   );
 }
