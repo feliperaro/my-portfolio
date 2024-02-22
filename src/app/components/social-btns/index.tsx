@@ -11,7 +11,7 @@ export function SocialBtns() {
       >
         <LinkedInIcon />
       </a>
-      <a href="https://github.com/feliperroque" target="_blank">
+      <a href="https://github.com/feliperaro" target="_blank">
         <GitHubIcon />
       </a>
       <a href="https://instagram.com/feliperoque.dev" target="_blank">
