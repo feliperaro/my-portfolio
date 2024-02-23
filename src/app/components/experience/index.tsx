@@ -9,7 +9,7 @@ export default function Experience(props: ExperienceProps) {
   return (
     <div className="flex flex-col gap-3 p-5 w-5/6">
       <SectionTitle text="Experience" />
-      <p className="text-justify">{text}</p>
+      <p className="text-start">{text}</p>
     </div>
   );
 }
