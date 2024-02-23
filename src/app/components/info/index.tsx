@@ -5,7 +5,7 @@ const EducationSection = (props: {
   courseType: string;
   location: string;
   school: string;
-  schoolWebsiteUrl?: string;
+  schoolWebsiteUrl: string;
   period: string;
 }) => {
   return (
@@ -27,22 +27,23 @@ const EducationSection = (props: {
 
 const WorkSection = (props: {
   company: string;
-  companyWebsiteUrl?: string;
+  companyWebsiteUrl: string;
   jobTitle: string;
   location: string;
   period: string;
 }) => {
+  const isFRR = props.company === "FRRTechnology";
+  const COMPANY_URL = isFRR
+    ? props.companyWebsiteUrl
+    : `https://${props.companyWebsiteUrl}`;
+
   return (
     <div className="flex flex-col items-center">
       <span>
         <a
           className="hover:font-bold"
-          href={
-            props.companyWebsiteUrl
-              ? `https://${props.companyWebsiteUrl}`
-              : undefined
-          }
-          target="_blank"
+          href={COMPANY_URL}
+          target={isFRR ? "_self" : "_blank"}
         >
           @{props.company}
         </a>
@@ -90,6 +91,7 @@ export default function Info() {
         <div className="flex flex-col gap-5 mb-5">
           <WorkSection
             company="FRRTechnology"
+            companyWebsiteUrl="/frr-technology"
             jobTitle="Full-Stack & RPA Developer"
             location="Remote"
             period="2022-Present"
