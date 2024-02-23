@@ -4,8 +4,14 @@ import HeaderNav from "../components/header-nav";
 export default function BlogPage() {
   return (
     <div className="border border-black h-full">
-      <HeaderNav />
-      <main></main>
+      <HeaderNav page={"blog"}/>
+      <main className="h-full">
+        <div className="font-semibold text-center p-40">
+          {
+            "This page is currently under construction. Exciting things coming soon! ✨"
+          }
+        </div>
+      </main>
       <Footer />
     </div>
   );
