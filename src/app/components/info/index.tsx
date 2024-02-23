@@ -3,7 +3,6 @@ import SectionTitle from "../section-title";
 const EducationSection = (props: {
   course: string;
   courseType: string;
-  hoverColor: string;
   location: string;
   school: string;
   schoolWebsiteUrl?: string;
@@ -13,7 +12,7 @@ const EducationSection = (props: {
     <div className="flex flex-col items-center w-full">
       <span>
         <a
-          className={`hover:${props.hoverColor}`}
+          className="hover:font-bold"
           href={`https://${props.schoolWebsiteUrl}`}
           target="_blank"
         >
@@ -29,7 +28,6 @@ const EducationSection = (props: {
 const WorkSection = (props: {
   company: string;
   companyWebsiteUrl?: string;
-  hoverColor: string;
   jobTitle: string;
   location: string;
   period: string;
@@ -38,7 +36,7 @@ const WorkSection = (props: {
     <div className="flex flex-col items-center">
       <span>
         <a
-          className={`hover:${props.hoverColor}`}
+          className="hover:font-bold"
           href={
             props.companyWebsiteUrl
               ? `https://${props.companyWebsiteUrl}`
@@ -64,7 +62,6 @@ export default function Info() {
           <EducationSection
             course="Web Development"
             courseType="Certificate"
-            hoverColor="text-cyan-500"
             location="Toronto"
             period="2023-2024"
             school="Tamwood"
@@ -73,7 +70,6 @@ export default function Info() {
           <EducationSection
             course="Analysis and Software Development"
             courseType="Technologist College Degree"
-            hoverColor="text-red-500"
             location="Sao Paulo"
             period="2020-2022"
             school="FIAP"
@@ -82,7 +78,6 @@ export default function Info() {
           <EducationSection
             course="IT Technical Course"
             courseType="Technician College Degree"
-            hoverColor="text-blue-500"
             location="Sao Paulo"
             period="2019-2020"
             school="SENAC"
@@ -95,7 +90,6 @@ export default function Info() {
         <div className="flex flex-col gap-5 mb-5">
           <WorkSection
             company="FRRTechnology"
-            hoverColor="font-bold"
             jobTitle="Full-Stack & RPA Developer"
             location="Remote"
             period="2022-Present"
@@ -103,7 +97,6 @@ export default function Info() {
           <WorkSection
             company="CADMUS"
             companyWebsiteUrl="cadmus.com.br"
-            hoverColor="font-bold"
             jobTitle="Python RPA Analysis Developer"
             location="Remote"
             period="2022"
@@ -111,7 +104,6 @@ export default function Info() {
           <WorkSection
             company="BPATechnologies"
             companyWebsiteUrl="bpatechnologies.com"
-            hoverColor="font-bold"
             jobTitle="Python Developer"
             location="Remote"
             period="2020-2022"
