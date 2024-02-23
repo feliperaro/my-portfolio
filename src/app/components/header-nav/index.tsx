@@ -3,10 +3,14 @@ export default function HeaderNav() {
     <nav className="mb-5 p-5 w-full">
       <ul className="flex flex-row justify-center gap-10">
         <li>
-          <a href="/">Home</a>
+          <a className="hover:font-bold" href="/">
+            Home
+          </a>
         </li>{" "}
         <li>
-          <a href="/blog">Blog</a>
+          <a className="hover:font-bold" href="/blog">
+            Blog
+          </a>
         </li>
       </ul>
     </nav>
