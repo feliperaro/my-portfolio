@@ -3,7 +3,7 @@ import HeaderNav from "../components/header-nav";
 
 export default function BlogPage() {
   return (
-    <div className="border border-black h-full">
+    <div className="h-full">
       <HeaderNav page={"blog"}/>
       <main className="h-full">
         <div className="font-semibold text-center p-40">
