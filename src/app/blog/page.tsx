@@ -7,6 +7,7 @@ import Post from "../types/post";
 import PostCard from "../components/post-card";
 
 export default function BlogPage() {
+  const pageIsReady = false;
   const [posts, setPosts] = useState([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<any>(null);
@@ -37,13 +38,21 @@ export default function BlogPage() {
       <HeaderNav page={"blog"} />
       <main className="h-full pb-40">
         <h1 className="border font-bold p-5 text-center">{"My Posts"}</h1>
-        <div className="flex flex-wrap gap-5 justify-center ml-1 mr-1">
-          {isLoading && <p>Loading posts...</p>}
-          {error && <p>{error}</p>}
-          {posts.map((post: Post, index: number) => (
-            <PostCard key={index} post={post} />
-          ))}
-        </div>
+        {pageIsReady ? (
+          <div className="flex flex-wrap gap-5 justify-center ml-1 mr-1">
+            {isLoading && <p>Loading posts...</p>}
+            {error && <p>{error}</p>}
+            {posts.map((post: Post, index: number) => (
+              <PostCard key={index} post={post} />
+            ))}
+          </div>
+        ) : (
+          <div className="font-semibold p-10 ">
+            {
+              "This page is currently under construction. Exciting things coming soon! ✨"
+            }
+          </div>
+        )}
       </main>
       <Footer />
     </div>
