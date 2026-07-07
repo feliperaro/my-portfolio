@@ -2,21 +2,35 @@ import { GitHubIcon } from "../icons/github-icon";
 import { InstagramIcon } from "../icons/instagram-icon";
 import { LinkedInIcon } from "../icons/linkedin-icon";
 
+const SOCIALS = [
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/felipe-roque-b901a417b/",
+    Icon: LinkedInIcon,
+  },
+  { label: "GitHub", href: "https://github.com/FehRoque", Icon: GitHubIcon },
+  {
+    label: "Instagram",
+    href: "https://instagram.com/feliperoque.dev",
+    Icon: InstagramIcon,
+  },
+];
+
 export function SocialBtns() {
   return (
-    <div className="flex gap-5">
-      <a
-        href="https://www.linkedin.com/in/felipe-roque-b901a417b/"
-        target="_blank"
-      >
-        <LinkedInIcon />
-      </a>
-      <a href="https://github.com/feliperaro" target="_blank">
-        <GitHubIcon />
-      </a>
-      <a href="https://instagram.com/feliperoque.dev" target="_blank">
-        <InstagramIcon />
-      </a>
+    <div className="flex gap-5 text-text-muted">
+      {SOCIALS.map(({ label, href, Icon }) => (
+        <a
+          key={label}
+          href={href}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={label}
+          className="transition-colors hover:text-accent"
+        >
+          <Icon />
+        </a>
+      ))}
     </div>
   );
 }
