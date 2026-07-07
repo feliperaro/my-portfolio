@@ -68,6 +68,9 @@ export type Dictionary = {
   gate: {
     welcome: string;
     prompt: string;
+    themePrompt: string;
+    light: string;
+    dark: string;
   };
   blog: {
     title: string;
@@ -221,6 +224,9 @@ export const content: Record<Locale, Dictionary> = {
     gate: {
       welcome: "Welcome",
       prompt: "Choose your language",
+      themePrompt: "Choose a theme",
+      light: "Light",
+      dark: "Dark",
     },
     blog: {
       title: "My Posts",
@@ -372,6 +378,9 @@ export const content: Record<Locale, Dictionary> = {
     gate: {
       welcome: "Bem-vindo",
       prompt: "Escolha seu idioma",
+      themePrompt: "Escolha um tema",
+      light: "Claro",
+      dark: "Escuro",
     },
     blog: {
       title: "Meus Posts",

@@ -23,6 +23,20 @@
   --max-content: 64rem; /* ~1024px */
 }
 
+/* ============================================================
+   Dark theme tokens
+   ============================================================ */
+[data-theme="dark"] {
+  --bg: #0f0f11;
+  --surface: #18181b;
+  --text: #f4f4f5;
+  --text-muted: #a1a1aa;
+  --border: #27272a;
+  --accent: #818cf8;
+  --accent-hover: #6366f1;
+  --accent-soft: #1e1b4b;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
