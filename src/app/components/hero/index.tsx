@@ -12,7 +12,7 @@ export default function Hero() {
       <p className="mb-4 font-mono text-sm text-accent">{t.hero.greeting}</p>
 
       <h1 className="text-4xl font-bold tracking-tight text-text sm:text-6xl">
-        Felipe Ramos Roque
+        Felipe Roque
       </h1>
 
       <h2 className="mt-2 text-2xl font-semibold text-text-muted sm:text-4xl">
