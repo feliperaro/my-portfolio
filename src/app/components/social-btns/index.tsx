@@ -11,7 +11,7 @@ const SOCIALS = [
   { label: "GitHub", href: "https://github.com/feliperaro", Icon: GitHubIcon },
   {
     label: "Instagram",
-    href: "https://instagram.com/feliperoque.dev",
+    href: "https://instagram.com/raroque01",
     Icon: InstagramIcon,
   },
 ];
