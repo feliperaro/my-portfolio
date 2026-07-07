@@ -17,7 +17,7 @@ export default function Contact() {
       </p>
 
       <a
-        href="mailto:feliperoque.dev@gmail.com"
+        href="mailto:feliperamosroque@gmail.com"
         className="mt-8 inline-block rounded-lg bg-accent px-8 py-3 font-medium text-white transition-colors hover:bg-accent-hover"
       >
         {t.contact.cta}
