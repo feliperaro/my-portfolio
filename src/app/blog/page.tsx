@@ -1,60 +1,62 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import HeaderNav from "../components/header-nav";
 import Post from "../types/post";
 import PostCard from "../components/post-card";
+import { useLanguage } from "../i18n/language-provider";
 
 export default function BlogPage() {
+  const { t } = useLanguage();
   const pageIsReady = false;
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState<Post[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [error, setError] = useState<any>(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    if (!pageIsReady) return;
+
     const fetchPosts = async () => {
       setIsLoading(true);
       setError(null);
 
       try {
-        const response = await fetch("http://localhost:3000/api/posts");
+        const response = await fetch("/api/posts");
         const posts = await response.json();
-        console.log("posts", posts);
         setPosts(posts);
       } catch (error) {
         console.error("error", error);
-        setError("Failed to fetch posts");
+        setError(t.blog.error);
       } finally {
         setIsLoading(false);
       }
     };
 
     fetchPosts();
-  }, []);
+  }, [pageIsReady, t.blog.error]);
 
   return (
-    <div className="h-full">
-      <HeaderNav page={"blog"} />
-      <main className="h-full pb-40">
-        <h1 className="border font-bold p-5 text-center">{"My Posts"}</h1>
+    <>
+      <Navbar />
+      <main className="section-container min-h-[60vh] py-16">
+        <h1 className="text-4xl font-bold tracking-tight text-text">
+          {t.blog.title}
+        </h1>
+
         {pageIsReady ? (
-          <div className="flex flex-wrap gap-5 justify-center ml-1 mr-1">
-            {isLoading && <p>Loading posts...</p>}
-            {error && <p>{error}</p>}
+          <div className="mt-10 flex flex-wrap justify-center gap-5">
+            {isLoading && <p className="text-text-muted">{t.blog.loading}</p>}
+            {error && <p className="text-text-muted">{error}</p>}
             {posts.map((post: Post, index: number) => (
               <PostCard key={index} post={post} />
             ))}
           </div>
         ) : (
-          <div className="font-semibold p-10 ">
-            {
-              "This page is currently under construction. Exciting things coming soon! ✨"
-            }
-          </div>
+          <p className="mt-6 text-lg text-text-muted">{t.blog.construction}</p>
         )}
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
