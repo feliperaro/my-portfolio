@@ -7,6 +7,7 @@ import {
   useEffect,
   useState,
 } from "react";
+
 import { content, Dictionary, Locale } from "./content";
 
 const LOCALE_KEY = "portfolio-locale";
@@ -108,69 +109,94 @@ function LanguageGate({
   onSelectLocale: (locale: Locale) => void;
   onSelectTheme: (theme: Theme) => void;
 }) {
-  // Use PT label for theme since we don't know locale yet — show bilingual
+  const [selectedLocale, setSelectedLocale] = useState<Locale | null>(null);
+
+  const handleLocale = (locale: Locale) => {
+    setSelectedLocale(locale);
+    onSelectTheme(currentTheme); // re-apply current theme
+  };
+
+  const handleConfirm = () => {
+    if (selectedLocale) onSelectLocale(selectedLocale);
+  };
+
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center gap-10 bg-bg px-6">
-      {/* Language selection */}
-      <div className="flex flex-col items-center gap-4">
-        <p className="font-mono text-xs uppercase tracking-widest text-text-muted">
-          Choose your language · Escolha seu idioma
-        </p>
-        <div className="flex flex-col gap-3 sm:flex-row">
-          <button
-            type="button"
-            onClick={() => onSelectLocale("en")}
-            className="min-w-48 rounded-xl border border-border bg-surface px-8 py-5 text-lg font-medium text-text transition-colors hover:border-accent hover:text-accent"
-          >
-            <span className="mr-2">🇺🇸</span> English
-          </button>
-          <button
-            type="button"
-            onClick={() => onSelectLocale("pt")}
-            className="min-w-48 rounded-xl border border-border bg-surface px-8 py-5 text-lg font-medium text-text transition-colors hover:border-accent hover:text-accent"
-          >
-            <span className="mr-2">🇧🇷</span> Português
-          </button>
-        </div>
+    <div className="flex min-h-screen flex-col items-center justify-center gap-8 bg-bg px-6">
+      {/* Language buttons */}
+      <div className="flex flex-col gap-3 sm:flex-row">
+        <button
+          type="button"
+          onClick={() => handleLocale("en")}
+          aria-pressed={selectedLocale === "en"}
+          className={`flex min-w-44 items-center justify-center gap-3 rounded-xl border px-8 py-5 text-lg font-medium transition-colors ${
+            selectedLocale === "en"
+              ? "border-accent bg-accent-soft text-accent"
+              : "border-border bg-surface text-text hover:border-accent hover:text-accent"
+          }`}
+        >
+          <span aria-hidden="true">🇺🇸</span> English
+        </button>
+        <button
+          type="button"
+          onClick={() => handleLocale("pt")}
+          aria-pressed={selectedLocale === "pt"}
+          className={`flex min-w-44 items-center justify-center gap-3 rounded-xl border px-8 py-5 text-lg font-medium transition-colors ${
+            selectedLocale === "pt"
+              ? "border-accent bg-accent-soft text-accent"
+              : "border-border bg-surface text-text hover:border-accent hover:text-accent"
+          }`}
+        >
+          <span aria-hidden="true">🇧🇷</span> Português
+        </button>
       </div>
 
       {/* Divider */}
-      <div className="h-px w-48 bg-border" />
+      <div className="h-px w-40 bg-border" />
 
-      {/* Theme selection */}
-      <div className="flex flex-col items-center gap-4">
-        <p className="font-mono text-xs uppercase tracking-widest text-text-muted">
-          Theme · Tema
-        </p>
-        <div className="flex gap-3">
-          <button
-            type="button"
-            onClick={() => onSelectTheme("light")}
-            aria-pressed={currentTheme === "light"}
-            className={`flex min-w-36 items-center justify-center gap-2 rounded-xl border px-6 py-4 text-base font-medium transition-colors ${
-              currentTheme === "light"
-                ? "border-accent bg-accent-soft text-accent"
-                : "border-border bg-surface text-text hover:border-accent hover:text-accent"
-            }`}
-          >
-            <SunIcon />
-            Light · Claro
-          </button>
-          <button
-            type="button"
-            onClick={() => onSelectTheme("dark")}
-            aria-pressed={currentTheme === "dark"}
-            className={`flex min-w-36 items-center justify-center gap-2 rounded-xl border px-6 py-4 text-base font-medium transition-colors ${
-              currentTheme === "dark"
-                ? "border-accent bg-accent-soft text-accent"
-                : "border-border bg-surface text-text hover:border-accent hover:text-accent"
-            }`}
-          >
-            <MoonIcon />
-            Dark · Escuro
-          </button>
-        </div>
+      {/* Theme buttons */}
+      <div className="flex gap-3">
+        <button
+          type="button"
+          onClick={() => onSelectTheme("light")}
+          aria-pressed={currentTheme === "light"}
+          className={`flex min-w-36 items-center justify-center gap-2 rounded-xl border px-6 py-4 text-base font-medium transition-colors ${
+            currentTheme === "light"
+              ? "border-accent bg-accent-soft text-accent"
+              : "border-border bg-surface text-text hover:border-accent hover:text-accent"
+          }`}
+        >
+          <SunIcon />
+          Light · Claro
+        </button>
+        <button
+          type="button"
+          onClick={() => onSelectTheme("dark")}
+          aria-pressed={currentTheme === "dark"}
+          className={`flex min-w-36 items-center justify-center gap-2 rounded-xl border px-6 py-4 text-base font-medium transition-colors ${
+            currentTheme === "dark"
+              ? "border-accent bg-accent-soft text-accent"
+              : "border-border bg-surface text-text hover:border-accent hover:text-accent"
+          }`}
+        >
+          <MoonIcon />
+          Dark · Escuro
+        </button>
       </div>
+
+      {/* Confirm arrow */}
+      <button
+        type="button"
+        onClick={handleConfirm}
+        disabled={!selectedLocale}
+        aria-label="Confirm and enter"
+        className={`mt-2 flex h-14 w-14 items-center justify-center rounded-full border-2 transition-all duration-200 ${
+          selectedLocale
+            ? "border-accent bg-accent text-white hover:bg-accent-hover hover:scale-105"
+            : "cursor-not-allowed border-border bg-surface text-text-muted opacity-40"
+        }`}
+      >
+        <ArrowRightIcon />
+      </button>
     </div>
   );
 }
@@ -210,6 +236,25 @@ function MoonIcon() {
       aria-hidden="true"
     >
       <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+    </svg>
+  );
+}
+
+function ArrowRightIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="22"
+      height="22"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M5 12h14M12 5l7 7-7 7" />
     </svg>
   );
 }
