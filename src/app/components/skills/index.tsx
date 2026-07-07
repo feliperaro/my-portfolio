@@ -7,7 +7,7 @@ export default function Skills() {
   const { t } = useLanguage();
 
   return (
-    <section id="skills" className="section-container py-20">
+    <section id="skills" className="section-container py-16 sm:py-20">
       <SectionTitle text={t.skills.title} eyebrow="02." />
 
       <div className="grid gap-8 sm:grid-cols-2">

@@ -61,7 +61,19 @@ a {
   width: 100%;
   max-width: var(--max-content);
   margin-inline: auto;
-  padding-inline: 1.5rem;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .section-container {
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-container {
+    padding-inline: 2.5rem;
+  }
 }
 
 /* Translucent sticky navbar background (CSS-var friendly) */

@@ -97,15 +97,20 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile menu */}
-      {open && (
-        <ul className="flex flex-col gap-1 border-t border-border px-6 py-4 md:hidden">
+      <div
+        className={`overflow-hidden transition-all duration-300 ease-in-out md:hidden ${
+          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+        aria-hidden={!open}
+      >
+        <ul className="flex flex-col gap-1 border-t border-border px-6 py-4">
           {[...links, { label: t.nav.contact, href: "/#contact" }].map(
             (link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block py-2 text-text-muted hover:text-text"
+                  className="block py-2.5 text-base text-text-muted transition-colors hover:text-text"
                 >
                   {link.label}
                 </Link>
@@ -113,7 +118,7 @@ export default function Navbar() {
             )
           )}
         </ul>
-      )}
+      </div>
     </header>
   );
 }
