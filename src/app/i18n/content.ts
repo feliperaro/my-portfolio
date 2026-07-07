@@ -77,7 +77,7 @@ export type Dictionary = {
   };
 };
 
-const GITHUB = "https://github.com/FehRoque";
+const GITHUB = "https://github.com/feliperaro";
 
 export const content: Record<Locale, Dictionary> = {
   en: {

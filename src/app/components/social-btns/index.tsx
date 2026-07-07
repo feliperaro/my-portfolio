@@ -8,7 +8,7 @@ const SOCIALS = [
     href: "https://www.linkedin.com/in/felipe-roque-b901a417b/",
     Icon: LinkedInIcon,
   },
-  { label: "GitHub", href: "https://github.com/FehRoque", Icon: GitHubIcon },
+  { label: "GitHub", href: "https://github.com/feliperaro", Icon: GitHubIcon },
   {
     label: "Instagram",
     href: "https://instagram.com/feliperoque.dev",
