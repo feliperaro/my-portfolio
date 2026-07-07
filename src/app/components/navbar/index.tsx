@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useLanguage } from "../../i18n/language-provider";
 
 export default function Navbar() {
-  const { t, locale, setLocale } = useLanguage();
+  const { t, locale, setLocale, theme, setTheme } = useLanguage();
   const [open, setOpen] = useState(false);
 
   const links = [
@@ -16,6 +16,7 @@ export default function Navbar() {
   ];
 
   const toggleLocale = () => setLocale(locale === "en" ? "pt" : "en");
+  const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
 
   return (
     <header className="nav-surface sticky top-0 z-50 border-b border-border backdrop-blur">
@@ -50,6 +51,16 @@ export default function Navbar() {
               {locale === "en" ? "PT" : "EN"}
             </button>
           </li>
+          <li>
+            <button
+              type="button"
+              onClick={toggleTheme}
+              aria-label="Toggle theme"
+              className="flex items-center justify-center rounded-md border border-border p-1.5 text-text-muted transition-colors hover:border-accent hover:text-accent"
+            >
+              {theme === "light" ? <MoonIcon /> : <SunIcon />}
+            </button>
+          </li>
         </ul>
 
         {/* Contact — right side */}
@@ -62,6 +73,14 @@ export default function Navbar() {
 
         {/* Mobile controls */}
         <div className="flex items-center gap-2 md:hidden">
+          <button
+            type="button"
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+            className="flex items-center justify-center rounded-md border border-border p-1.5 text-text-muted"
+          >
+            {theme === "light" ? <MoonIcon /> : <SunIcon />}
+          </button>
           <button
             type="button"
             onClick={toggleLocale}
@@ -120,5 +139,44 @@ export default function Navbar() {
         </ul>
       </div>
     </header>
+  );
+}
+
+function SunIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+    </svg>
+  );
+}
+
+function MoonIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+    </svg>
   );
 }
