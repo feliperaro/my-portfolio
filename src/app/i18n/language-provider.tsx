@@ -71,14 +71,7 @@ export default function LanguageProvider({
 
 function LanguageGate({ onSelect }: { onSelect: (locale: Locale) => void }) {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center gap-10 bg-bg px-6">
-      <div className="text-center">
-        <p className="mb-2 font-mono text-sm text-accent">Felipe Roque</p>
-        <h1 className="text-3xl font-bold tracking-tight text-text sm:text-4xl">
-          {content.en.gate.prompt} · {content.pt.gate.prompt}
-        </h1>
-      </div>
-
+    <div className="flex min-h-screen flex-col items-center justify-center bg-bg px-6">
       <div className="flex flex-col gap-4 sm:flex-row">
         <button
           type="button"
