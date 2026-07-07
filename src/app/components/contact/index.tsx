@@ -7,7 +7,7 @@ export default function Contact() {
   const { t } = useLanguage();
 
   return (
-    <section id="contact" className="section-container py-24 text-center">
+    <section id="contact" className="section-container py-16 text-center sm:py-24">
       <p className="mb-3 font-mono text-sm text-accent">{t.contact.eyebrow}</p>
       <h2 className="text-3xl font-bold tracking-tight text-text sm:text-4xl">
         {t.contact.title}
@@ -17,7 +17,7 @@ export default function Contact() {
       </p>
 
       <a
-        href="mailto:feliperamosroque@gmail.com"
+        href="mailto:feliperoque.dev@gmail.com"
         className="mt-8 inline-block rounded-lg bg-accent px-8 py-3 font-medium text-white transition-colors hover:bg-accent-hover"
       >
         {t.contact.cta}

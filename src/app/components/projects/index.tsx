@@ -8,12 +8,12 @@ export default function Projects() {
   const { t } = useLanguage();
 
   return (
-    <section id="projects" className="section-container py-20">
+    <section id="projects" className="section-container py-16 sm:py-20">
       <SectionTitle text={t.projects.title} eyebrow="03." />
 
       <p className="mb-8 max-w-2xl text-text-muted">{t.projects.note}</p>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
         {t.projects.items.map((project, i) => (
           <article
             key={i}

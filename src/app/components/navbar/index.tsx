@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <header className="nav-surface sticky top-0 z-50 border-b border-border backdrop-blur">
-      <nav className="section-container flex h-16 items-center justify-between">
+      <nav className="section-container relative flex h-16 items-center justify-between">
         <Link
           href="/"
           className="font-semibold tracking-tight text-text hover:text-accent"
@@ -28,8 +28,8 @@ export default function Navbar() {
           Felipe Roque
         </Link>
 
-        {/* Desktop links */}
-        <ul className="hidden items-center gap-8 md:flex">
+        {/* Desktop links — centered */}
+        <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 md:flex">
           {links.map((link) => (
             <li key={link.href}>
               <Link
@@ -50,15 +50,15 @@ export default function Navbar() {
               {locale === "en" ? "PT" : "EN"}
             </button>
           </li>
-          <li>
-            <Link
-              href="/#contact"
-              className="rounded-lg bg-accent px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-accent-hover"
-            >
-              {t.nav.contact}
-            </Link>
-          </li>
         </ul>
+
+        {/* Contact — right side */}
+        <Link
+          href="/#contact"
+          className="hidden rounded-lg bg-accent px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-accent-hover md:block"
+        >
+          {t.nav.contact}
+        </Link>
 
         {/* Mobile controls */}
         <div className="flex items-center gap-2 md:hidden">
@@ -97,15 +97,20 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile menu */}
-      {open && (
-        <ul className="flex flex-col gap-1 border-t border-border px-6 py-4 md:hidden">
+      <div
+        className={`overflow-hidden transition-all duration-300 ease-in-out md:hidden ${
+          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+        aria-hidden={!open}
+      >
+        <ul className="flex flex-col gap-1 border-t border-border px-6 py-4">
           {[...links, { label: t.nav.contact, href: "/#contact" }].map(
             (link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block py-2 text-text-muted hover:text-text"
+                  className="block py-2.5 text-base text-text-muted transition-colors hover:text-text"
                 >
                   {link.label}
                 </Link>
@@ -113,7 +118,7 @@ export default function Navbar() {
             )
           )}
         </ul>
-      )}
+      </div>
     </header>
   );
 }
