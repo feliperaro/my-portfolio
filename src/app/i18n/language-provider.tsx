@@ -166,7 +166,7 @@ function LanguageGate({
           }`}
         >
           <SunIcon />
-          Light · Claro
+          {selectedLocale === "pt" ? "Claro" : "Light"}
         </button>
         <button
           type="button"
@@ -179,7 +179,7 @@ function LanguageGate({
           }`}
         >
           <MoonIcon />
-          Dark · Escuro
+          {selectedLocale === "pt" ? "Escuro" : "Dark"}
         </button>
       </div>
 
