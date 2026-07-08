@@ -1,5 +1,4 @@
 import { GitHubIcon } from "../icons/github-icon";
-import { InstagramIcon } from "../icons/instagram-icon";
 import { LinkedInIcon } from "../icons/linkedin-icon";
 
 const SOCIALS = [
@@ -9,11 +8,6 @@ const SOCIALS = [
     Icon: LinkedInIcon,
   },
   { label: "GitHub", href: "https://github.com/feliperaro", Icon: GitHubIcon },
-  {
-    label: "Instagram",
-    href: "https://instagram.com/raroque01",
-    Icon: InstagramIcon,
-  },
 ];
 
 export function SocialBtns() {
