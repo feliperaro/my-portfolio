@@ -5,6 +5,7 @@ export type TimelineItem = {
   org: string;
   url?: string;
   location: string;
+  mapsUrl?: string;
   period: string;
 };
 
@@ -56,7 +57,6 @@ export type Dictionary = {
     education: TimelineItem[];
   };
   contact: {
-    eyebrow: string;
     title: string;
     text: string;
     cta: string;
@@ -156,32 +156,38 @@ export const content: Record<Locale, Dictionary> = {
           role: "Founder, CEO & CTO · IT Consultant",
           org: "FEROQ",
           url: GITHUB,
-          location: "Earth",
+          location: "Worldwide",
           period: "2021 — Present",
         },
         {
           role: "IT Consultant",
           org: "BasicX Solutions",
           url: "https://basicx-solutions.vercel.app/",
-          location: "São Paulo, SP, Brasil",
-          period: "Out 2025 — Present",
+          location: "São Paulo, SP, Brazil",
+          mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brazil",
+          period: "Oct 2025 — Present",
         },
         {
           role: "Senior RPA Developer",
           org: "Fiibo",
+          url: "https://fiibo.com.br",
           location: "Fortaleza, CE, Brazil",
+          mapsUrl: "https://maps.google.com/?q=Fortaleza,+CE,+Brazil",
           period: "Apr 2024 — Sep 2025",
         },
         {
           role: "RPA Analyst Developer",
           org: "Cadmus IT Solutions",
+          url: "https://cadmusit.com.br",
           location: "São Paulo, SP, Brazil",
+          mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brazil",
           period: "Mar 2022 — Sep 2022",
         },
         {
           role: "Python Developer",
           org: "BPA Technologies",
           location: "São Paulo, SP, Brazil",
+          mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brazil",
           period: "Dec 2020 — Mar 2022",
         },
       ],
@@ -189,37 +195,45 @@ export const content: Record<Locale, Dictionary> = {
         {
           role: "Postgraduate — AI for Developers",
           org: "FIAP (Postech)",
+          url: "https://postech.fiap.com.br",
           location: "Online",
           period: "Aug 2024 — Jun 2025",
         },
         {
           role: "Associate's Degree — Information Technology",
           org: "Tamwood Careers College",
+          url: "https://tamwood.com",
           location: "Toronto, Canada",
-          period: "Jul 2023 — Jan 2024",
+          mapsUrl: "https://maps.google.com/?q=Toronto,+Canada",
+          period: "Jul 2023 — Dec 2023",
         },
         {
           role: "Web Development — Course",
           org: "Cantek IT Program",
+          url: "https://cantek.ca",
           location: "Toronto, Canada",
+          mapsUrl: "https://maps.google.com/?q=Toronto,+Canada",
           period: "Aug 2023 — Sep 2023",
         },
         {
           role: "Bachelor's — Systems Analysis & Development",
           org: "FIAP",
+          url: "https://fiap.com.br",
           location: "São Paulo, SP, Brazil",
+          mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brazil",
           period: "Feb 2020 — Dec 2021",
         },
         {
           role: "Technical Degree — Information Technology",
           org: "Senac",
+          url: "https://sp.senac.br",
           location: "Taboão da Serra, SP, Brazil",
+          mapsUrl: "https://maps.google.com/?q=Taboão+da+Serra,+SP,+Brazil",
           period: "Feb 2019 — Jul 2020",
         },
       ],
     },
     contact: {
-      eyebrow: "05.",
       title: "Get in touch",
       text: "Open to opportunities with people and companies focused on changing the world through technology, automation, and innovation. Have a project in mind or want to collaborate? My inbox is always open.",
       cta: "Say hello",
@@ -317,7 +331,7 @@ export const content: Record<Locale, Dictionary> = {
           role: "Fundador, CEO & CTO · Consultor de Tecnologia",
           org: "FEROQ",
           url: GITHUB,
-          location: "Terra",
+          location: "Worldwide",
           period: "2021 — Presente",
         },
         {
@@ -325,24 +339,30 @@ export const content: Record<Locale, Dictionary> = {
           org: "BasicX Solutions",
           url: "https://basicx-solutions.vercel.app/",
           location: "São Paulo, SP, Brasil",
+          mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brasil",
           period: "Out 2025 — Presente",
         },
         {
           role: "Desenvolvedor RPA Sênior",
           org: "Fiibo",
+          url: "https://fiibo.com.br",
           location: "Fortaleza, CE, Brasil",
+          mapsUrl: "https://maps.google.com/?q=Fortaleza,+CE,+Brasil",
           period: "Abr 2024 — Set 2025",
         },
         {
           role: "Analista e Desenvolvedor RPA",
           org: "Cadmus IT Solutions",
+          url: "https://cadmusit.com.br",
           location: "São Paulo, SP, Brasil",
+          mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brasil",
           period: "Mar 2022 — Set 2022",
         },
         {
           role: "Desenvolvedor Python",
           org: "BPA Technologies",
           location: "São Paulo, SP, Brasil",
+          mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brasil",
           period: "Dez 2020 — Mar 2022",
         },
       ],
@@ -350,39 +370,47 @@ export const content: Record<Locale, Dictionary> = {
         {
           role: "Pós-Graduação — IA para Desenvolvedores",
           org: "FIAP (Postech)",
+          url: "https://postech.fiap.com.br",
           location: "Online",
           period: "Ago 2024 — Jun 2025",
         },
         {
           role: "Associate's Degree — Tecnologia da Informação",
           org: "Tamwood Careers College",
+          url: "https://tamwood.com",
           location: "Toronto, Canadá",
-          period: "Jul 2023 — Jan 2024",
+          mapsUrl: "https://maps.google.com/?q=Toronto,+Canada",
+          period: "Jul 2023 — Dez 2023",
         },
         {
           role: "Curso — Desenvolvimento Web",
           org: "Cantek IT Program",
+          url: "https://cantek.ca",
           location: "Toronto, Canadá",
+          mapsUrl: "https://maps.google.com/?q=Toronto,+Canada",
           period: "Ago 2023 — Set 2023",
         },
         {
           role: "Graduação — Análise e Desenvolvimento de Sistemas",
           org: "FIAP",
+          url: "https://fiap.com.br",
           location: "São Paulo, SP, Brasil",
+          mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brasil",
           period: "Fev 2020 — Dez 2021",
         },
         {
           role: "Técnico — Tecnologia da Informação",
           org: "Senac",
+          url: "https://sp.senac.br",
           location: "Taboão da Serra, SP, Brasil",
+          mapsUrl: "https://maps.google.com/?q=Taboão+da+Serra,+SP,+Brasil",
           period: "Fev 2019 — Jul 2020",
         },
       ],
     },
     contact: {
-      eyebrow: "05.",
       title: "Entre em contato",
-      text: "Aberto a oportunidades com pessoas e empresas focadas em mudar o mundo através de tecnologia, automação e inovação. Tem um projeto em mente ou quer colaborar? Minha caixa de entrada está sempre aberta.",
+      text: "Aberto a oportunidades com pessoas e empresas focadas em mudar o mundo através de tecnologia, automação e inovação. Tem um projeto em mente ou quer colaborar? Minha caixa de entrada est�� sempre aberta.",
       cta: "Diga olá",
     },
     footer: {

@@ -8,7 +8,6 @@ export default function Contact() {
 
   return (
     <section id="contact" className="section-container py-16 text-center sm:py-24">
-      <p className="mb-3 font-mono text-sm text-accent">{t.contact.eyebrow}</p>
       <h2 className="text-3xl font-bold tracking-tight text-text sm:text-4xl">
         {t.contact.title}
       </h2>
