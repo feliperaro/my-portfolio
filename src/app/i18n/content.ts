@@ -156,7 +156,7 @@ export const content: Record<Locale, Dictionary> = {
           role: "Founder, CEO & CTO · Software Engineer",
           org: "FEROQ",
           url: GITHUB,
-          location: "",
+          location: "Earth",
           period: "2021 — Present",
         },
         {
@@ -310,7 +310,7 @@ export const content: Record<Locale, Dictionary> = {
           role: "Fundador, CEO & CTO · Software Engineer",
           org: "FEROQ",
           url: GITHUB,
-          location: "",
+          location: "Terra",
           period: "2021 — Presente",
         },
         {
