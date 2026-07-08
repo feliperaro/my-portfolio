@@ -8,8 +8,8 @@ export default function Projects() {
   const { t } = useLanguage();
 
   return (
-    <section id="projects" className="section-container py-16 sm:py-20">
-      <SectionTitle text={t.projects.title} eyebrow="03." />
+    <section id="projects" className="section-container py-14 sm:py-16">
+      <SectionTitle text={t.projects.title} />
 
       <p className="mb-8 max-w-2xl text-text-muted">{t.projects.note}</p>
 
