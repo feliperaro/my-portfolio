@@ -7,8 +7,8 @@ export default function About() {
   const { t } = useLanguage();
 
   return (
-    <section id="about" className="section-container py-16 sm:py-20">
-      <SectionTitle text={t.about.title} eyebrow="01." />
+    <section id="about" className="section-container py-14 sm:py-16">
+      <SectionTitle text={t.about.title} />
 
       <div className="max-w-3xl space-y-4 text-base text-text-muted sm:text-lg">
         {t.about.paragraphs.map((p, i) => (
