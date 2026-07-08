@@ -153,14 +153,14 @@ export const content: Record<Locale, Dictionary> = {
       educationLabel: "Education",
       work: [
         {
-          role: "Founder, CEO & CTO · Software Engineer",
+          role: "Founder, CEO & CTO · IT Consultant",
           org: "FEROQ",
           url: GITHUB,
           location: "Earth",
           period: "2021 — Present",
         },
         {
-          role: "Software Consultant",
+          role: "IT Consultant",
           org: "BasicX Solutions",
           url: "https://basicx-solutions.vercel.app/",
           location: "São Paulo, SP, Brasil",
