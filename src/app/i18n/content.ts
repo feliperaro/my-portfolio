@@ -160,6 +160,13 @@ export const content: Record<Locale, Dictionary> = {
           period: "2021 — Present",
         },
         {
+          role: "Software Consultant",
+          org: "BasicX Solutions",
+          url: "https://basicx-solutions.vercel.app/",
+          location: "São Paulo, SP, Brasil",
+          period: "Out 2025 — Present",
+        },
+        {
           role: "Senior RPA Developer",
           org: "Fiibo",
           location: "Fortaleza, CE, Brazil",
@@ -307,20 +314,27 @@ export const content: Record<Locale, Dictionary> = {
       educationLabel: "Formação",
       work: [
         {
-          role: "Fundador, CEO & CTO · Software Engineer",
+          role: "Fundador, CEO & CTO · Software Consultant",
           org: "FEROQ",
           url: GITHUB,
           location: "Terra",
           period: "2021 — Presente",
         },
         {
-          role: "RPA Developer Sênior",
+          role: "Software Consultant",
+          org: "BasicX Solutions",
+          url: "https://basicx-solutions.vercel.app/",
+          location: "São Paulo, SP, Brasil",
+          period: "Out 2025 — Present",
+        },
+        {
+          role: "Desenvolvedor RPA Sênior",
           org: "Fiibo",
           location: "Fortaleza, CE, Brasil",
           period: "Abr 2024 — Set 2025",
         },
         {
-          role: "RPA Analyst Developer",
+          role: "Analista e Desenvolvedor RPA",
           org: "Cadmus IT Solutions",
           location: "São Paulo, SP, Brasil",
           period: "Mar 2022 — Set 2022",
