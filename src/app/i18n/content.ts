@@ -314,18 +314,18 @@ export const content: Record<Locale, Dictionary> = {
       educationLabel: "Formação",
       work: [
         {
-          role: "Fundador, CEO & CTO · Software Consultant",
+          role: "Fundador, CEO & CTO · Consultor de Tecnologia",
           org: "FEROQ",
           url: GITHUB,
           location: "Terra",
           period: "2021 — Presente",
         },
         {
-          role: "Software Consultant",
+          role: "Consultor de Tecnologia",
           org: "BasicX Solutions",
           url: "https://basicx-solutions.vercel.app/",
           location: "São Paulo, SP, Brasil",
-          period: "Out 2025 — Present",
+          period: "Out 2025 — Presente",
         },
         {
           role: "Desenvolvedor RPA Sênior",
