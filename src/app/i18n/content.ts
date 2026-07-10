@@ -328,7 +328,7 @@ export const content: Record<Locale, Dictionary> = {
           role: "Fundador, CEO & CTO · Consultor de Tecnologia",
           org: "FEROQ",
           location: "Worldwide",
-          period: "2021 — Presente",
+          period: "Fev 2021 — Presente",
         },
         {
           role: "Consultor de Tecnologia",
@@ -368,7 +368,7 @@ export const content: Record<Locale, Dictionary> = {
           role: "Pós-Graduação — IA para Desenvolvedores",
           org: "FIAP (Postech)",
           url: "https://postech.fiap.com.br",
-          location: "Online",
+          location: "São Paulo, Brasil",
           period: "Ago 2024 — Jun 2025",
         },
         {
