@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://feliperoque.dev"),
   title: {
     default: "Felipe Ramos Roque — AI & Automation Engineer",
-    template: "%s — Felipe Roque",
+    template: "%s — Felipe Ramos Roque",
   },
   description:
     "Founder & CTO @ FEROQ. Full-stack software engineer specialized in intelligent automation — RPA, AI agents and full-stack web applications.",
