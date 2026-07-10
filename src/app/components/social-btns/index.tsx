@@ -4,7 +4,7 @@ import { LinkedInIcon } from "../icons/linkedin-icon";
 const SOCIALS = [
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/felipe-roque-b901a417b/",
+    href: "https://www.linkedin.com/in/felipe-ramos-roque-b901a417b/",
     Icon: LinkedInIcon,
   },
   { label: "GitHub", href: "https://github.com/feliperaro", Icon: GitHubIcon },
