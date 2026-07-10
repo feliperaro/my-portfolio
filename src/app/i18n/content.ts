@@ -152,7 +152,6 @@ export const content: Record<Locale, Dictionary> = {
         {
           role: "Founder, CEO & CTO · IT Consultant",
           org: "FEROQ",
-          url: null,
           location: "Worldwide",
           period: "2021 — Present",
         },
@@ -237,7 +236,7 @@ export const content: Record<Locale, Dictionary> = {
       cta: "Say hello",
     },
     footer: {
-      built: "Designed & built by Felipe Roque",
+      built: "Designed & built by Felipe Ramos Roque",
       rights: "All rights reserved",
     },
     gate: {
@@ -328,7 +327,6 @@ export const content: Record<Locale, Dictionary> = {
         {
           role: "Fundador, CEO & CTO · Consultor de Tecnologia",
           org: "FEROQ",
-          url: null,
           location: "Worldwide",
           period: "2021 — Presente",
         },
@@ -409,11 +407,11 @@ export const content: Record<Locale, Dictionary> = {
     },
     contact: {
       title: "Entre em contato",
-      text: "Aberto a oportunidades com pessoas e empresas focadas em mudar o mundo através de tecnologia, automação e inovação. Tem um projeto em mente ou quer colaborar? Minha caixa de entrada est�� sempre aberta.",
+      text: "Aberto a oportunidades com pessoas e empresas focadas em mudar o mundo através de tecnologia, automação e inova��ão. Tem um projeto em mente ou quer colaborar? Minha caixa de entrada est�� sempre aberta.",
       cta: "Diga olá",
     },
     footer: {
-      built: "Projetado & desenvolvido por Felipe Roque",
+      built: "Projetado & desenvolvido por Felipe Ramos Roque",
       rights: "Todos os direitos reservados",
     },
     gate: {

@@ -12,13 +12,13 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://feliperoque.dev"),
   title: {
-    default: "Felipe Roque — AI & Automation Engineer",
-    template: "%s — Felipe Roque",
+    default: "Felipe Ramos Roque — AI & Automation Engineer",
+    template: "%s — Felipe Ramos Roque",
   },
   description:
     "Founder & CTO @ FEROQ. Full-stack software engineer specialized in intelligent automation — RPA, AI agents and full-stack web applications.",
   openGraph: {
-    title: "Felipe Roque — AI & Automation Engineer",
+    title: "Felipe Ramos Roque — AI & Automation Engineer",
     description:
       "Founder & CTO @ FEROQ. Full-stack engineer specialized in intelligent automation, RPA and AI agents.",
     type: "website",

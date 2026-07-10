@@ -26,7 +26,7 @@ export default function Navbar() {
           className="font-semibold tracking-tight text-text hover:text-accent"
           onClick={() => setOpen(false)}
         >
-          Felipe Roque
+          Felipe Ramos Roque
         </Link>
 
         {/* Desktop links — centered */}
@@ -97,19 +97,16 @@ export default function Navbar() {
             className="flex flex-col gap-1.5 p-2"
           >
             <span
-              className={`h-0.5 w-6 bg-text transition-transform ${
-                open ? "translate-y-2 rotate-45" : ""
-              }`}
+              className={`h-0.5 w-6 bg-text transition-transform ${open ? "translate-y-2 rotate-45" : ""
+                }`}
             />
             <span
-              className={`h-0.5 w-6 bg-text transition-opacity ${
-                open ? "opacity-0" : ""
-              }`}
+              className={`h-0.5 w-6 bg-text transition-opacity ${open ? "opacity-0" : ""
+                }`}
             />
             <span
-              className={`h-0.5 w-6 bg-text transition-transform ${
-                open ? "-translate-y-2 -rotate-45" : ""
-              }`}
+              className={`h-0.5 w-6 bg-text transition-transform ${open ? "-translate-y-2 -rotate-45" : ""
+                }`}
             />
           </button>
         </div>
@@ -117,9 +114,8 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className={`overflow-hidden transition-all duration-300 ease-in-out md:hidden ${
-          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`overflow-hidden transition-all duration-300 ease-in-out md:hidden ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
         aria-hidden={!open}
       >
         <ul className="flex flex-col gap-1 border-t border-border px-6 py-4">
