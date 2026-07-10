@@ -193,7 +193,7 @@ export const content: Record<Locale, Dictionary> = {
           role: "Postgraduate — AI for Developers",
           org: "FIAP (Postech)",
           url: "https://postech.fiap.com.br",
-          location: "Online",
+          location: "São Paulo, Brazil",
           period: "Aug 2024 — Jun 2025",
         },
         {
