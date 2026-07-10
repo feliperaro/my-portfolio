@@ -64,7 +64,7 @@ export default function Navbar() {
         </Link>
 
         {/* Mobile controls */}
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="ml-auto flex items-center gap-2 md:hidden">
           <button
             type="button"
             onClick={toggleTheme}
