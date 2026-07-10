@@ -129,21 +129,21 @@ export const content: Record<Locale, Dictionary> = {
           description:
             "20+ automations for healthcare provider processes, delivered end-to-end from requirements to production — cutting operational team size and costs by replacing manual, repetitive tasks with reliable, scalable RPA.",
           stack: ["Python", "RPA", "Selenium"],
-          repoUrl: GITHUB,
+          repoUrl: null,
         },
         {
           title: "AI Agents & n8n Automations",
           description:
             "AI agents and n8n automations running in production for BasicX and its clients — integrating systems and adding intelligence to real business processes to accelerate delivery.",
           stack: ["n8n", "AI Agents", "Python", "APIs"],
-          repoUrl: GITHUB,
+          repoUrl: null,
         },
         {
           title: "Enterprise RPA Automations",
           description:
             "RPA solutions across finance, HR, insurance, health and logistics teams — from process documentation to development, dashboards and production deployment, with ongoing support.",
           stack: ["Python", "Pandas", "OpenCV", "AutoHotkey"],
-          repoUrl: GITHUB,
+          repoUrl: null,
         },
       ],
     },
@@ -155,7 +155,7 @@ export const content: Record<Locale, Dictionary> = {
         {
           role: "Founder, CEO & CTO · IT Consultant",
           org: "FEROQ",
-          url: GITHUB,
+          url: null,
           location: "Worldwide",
           period: "2021 — Present",
         },
@@ -178,7 +178,7 @@ export const content: Record<Locale, Dictionary> = {
         {
           role: "RPA Analyst Developer",
           org: "Cadmus IT Solutions",
-          url: "https://cadmusit.com.br",
+          url: "https://cadmus.com.br",
           location: "São Paulo, SP, Brazil",
           mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brazil",
           period: "Mar 2022 — Sep 2022",
@@ -186,6 +186,7 @@ export const content: Record<Locale, Dictionary> = {
         {
           role: "Python Developer",
           org: "BPA Technologies",
+          url: "https://bpatechnologies.com/",
           location: "São Paulo, SP, Brazil",
           mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brazil",
           period: "Dec 2020 — Mar 2022",
@@ -210,7 +211,7 @@ export const content: Record<Locale, Dictionary> = {
         {
           role: "Web Development — Course",
           org: "Cantek IT Program",
-          url: "https://cantek.ca",
+          url: "https://futuretek.go.studio/",
           location: "Toronto, Canada",
           mapsUrl: "https://maps.google.com/?q=Toronto,+Canada",
           period: "Aug 2023 — Sep 2023",
@@ -330,7 +331,7 @@ export const content: Record<Locale, Dictionary> = {
         {
           role: "Fundador, CEO & CTO · Consultor de Tecnologia",
           org: "FEROQ",
-          url: GITHUB,
+          url: null,
           location: "Worldwide",
           period: "2021 — Presente",
         },
@@ -353,7 +354,7 @@ export const content: Record<Locale, Dictionary> = {
         {
           role: "Analista e Desenvolvedor RPA",
           org: "Cadmus IT Solutions",
-          url: "https://cadmusit.com.br",
+          url: "https://cadmus.com.br",
           location: "São Paulo, SP, Brasil",
           mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brasil",
           period: "Mar 2022 — Set 2022",
@@ -361,6 +362,7 @@ export const content: Record<Locale, Dictionary> = {
         {
           role: "Desenvolvedor Python",
           org: "BPA Technologies",
+          url: "https://bpatechnologies.com/",
           location: "São Paulo, SP, Brasil",
           mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brasil",
           period: "Dez 2020 — Mar 2022",
@@ -385,7 +387,7 @@ export const content: Record<Locale, Dictionary> = {
         {
           role: "Curso — Desenvolvimento Web",
           org: "Cantek IT Program",
-          url: "https://cantek.ca",
+          url: "https://futuretek.go.studio/",
           location: "Toronto, Canadá",
           mapsUrl: "https://maps.google.com/?q=Toronto,+Canada",
           period: "Ago 2023 — Set 2023",
