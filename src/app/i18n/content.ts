@@ -129,21 +129,18 @@ export const content: Record<Locale, Dictionary> = {
           description:
             "20+ automations for healthcare provider processes, delivered end-to-end from requirements to production — cutting operational team size and costs by replacing manual, repetitive tasks with reliable, scalable RPA.",
           stack: ["Python", "RPA", "Selenium"],
-          repoUrl: null,
         },
         {
           title: "AI Agents & n8n Automations",
           description:
             "AI agents and n8n automations running in production for BasicX and its clients — integrating systems and adding intelligence to real business processes to accelerate delivery.",
           stack: ["n8n", "AI Agents", "Python", "APIs"],
-          repoUrl: null,
         },
         {
           title: "Enterprise RPA Automations",
           description:
             "RPA solutions across finance, HR, insurance, health and logistics teams — from process documentation to development, dashboards and production deployment, with ongoing support.",
           stack: ["Python", "Pandas", "OpenCV", "AutoHotkey"],
-          repoUrl: null,
         },
       ],
     },
