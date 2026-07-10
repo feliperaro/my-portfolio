@@ -21,14 +21,6 @@ export default function Navbar() {
   return (
     <header className="nav-surface sticky top-0 z-50 border-b border-border backdrop-blur">
       <nav className="section-container relative flex h-16 items-center justify-between">
-        <Link
-          href="/"
-          className="font-semibold tracking-tight text-text hover:text-accent"
-          onClick={() => setOpen(false)}
-        >
-          Felipe Ramos Roque
-        </Link>
-
         {/* Desktop links — centered */}
         <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 md:flex">
           {links.map((link) => (
