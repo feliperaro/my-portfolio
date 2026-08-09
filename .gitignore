@@ -33,3 +33,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# generated CV artifacts (rebuild with: python cv/build-docx.py)
+cv/*.docx
