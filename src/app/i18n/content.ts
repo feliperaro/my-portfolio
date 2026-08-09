@@ -5,6 +5,7 @@ export type TimelineItem = {
   org: string;
   url?: string;
   location: string;
+  mapsUrl?: string;
   period: string;
 };
 
@@ -56,7 +57,6 @@ export type Dictionary = {
     education: TimelineItem[];
   };
   contact: {
-    eyebrow: string;
     title: string;
     text: string;
     cta: string;
@@ -68,6 +68,9 @@ export type Dictionary = {
   gate: {
     welcome: string;
     prompt: string;
+    themePrompt: string;
+    light: string;
+    dark: string;
   };
   blog: {
     title: string;
@@ -79,7 +82,6 @@ export type Dictionary = {
 
 export const GITHUB = "https://github.com/feliperaro";
 export const LINKEDIN = "https://www.linkedin.com/in/felipe-ramos-roque-b901a417b/";
-export const INSTAGRAM = "https://instagram.com/feliperoque.dev";
 
 export const content: Record<Locale, Dictionary> = {
   en: {
@@ -128,21 +130,18 @@ export const content: Record<Locale, Dictionary> = {
           description:
             "20+ automations for healthcare provider processes, delivered end-to-end from requirements to production — cutting operational team size and costs by replacing manual, repetitive tasks with reliable, scalable RPA.",
           stack: ["Python", "RPA", "Selenium"],
-          repoUrl: GITHUB,
         },
         {
           title: "AI Agents & n8n Automations",
           description:
             "AI agents and n8n automations running in production for BasicX and its clients — integrating systems and adding intelligence to real business processes to accelerate delivery.",
           stack: ["n8n", "AI Agents", "Python", "APIs"],
-          repoUrl: GITHUB,
         },
         {
           title: "Enterprise RPA Automations",
           description:
             "RPA solutions across finance, HR, insurance, health and logistics teams — from process documentation to development, dashboards and production deployment, with ongoing support.",
           stack: ["Python", "Pandas", "OpenCV", "AutoHotkey"],
-          repoUrl: GITHUB,
         },
       ],
     },
@@ -152,28 +151,41 @@ export const content: Record<Locale, Dictionary> = {
       educationLabel: "Education",
       work: [
         {
-          role: "Founder, CEO & CTO · Software Engineer",
+          role: "Founder, CEO & CTO · IT Consultant",
           org: "FEROQ",
-          url: GITHUB,
-          location: "Brazil",
+          location: "Worldwide",
           period: "2021 — Present",
+        },
+        {
+          role: "IT Consultant",
+          org: "BasicX Solutions",
+          url: "https://basicx-solutions.vercel.app/",
+          location: "São Paulo, SP, Brazil",
+          mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brazil",
+          period: "Oct 2025 — Present",
         },
         {
           role: "Senior RPA Developer",
           org: "Fiibo",
+          url: "https://fiibo.com.br",
           location: "Fortaleza, CE, Brazil",
+          mapsUrl: "https://maps.google.com/?q=Fortaleza,+CE,+Brazil",
           period: "Apr 2024 — Sep 2025",
         },
         {
           role: "RPA Analyst Developer",
           org: "Cadmus IT Solutions",
-          location: "Brazil",
+          url: "https://cadmus.com.br",
+          location: "São Paulo, SP, Brazil",
+          mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brazil",
           period: "Mar 2022 — Sep 2022",
         },
         {
           role: "Python Developer",
           org: "BPA Technologies",
-          location: "Brazil",
+          url: "https://bpatechnologies.com/",
+          location: "São Paulo, SP, Brazil",
+          mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brazil",
           period: "Dec 2020 — Mar 2022",
         },
       ],
@@ -181,48 +193,59 @@ export const content: Record<Locale, Dictionary> = {
         {
           role: "Postgraduate — AI for Developers",
           org: "FIAP (Postech)",
-          location: "Brazil",
+          url: "https://postech.fiap.com.br",
+          location: "São Paulo, Brazil",
           period: "Aug 2024 — Jun 2025",
         },
         {
           role: "Associate's Degree — Information Technology",
           org: "Tamwood Careers College",
-          location: "Canada",
-          period: "Jul 2023 — Jan 2024",
+          url: "https://tamwood.com",
+          location: "Toronto, Canada",
+          mapsUrl: "https://maps.google.com/?q=Toronto,+Canada",
+          period: "Jul 2023 — Dec 2023",
         },
         {
           role: "Web Development — Course",
           org: "Cantek IT Program",
-          location: "Canada",
+          url: "https://futuretek.go.studio/",
+          location: "Toronto, Canada",
+          mapsUrl: "https://maps.google.com/?q=Toronto,+Canada",
           period: "Aug 2023 — Sep 2023",
         },
         {
           role: "Bachelor's — Systems Analysis & Development",
           org: "FIAP",
-          location: "Brazil",
+          url: "https://fiap.com.br",
+          location: "São Paulo, SP, Brazil",
+          mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brazil",
           period: "Feb 2020 — Dec 2021",
         },
         {
           role: "Technical Degree — Information Technology",
           org: "Senac",
-          location: "Brazil",
+          url: "https://sp.senac.br",
+          location: "Taboão da Serra, SP, Brazil",
+          mapsUrl: "https://maps.google.com/?q=Taboão+da+Serra,+SP,+Brazil",
           period: "Feb 2019 — Jul 2020",
         },
       ],
     },
     contact: {
-      eyebrow: "05.",
       title: "Get in touch",
       text: "Open to opportunities with people and companies focused on changing the world through technology, automation, and innovation. Have a project in mind or want to collaborate? My inbox is always open.",
       cta: "Say hello",
     },
     footer: {
-      built: "Designed & built by Felipe Roque",
+      built: "Designed & built by Felipe Ramos Roque",
       rights: "All rights reserved",
     },
     gate: {
       welcome: "Welcome",
       prompt: "Choose your language",
+      themePrompt: "Choose a theme",
+      light: "Light",
+      dark: "Dark",
     },
     blog: {
       title: "My Posts",
@@ -303,28 +326,41 @@ export const content: Record<Locale, Dictionary> = {
       educationLabel: "Formação",
       work: [
         {
-          role: "Fundador, CEO & CTO · Software Engineer",
+          role: "Fundador, CEO & CTO · Consultor de Tecnologia",
           org: "FEROQ",
-          url: GITHUB,
-          location: "Brasil",
-          period: "2021 — Presente",
+          location: "Worldwide",
+          period: "Fev 2021 — Presente",
         },
         {
-          role: "RPA Developer Sênior",
+          role: "Consultor de Tecnologia",
+          org: "BasicX Solutions",
+          url: "https://basicx-solutions.vercel.app/",
+          location: "São Paulo, SP, Brasil",
+          mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brasil",
+          period: "Out 2025 — Presente",
+        },
+        {
+          role: "Desenvolvedor RPA Sênior",
           org: "Fiibo",
+          url: "https://fiibo.com.br",
           location: "Fortaleza, CE, Brasil",
+          mapsUrl: "https://maps.google.com/?q=Fortaleza,+CE,+Brasil",
           period: "Abr 2024 — Set 2025",
         },
         {
-          role: "RPA Analyst Developer",
+          role: "Analista e Desenvolvedor RPA",
           org: "Cadmus IT Solutions",
-          location: "Brasil",
+          url: "https://cadmus.com.br",
+          location: "São Paulo, SP, Brasil",
+          mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brasil",
           period: "Mar 2022 — Set 2022",
         },
         {
           role: "Desenvolvedor Python",
           org: "BPA Technologies",
-          location: "Brasil",
+          url: "https://bpatechnologies.com/",
+          location: "São Paulo, SP, Brasil",
+          mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brasil",
           period: "Dez 2020 — Mar 2022",
         },
       ],
@@ -332,48 +368,59 @@ export const content: Record<Locale, Dictionary> = {
         {
           role: "Pós-Graduação — IA para Desenvolvedores",
           org: "FIAP (Postech)",
-          location: "Brasil",
+          url: "https://postech.fiap.com.br",
+          location: "São Paulo, Brasil",
           period: "Ago 2024 — Jun 2025",
         },
         {
           role: "Associate's Degree — Tecnologia da Informação",
           org: "Tamwood Careers College",
-          location: "Canadá",
-          period: "Jul 2023 — Jan 2024",
+          url: "https://tamwood.com",
+          location: "Toronto, Canadá",
+          mapsUrl: "https://maps.google.com/?q=Toronto,+Canada",
+          period: "Jul 2023 — Dez 2023",
         },
         {
           role: "Curso — Desenvolvimento Web",
           org: "Cantek IT Program",
-          location: "Canadá",
+          url: "https://futuretek.go.studio/",
+          location: "Toronto, Canadá",
+          mapsUrl: "https://maps.google.com/?q=Toronto,+Canada",
           period: "Ago 2023 — Set 2023",
         },
         {
           role: "Graduação — Análise e Desenvolvimento de Sistemas",
           org: "FIAP",
-          location: "Brasil",
+          url: "https://fiap.com.br",
+          location: "São Paulo, SP, Brasil",
+          mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brasil",
           period: "Fev 2020 — Dez 2021",
         },
         {
           role: "Técnico — Tecnologia da Informação",
           org: "Senac",
-          location: "Brasil",
+          url: "https://sp.senac.br",
+          location: "Taboão da Serra, SP, Brasil",
+          mapsUrl: "https://maps.google.com/?q=Taboão+da+Serra,+SP,+Brasil",
           period: "Fev 2019 — Jul 2020",
         },
       ],
     },
     contact: {
-      eyebrow: "05.",
       title: "Entre em contato",
-      text: "Aberto a oportunidades com pessoas e empresas focadas em mudar o mundo através de tecnologia, automação e inovação. Tem um projeto em mente ou quer colaborar? Minha caixa de entrada está sempre aberta.",
+      text: "Aberto a oportunidades com pessoas e empresas focadas em mudar o mundo através de tecnologia, automação e inova��ão. Tem um projeto em mente ou quer colaborar? Minha caixa de entrada est�� sempre aberta.",
       cta: "Diga olá",
     },
     footer: {
-      built: "Projetado & desenvolvido por Felipe Roque",
+      built: "Projetado & desenvolvido por Felipe Ramos Roque",
       rights: "Todos os direitos reservados",
     },
     gate: {
       welcome: "Bem-vindo",
       prompt: "Escolha seu idioma",
+      themePrompt: "Escolha um tema",
+      light: "Claro",
+      dark: "Escuro",
     },
     blog: {
       title: "Meus Posts",

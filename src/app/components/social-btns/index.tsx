@@ -1,12 +1,10 @@
 import { GitHubIcon } from "../icons/github-icon";
-import { InstagramIcon } from "../icons/instagram-icon";
 import { LinkedInIcon } from "../icons/linkedin-icon";
-import { GITHUB, INSTAGRAM, LINKEDIN } from "../../i18n/content";
+import { GITHUB, LINKEDIN } from "../../i18n/content";
 
 const SOCIALS = [
   { label: "LinkedIn", href: LINKEDIN, Icon: LinkedInIcon },
   { label: "GitHub", href: GITHUB, Icon: GitHubIcon },
-  { label: "Instagram", href: INSTAGRAM, Icon: InstagramIcon },
 ];
 
 export function SocialBtns() {

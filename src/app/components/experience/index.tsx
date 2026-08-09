@@ -16,16 +16,28 @@ function Timeline({ items }: { items: TimelineItem[] }) {
             {item.url ? (
               <a
                 href={item.url}
-                target={item.url.startsWith("/") ? "_self" : "_blank"}
+                target="_blank"
                 rel="noreferrer"
-                className="hover:text-accent"
+                className="font-medium text-text transition-colors hover:text-accent"
               >
                 {item.org}
               </a>
             ) : (
-              item.org
-            )}{" "}
-            · {item.location}
+              <span className="font-medium text-text">{item.org}</span>
+            )}
+            {" · "}
+            {item.mapsUrl ? (
+              <a
+                href={item.mapsUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="transition-colors hover:text-accent"
+              >
+                {item.location}
+              </a>
+            ) : (
+              item.location
+            )}
           </p>
         </li>
       ))}
@@ -37,10 +49,10 @@ export default function Experience() {
   const { t } = useLanguage();
 
   return (
-    <section id="experience" className="section-container py-20">
-      <SectionTitle text={t.experience.title} eyebrow="04." />
+    <section id="experience" className="section-container py-14 sm:py-16">
+      <SectionTitle text={t.experience.title} />
 
-      <div className="grid gap-12 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12">
         <div>
           <h3 className="mb-6 text-sm font-semibold uppercase tracking-wider text-text-muted">
             {t.experience.workLabel}

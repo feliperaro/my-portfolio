@@ -1,17 +1,12 @@
 interface SectionTitleProps {
   text: string;
-  /** optional small mono label shown above the title, e.g. "01." */
-  eyebrow?: string;
 }
 
-export default function SectionTitle({ text, eyebrow }: SectionTitleProps) {
+export default function SectionTitle({ text }: SectionTitleProps) {
   return (
-    <div className="mb-10">
-      {eyebrow && (
-        <p className="mb-2 font-mono text-sm text-accent">{eyebrow}</p>
-      )}
+    <div className="mb-8">
       <h2 className="text-3xl font-bold tracking-tight text-text">{text}</h2>
-      <div className="mt-4 h-px w-16 bg-accent" />
+      <div className="mt-3 h-px w-16 bg-accent" />
     </div>
   );
 }
