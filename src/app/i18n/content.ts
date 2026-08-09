@@ -77,7 +77,9 @@ export type Dictionary = {
   };
 };
 
-const GITHUB = "https://github.com/FehRoque";
+export const GITHUB = "https://github.com/feliperaro";
+export const LINKEDIN = "https://www.linkedin.com/in/felipe-ramos-roque-b901a417b/";
+export const INSTAGRAM = "https://instagram.com/feliperoque.dev";
 
 export const content: Record<Locale, Dictionary> = {
   en: {

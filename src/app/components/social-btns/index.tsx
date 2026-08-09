@@ -1,19 +1,12 @@
 import { GitHubIcon } from "../icons/github-icon";
 import { InstagramIcon } from "../icons/instagram-icon";
 import { LinkedInIcon } from "../icons/linkedin-icon";
+import { GITHUB, INSTAGRAM, LINKEDIN } from "../../i18n/content";
 
 const SOCIALS = [
-  {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/felipe-roque-b901a417b/",
-    Icon: LinkedInIcon,
-  },
-  { label: "GitHub", href: "https://github.com/FehRoque", Icon: GitHubIcon },
-  {
-    label: "Instagram",
-    href: "https://instagram.com/feliperoque.dev",
-    Icon: InstagramIcon,
-  },
+  { label: "LinkedIn", href: LINKEDIN, Icon: LinkedInIcon },
+  { label: "GitHub", href: GITHUB, Icon: GitHubIcon },
+  { label: "Instagram", href: INSTAGRAM, Icon: InstagramIcon },
 ];
 
 export function SocialBtns() {
