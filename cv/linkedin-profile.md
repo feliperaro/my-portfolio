@@ -5,7 +5,7 @@ Everything here reflects confirmed experience.
 
 > **Do not add AWS.** The profile audit suggested "proficient in AWS cloud services"
 > and an AWS certification. That is not your stack — you confirmed general cloud with
-> Azure working knowledge. The unused `public/images/aws.png` in this repo is likely
+> Azure working knowledge. The `public/images/aws.png` formerly in this repo (now deleted) is likely
 > what the audit picked up on. Claiming AWS would also contradict the CVs, which say
 > "Microsoft Azure (working knowledge)".
 
@@ -31,7 +31,7 @@ Senior AI & Automation Engineer | Building Production AI Agents & RPA That Cut O
 **Option 3 — leads with the current role (151 chars)**
 
 ```
-AI Engineer @ Basicx Solutions | AI Agents, LangChain & Multi-Agent Orchestration | RPA & Process Automation | Python & TypeScript | Founder @ FEROQ
+AI Engineer @ BasicX Solutions | AI Agents, LangChain & Multi-Agent Orchestration | RPA & Process Automation | Python & TypeScript | Founder @ FEROQ
 ```
 
 ---
@@ -63,7 +63,7 @@ cheapest fix on the profile. Add via *Add profile section → Additional → Lan
 | Portuguese | Native or bilingual proficiency |
 | English | Full professional proficiency |
 
-Your Canadian study period (Tamwood Careers College, Jul 2023 – Jan 2024) already
+Your Canadian study period (Tamwood Careers College, Jul 2023 – Dec 2023) already
 substantiates the English claim on the profile.
 
 ---
@@ -73,7 +73,7 @@ substantiates the English claim on the profile.
 Keep these consistent with the CVs. LinkedIn renders bullets fine — start each
 line with `•` and keep them to two lines each.
 
-### FEROQ — Founder, CEO & CTO · Software Engineer (2021 – Present)
+### FEROQ — Founder, CEO & CTO · IT Consultant (2021 – Present)
 
 ```
 • Founded and lead a technology consultancy delivering AI agents, intelligent process automation, and full-stack applications to clients across healthcare, finance, and logistics.
@@ -84,7 +84,7 @@ line with `•` and keep them to two lines each.
 • Engineer production applications in Python and TypeScript with automated test suites and CI/CD pipelines.
 ```
 
-### Basicx Solutions — AI Engineer (Sep 2025 – Present)
+### BasicX Solutions — AI Engineer (Oct 2025 – Present)
 
 This is your current role and it now leads the experience section on all three CVs.
 

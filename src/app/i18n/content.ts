@@ -157,7 +157,7 @@ export const content: Record<Locale, Dictionary> = {
           period: "2021 — Present",
         },
         {
-          role: "IT Consultant",
+          role: "AI Engineer",
           org: "BasicX Solutions",
           url: "https://basicx-solutions.vercel.app/",
           location: "São Paulo, SP, Brazil",
@@ -332,7 +332,7 @@ export const content: Record<Locale, Dictionary> = {
           period: "Fev 2021 — Presente",
         },
         {
-          role: "Consultor de Tecnologia",
+          role: "Engenheiro de IA",
           org: "BasicX Solutions",
           url: "https://basicx-solutions.vercel.app/",
           location: "São Paulo, SP, Brasil",
