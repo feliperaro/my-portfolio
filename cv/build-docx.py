@@ -131,15 +131,16 @@ def add_bottom_border(paragraph):
 
 
 # kind -> (size_pt, bold, italic, space_before_pt, space_after_pt)
+# Sizes track the .html <style> block so the Word output paginates like the PDF.
 STYLES = {
-    NAME:     (20, True,  False, 0,  2),
-    HEADLINE: (11.5, True, False, 0,  2),
-    CONTACT:  (9.5, False, False, 0,  10),
-    SECTION:  (11, True,  False, 12, 4),
-    ENTRY:    (10.5, True, False, 7,  0),
-    META:     (9.5, False, True,  0,  2),
-    BODY:     (10.5, False, False, 0, 5),
-    BULLET:   (10.5, False, False, 0, 2),
+    NAME:     (18, True,  False, 0,  2),
+    HEADLINE: (11, True,  False, 0,  2),
+    CONTACT:  (9, False, False, 0,  10),
+    SECTION:  (10.5, True, False, 11, 4),
+    ENTRY:    (10, True,  False, 6,  0),
+    META:     (9, False, True,  0,  2),
+    BODY:     (10, False, False, 0, 4),
+    BULLET:   (10, False, False, 0, 2),
 }
 
 
@@ -152,10 +153,10 @@ def build(html_path: Path, docx_path: Path):
 
     normal = doc.styles["Normal"]
     normal.font.name = FONT
-    normal.font.size = Pt(10.5)
+    normal.font.size = Pt(10)
     normal.font.color.rgb = RGBColor(0, 0, 0)
     normal.paragraph_format.space_after = Pt(0)
-    normal.paragraph_format.line_spacing = 1.08
+    normal.paragraph_format.line_spacing = 1.05
 
     for section in doc.sections:
         section.top_margin = section.bottom_margin = Pt(40)

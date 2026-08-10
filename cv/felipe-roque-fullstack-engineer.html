@@ -11,8 +11,8 @@
 
   body {
     font-family: Calibri, "Segoe UI", Arial, sans-serif;
-    font-size: 10.5pt;
-    line-height: 1.34;
+    font-size: 10pt;
+    line-height: 1.28;
     color: #000;
     background: #fff;
     max-width: 190mm;
@@ -21,47 +21,47 @@
   }
 
   h1 {
-    font-size: 20pt;
+    font-size: 18pt;
     line-height: 1.1;
     margin: 0 0 2pt;
     letter-spacing: 0.3pt;
   }
 
   .headline {
-    font-size: 11.5pt;
+    font-size: 11pt;
     font-weight: bold;
     margin: 0 0 4pt;
   }
 
   .contact {
-    font-size: 9.5pt;
+    font-size: 9pt;
     margin: 0 0 12pt;
   }
 
   h2 {
-    font-size: 11pt;
+    font-size: 10.5pt;
     text-transform: uppercase;
     letter-spacing: 0.6pt;
-    margin: 13pt 0 5pt;
+    margin: 11pt 0 4pt;
     padding-bottom: 2pt;
     border-bottom: 1pt solid #000;
   }
 
   h3 {
-    font-size: 10.5pt;
-    margin: 8pt 0 0;
+    font-size: 10pt;
+    margin: 7pt 0 0;
   }
 
   .meta {
-    font-size: 9.5pt;
+    font-size: 9pt;
     font-style: italic;
     margin: 0 0 3pt;
   }
 
-  p { margin: 0 0 6pt; }
+  p { margin: 0 0 5pt; }
 
-  ul { margin: 3pt 0 6pt; padding-left: 16pt; }
-  li { margin-bottom: 2.5pt; }
+  ul { margin: 2pt 0 5pt; padding-left: 15pt; }
+  li { margin-bottom: 2pt; }
 
   .skills p { margin: 0 0 3pt; }
 
@@ -86,21 +86,22 @@
 <h2>Professional Summary</h2>
 <p>
   Full-stack software engineer with 5+ years building and shipping production applications and integrations across
-  the stack. Works day to day in Python, TypeScript, JavaScript, and Java, building REST APIs, Node.js services, and
-  React and Next.js front ends over SQL and NoSQL data stores. Strong background in systems integration and
-  intelligent automation, including AI agents and RPA delivered end to end from requirements through cloud
-  deployment and production support. Postgraduate in Artificial Intelligence for Developers. Fluent in English and
-  Portuguese.
+  the stack. Works day to day in Python and TypeScript, building FastAPI and Node.js services, REST integrations,
+  and React and Next.js front ends over PostgreSQL, MongoDB, and Redis. Co-built and operates a multi-tenant AI
+  platform running in production for 22 client brands on Kubernetes, with GitLab CI, distributed tracing, and a
+  substantial automated test suite. Strong background in systems integration and intelligent automation, including
+  AI agents and RPA delivered end to end from requirements through cloud deployment and production support.
+  Postgraduate in Artificial Intelligence for Developers. Fluent in English and Portuguese.
 </p>
 
 <h2>Technical Skills</h2>
 <div class="skills">
   <p><strong>Languages:</strong> Python, TypeScript, JavaScript, Java, SQL, HTML, CSS</p>
   <p><strong>Frontend:</strong> React, Next.js, Responsive Web Development, Tailwind CSS</p>
-  <p><strong>Backend:</strong> Node.js, REST API Design, API Integration, Microservice Integration, Authentication</p>
-  <p><strong>Databases &amp; Data:</strong> SQL and NoSQL databases, Pandas, Data Processing, ETL, Reporting Dashboards</p>
-  <p><strong>Cloud &amp; DevOps:</strong> Cloud Computing, Cloud Deployment, CI/CD, Git, Version Control, Monitoring, Production Support</p>
-  <p><strong>AI &amp; Automation:</strong> AI Agents, LLM Integration, Prompt Engineering, n8n, RPA, Selenium, OpenCV, Web Scraping</p>
+  <p><strong>Backend:</strong> Node.js, FastAPI, REST API Design, API Integration, Microservice Integration, Authentication, Automated Testing</p>
+  <p><strong>Databases &amp; Data:</strong> PostgreSQL, MongoDB, Redis, SQL and NoSQL databases, Pandas, Data Processing, ETL, Reporting Dashboards</p>
+  <p><strong>Cloud &amp; DevOps:</strong> Kubernetes, Docker, Cloud Deployment, GitLab CI, CI/CD, Git, Multi-Tenant Architecture, Monitoring, Observability, Production Support</p>
+  <p><strong>AI &amp; Automation:</strong> AI Agents, Multi-Agent Systems, LangGraph, LangChain, Retrieval (RAG), LLM Integration, Prompt Engineering, n8n, RPA, Selenium, OpenCV, Web Scraping</p>
   <p><strong>Practices:</strong> Requirements Gathering, Technical Documentation, Stakeholder Management, Agile, Code Review</p>
   <p><strong>Languages Spoken:</strong> Portuguese (Native), English (Fluent)</p>
 </div>
@@ -111,10 +112,11 @@
   <h3>AI Engineer</h3>
   <p class="meta">BasicX Solutions - São Paulo, SP, Brazil | October 2025 - Present</p>
   <ul>
-    <li>Build and deploy production AI agents and workflow automations for the company and its client accounts, integrating business systems via REST APIs and webhooks.</li>
-    <li>Engineer services in Python and TypeScript with automated testing and CI/CD pipelines for production deployment.</li>
-    <li>Design multi-agent systems with LangChain and LangGraph, covering tool use, retrieval, memory, and state management.</li>
-    <li>Integrate AI solutions with enterprise platforms including CRM (Salesforce), ERP, ticketing, and data warehouse systems.</li>
+    <li>Co-build and operate a multi-tenant conversational AI platform serving 22 client brands in production, deployed as isolated Kubernetes services with GitLab CI and per-tenant configuration management.</li>
+    <li>Engineer backend services in Python (FastAPI) and TypeScript with automated testing and CI/CD pipelines, backed by PostgreSQL, MongoDB, and Redis.</li>
+    <li>Build internal web applications in Next.js and React, including a configuration builder with versioning and diffing and several operational dashboards.</li>
+    <li>Design multi-agent systems with LangGraph and LangChain, covering tool use, hybrid retrieval, memory, and state management, instrumented with distributed tracing.</li>
+    <li>Integrate business systems through REST APIs and webhooks, including ERP, warehouse management, CRM, and the WhatsApp Business Platform.</li>
   </ul>
 </div>
 
@@ -139,7 +141,7 @@
     <li>Engineered Python services using Selenium, Pandas, and OpenCV to integrate web, desktop, and image-based systems that exposed no API.</li>
     <li>Built AI agents and n8n automations running in production for internal teams and client accounts, integrating disparate business systems.</li>
     <li>Developed operational dashboards giving stakeholders visibility into throughput, failure rates, and business impact.</li>
-    <li>Replaced manual, repetitive workflows with reliable, scalable automation, reducing operational headcount requirements and recurring cost.</li>
+    <li>Replaced manual, repetitive workflows across multiple business fronts with reliable, scalable automation, removing over 500 hours of manual processing per month and handling tens of thousands of records monthly.</li>
     <li>Provided production support and continuous improvement, diagnosing failures and hardening processes against upstream system changes.</li>
   </ul>
 </div>

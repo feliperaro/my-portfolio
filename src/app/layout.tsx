@@ -12,15 +12,15 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://feliperamosroque.vercel.app"),
   title: {
-    default: "Felipe Ramos Roque — AI & Automation Engineer",
+    default: "Felipe Ramos Roque — Applied AI Engineer",
     template: "%s — Felipe Ramos Roque",
   },
   description:
-    "Founder & CTO @ FEROQ. Full-stack software engineer specialized in intelligent automation — RPA, AI agents and full-stack web applications.",
+    "Applied AI engineer building production AI agents — multi-agent systems with retrieval, guardrails and tracing, serving 22 client brands on Kubernetes. Python, TypeScript, LangGraph.",
   openGraph: {
-    title: "Felipe Ramos Roque — AI & Automation Engineer",
+    title: "Felipe Ramos Roque — Applied AI Engineer",
     description:
-      "Founder & CTO @ FEROQ. Full-stack engineer specialized in intelligent automation, RPA and AI agents.",
+      "Applied AI engineer building production AI agents — multi-agent systems with retrieval, guardrails and tracing. Python, TypeScript, LangGraph.",
     type: "website",
     url: "https://feliperamosroque.vercel.app",
     siteName: "Felipe Roque",
@@ -31,16 +31,16 @@ export const metadata: Metadata = {
         url: "/images/me.jpg",
         width: 800,
         height: 800,
-        alt: "Felipe Roque — AI & Automation Engineer",
+        alt: "Felipe Roque — Applied AI Engineer",
       },
     ],
   },
   twitter: {
     // "summary" suits a square image; summary_large_image would crop it to 2:1.
     card: "summary",
-    title: "Felipe Roque — AI & Automation Engineer",
+    title: "Felipe Roque — Applied AI Engineer",
     description:
-      "Founder & CTO @ FEROQ. Full-stack engineer specialized in intelligent automation, RPA and AI agents.",
+      "Applied AI engineer building production AI agents — multi-agent systems with retrieval, guardrails and tracing. Python, TypeScript, LangGraph.",
     images: ["/images/me.jpg"],
   },
 };
