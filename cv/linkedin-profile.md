@@ -4,10 +4,14 @@ Written to match the CVs in this directory, so the two never contradict each oth
 Everything here reflects confirmed experience.
 
 > **Do not add AWS.** The profile audit suggested "proficient in AWS cloud services"
-> and an AWS certification. That is not your stack — you confirmed general cloud with
-> Azure working knowledge. The `public/images/aws.png` formerly in this repo (now deleted) is likely
-> what the audit picked up on. Claiming AWS would also contradict the CVs, which say
-> "Microsoft Azure (working knowledge)".
+> and an AWS certification. That is not your stack. The `public/images/aws.png`
+> formerly in this repo (now deleted) is likely what the audit picked up on.
+>
+> Azure is different, and it improved: the agent platform genuinely supports Azure
+> OpenAI as an LLM and embedding provider, so the CVs now say "Azure OpenAI Service"
+> rather than the weaker "Microsoft Azure (working knowledge)". That is accurate, but
+> it is provider integration, not Azure infrastructure depth — do not stretch it into
+> AKS, Function Apps, or Container Apps.
 
 ---
 
@@ -16,22 +20,22 @@ Everything here reflects confirmed experience.
 LinkedIn allows 220 characters. Option 1 is the recommendation — it leads with
 seniority and the keywords recruiters actually search, without padding.
 
-**Option 1 (recommended, 137 chars)**
+**Option 1 (recommended, 128 chars)**
 
 ```
-Senior AI & Automation Engineer | AI Agents & Multi-Agent Systems | RPA & Process Automation | Python & TypeScript | Open to Remote
+Applied AI Engineer | AI Agents & Multi-Agent Systems | LangGraph, Python, TypeScript | Process Automation & RPA | Open to Remote
 ```
 
-**Option 2 — heavier on business impact (152 chars)**
+**Option 2 — heavier on proof (130 chars)**
 
 ```
-Senior AI & Automation Engineer | Building Production AI Agents & RPA That Cut Operational Cost | Python, TypeScript, LangChain | Remote, Global
+Applied AI Engineer | Production AI Agents Serving 22 Brands on Kubernetes | LangGraph, RAG, Python | RPA to AI Migration | Remote
 ```
 
-**Option 3 — leads with the current role (151 chars)**
+**Option 3 — leads with the current role (140 chars)**
 
 ```
-AI Engineer @ BasicX Solutions | AI Agents, LangChain & Multi-Agent Orchestration | RPA & Process Automation | Python & TypeScript | Founder @ FEROQ
+AI Engineer @ BasicX Solutions | Multi-Tenant AI Agent Platform | LangGraph, RAG, Guardrails & Tracing | Python & TypeScript | Founder @ FEROQ
 ```
 
 ---
@@ -42,11 +46,11 @@ Four short paragraphs, results first, no hobbies. ~1,150 characters — well ins
 LinkedIn's 2,600 limit.
 
 ```
-Senior AI and automation engineer with 5+ years building production systems that automate complex business processes. I build AI agents from scratch and architect multi-agent systems with LangChain and LangGraph — covering tool use, retrieval, memory, and state — instrumented with tracing, evaluation, and guardrails so they behave reliably in production.
+Applied AI engineer with 5+ years building production systems that automate complex business processes. I co-build and operate a multi-tenant AI agent platform serving 22 client brands in production on Kubernetes — a hand-written LangGraph state machine covering tool use, hybrid retrieval, per-customer memory, guardrails, and human handoff, instrumented end to end with Langfuse and LangSmith tracing.
 
-I've delivered 20+ production automations end to end, from current-state process discovery and workflow redesign through development, deployment, monitoring, and support. The result has been measurable: reduced operational headcount and lower recurring cost for the teams I've built for. I work across healthcare, finance, insurance, HR, and logistics processes.
+Before moving into agent architecture I delivered 20+ production RPA automations, which is why I approach AI differently from most: I know what actually breaks in a business workflow, not just how to prompt around it. That work removed over 500 hours of manual processing per month across multiple business fronts and handles tens of thousands of records monthly. I've since migrated no-code n8n workflows into tested, maintainable Python services — the same shift, one process at a time.
 
-My stack is Python and TypeScript, with REST APIs, automated testing, and CI/CD; SQL and NoSQL data stores; n8n for workflow orchestration; and Selenium, Pandas, and OpenCV for RPA where no API exists. I integrate with enterprise platforms including CRM (Salesforce), ERP, ticketing, and data warehouse systems. Postgraduate in Artificial Intelligence for Developers (FIAP).
+My stack is Python and TypeScript: LangGraph and LangChain, FastAPI, hybrid BM25 and FAISS retrieval with reranking, PostgreSQL, MongoDB and Redis, Next.js and React on the front end, Kubernetes and GitLab CI for delivery. I integrate with ERP, warehouse management, CRM, ticketing, and the WhatsApp Business Platform. Postgraduate in Artificial Intelligence for Developers (FIAP).
 
 I'm open to remote roles with global teams working on applied AI and automation. Portuguese native, English fluent — I studied and lived in Canada. Let's connect.
 ```
@@ -89,24 +93,30 @@ line with `•` and keep them to two lines each.
 This is your current role and it now leads the experience section on all three CVs.
 
 ```
-• Build and deploy production AI agents from scratch for the company and its client accounts, adding automated decision-making to live operational processes.
-• Architect multi-agent systems using LangChain and LangGraph, handling tool use, retrieval, memory, state management, and coordination between agents.
-• Instrument agents with tracing, evaluation frameworks, and guardrails, managing prompt and version changes to keep production behavior reliable and cost-effective.
-• Integrate AI solutions with enterprise platforms including CRM (Salesforce), ERP, ticketing, and data warehouse systems via REST APIs and webhooks.
-• Develop and orchestrate n8n automations connecting business systems to accelerate delivery across client accounts.
-• Engineer services in Python and TypeScript with automated testing and CI/CD pipelines for production-ready deployment.
+• Co-build and operate a multi-tenant conversational AI platform on WhatsApp, deployed as isolated Kubernetes services for 22 client brands across healthcare, veterinary, retail marketplace, real estate, fitness, and beauty verticals.
+• Engineered the core agent as a hand-written LangGraph StateGraph — intent classification, lead extraction and persistence, retrieval, profile loading, a tool-calling agent loop, an LLM supervisor, and human-handoff detection — with checkpointed conversation state.
+• Built a hybrid retrieval layer combining BM25 and FAISS through Reciprocal Rank Fusion with cross-encoder reranking, over per-tenant isolated vector stores.
+• Designed a routing-agent and named-specialist architecture, with up to nine domain specialists per tenant, each bound to its own knowledge base and tool set.
+• Implemented a supervisor and guardrail layer enforcing brand voice, output format, age gating, and crisis-trigger detection, backed by a behavioral test suite.
+• Instrumented production agents with Langfuse and LangSmith tracing over OpenTelemetry, hardened with concurrency tests covering multi-replica handoff locking and message debouncing.
+• Built configuration as a product: Pydantic-validated per-tenant YAML with a web builder providing versioning and diffing, plus a CI job asserting deployed configuration matches the repository.
+• Delivered supporting automation — an ERP-to-WMS order fulfillment integrator, a deterministic payroll-billing audit engine with a human approval gate, and migrations of n8n no-code workflows into tested Python services.
 ```
 
-> These bullets are generalized from your confirmed skills and your portfolio's
-> description of the BasicX work. Replace the specifics with actual projects and
-> numbers where you have them — a current role carries the most weight with
-> recruiters, so it's worth the detail.
+> **Accuracy notes, since these are checkable.** You are 203 of 422 commits on the
+> agent platform and a colleague has 162 — so "co-build" is the honest verb, never
+> "built single-handedly." The payroll audit engine has zero LLM dependencies; it is
+> a deterministic rules engine and calling it AI would not survive an interview.
+> The support platform is a Chatwoot fork with upstream authorship dominating —
+> claim the customization, not the product. No client names appear here by your
+> decision, and no message-volume figure is claimed because none exists in the code.
 
 ### Fiibo — Senior RPA Developer (Apr 2024 – Sep 2025)
 
 ```
 • Delivered 20+ production automations for healthcare provider operations, owning each from current-state process analysis through development, production deployment, and support.
-• Redesigned manual, repetitive back-office workflows for automation, reducing operational headcount requirements and recurring operating costs while improving throughput consistency.
+• Redesigned manual, repetitive back-office workflows across multiple business fronts, removing over 500 hours of manual processing per month and reducing recurring operating cost while improving throughput consistency.
+• Automated processing of tens of thousands of records per month, improving throughput consistency and eliminating a class of manual data-entry error.
 • Built AI agents and orchestrated automations running in production for internal teams and client accounts, integrating CRM, ERP, and ticketing platforms.
 • Engineered Python automations using Selenium, Pandas, and OpenCV to drive web, desktop, and image-based interfaces where no API was available.
 • Implemented monitoring and operational dashboards, giving stakeholders visibility into throughput, failure rates, and realized business impact.
@@ -136,25 +146,28 @@ This is your current role and it now leads the experience section on all three C
 The audit's advice here is right: pin the ones recruiters filter on. LinkedIn shows
 your top 3 pinned skills prominently, so order matters.
 
-**Pin these three:** Python · Artificial Intelligence (AI) · Robotic Process Automation (RPA)
+**Pin these three:** Python · Artificial Intelligence (AI) · AI Agents
 
 **Then keep roughly these 15, in this order:**
 
 1. Python
 2. Artificial Intelligence (AI)
-3. Robotic Process Automation (RPA)
-4. AI Agents
+3. AI Agents
+4. LangGraph
 5. LangChain
-6. TypeScript
-7. JavaScript
-8. Process Automation
-9. n8n
-10. REST APIs
-11. Node.js
-12. React
-13. SQL
-14. Selenium
-15. Cloud Computing
+6. Retrieval-Augmented Generation (RAG)
+7. Robotic Process Automation (RPA)
+8. TypeScript
+9. Process Automation
+10. Kubernetes
+11. FastAPI
+12. REST APIs
+13. n8n
+14. Node.js
+15. React
+
+RPA drops from third to seventh deliberately. It is still there for recruiter
+filters, but leading with it now anchors you to the role you are moving out of.
 
 Remove generic or duplicated entries (e.g. "Software Development" alongside
 "Programming", or single-purpose tools nobody searches for). Fewer, sharper skills

@@ -95,10 +95,10 @@ export const content: Record<Locale, Dictionary> = {
     },
     hero: {
       greeting: "Hi, my name is",
-      title: "AI & Automation Engineer",
-      subtitle: "Founder & CTO @ FEROQ",
+      title: "Applied AI Engineer",
+      subtitle: "AI Agents & Automation · Founder @ FEROQ",
       pitch:
-        "Full-stack software engineer specialized in intelligent automation — building RPA solutions, AI agents, and full-stack web applications that deliver measurable business impact.",
+        "I build AI agents that run in production — multi-agent systems with retrieval, guardrails and tracing, serving 22 client brands on Kubernetes. Before that, 20+ RPA automations taught me what actually breaks in a business process.",
       viewWork: "View my work",
       getInTouch: "Get in touch",
       downloadCV: "Download CV",
@@ -106,18 +106,19 @@ export const content: Record<Locale, Dictionary> = {
     about: {
       title: "About me",
       paragraphs: [
-        "I'm a full-stack software engineer specialized in intelligent automation, with hands-on experience building RPA solutions, AI agents, and full-stack web applications. I work with Python, JavaScript, and Java, SQL & NoSQL databases, APIs, Cloud & DevOps, and automation platforms like n8n.",
-        "Over the past year, I've been applying AI directly in production systems and real business processes — not just in theory — building AI agents, integrating systems, and delivering automations that generate measurable business impact, including significant reductions in operational costs and team size.",
-        "I'm a quick learner, problem solver, and strong team player. I love technology, software development, cloud computing, AI, games, e-sports, traveling, and learning new things.",
+        "I'm an applied AI engineer who builds agents that survive contact with real users. I co-build and operate a multi-tenant AI agent platform serving 22 client brands in production on Kubernetes — a hand-written LangGraph state machine with tool calling, hybrid retrieval, per-customer memory, guardrails and human handoff, traced end to end.",
+        "Before moving into agent architecture I delivered 20+ production RPA automations, which is why I approach AI differently from most: I know what actually breaks in a business workflow, not just how to prompt around it. That work removed over 500 hours of manual processing per month across multiple business fronts and handles tens of thousands of records monthly.",
+        "My stack is Python and TypeScript — LangGraph, FastAPI, PostgreSQL, MongoDB and Redis, Next.js and React, with Kubernetes and CI/CD for delivery. I'm a quick learner, problem solver, and strong team player. I love technology, cloud computing, AI, games, e-sports, traveling, and learning new things.",
       ],
     },
     skills: {
       title: "Skills",
       groups: [
-        { label: "Languages", items: ["Python", "JavaScript", "TypeScript", "Java"] },
-        { label: "AI & Automation", items: ["AI Agents", "n8n", "RPA", "Selenium", "OpenCV"] },
-        { label: "Full-Stack", items: ["Node.js", "React", "REST APIs", "Web Development"] },
-        { label: "Data & Cloud", items: ["SQL", "NoSQL", "Cloud", "DevOps", "Pandas"] },
+        { label: "AI & Agents", items: ["AI Agents", "LangGraph", "LangChain", "RAG", "Guardrails"] },
+        { label: "Languages", items: ["Python", "TypeScript", "JavaScript", "Java"] },
+        { label: "Backend & Web", items: ["FastAPI", "Node.js", "React", "Next.js", "REST APIs"] },
+        { label: "Automation", items: ["RPA", "n8n", "Selenium", "OpenCV"] },
+        { label: "Data & Cloud", items: ["Kubernetes", "PostgreSQL", "MongoDB", "Redis", "CI/CD"] },
       ],
     },
     projects: {
@@ -126,16 +127,16 @@ export const content: Record<Locale, Dictionary> = {
       viewLive: "View live →",
       items: [
         {
-          title: "Healthcare RPA Suite",
+          title: "Multi-Tenant AI Agent Platform",
           description:
-            "20+ automations for healthcare provider processes, delivered end-to-end from requirements to production — cutting operational team size and costs by replacing manual, repetitive tasks with reliable, scalable RPA.",
-          stack: ["Python", "RPA", "Selenium"],
+            "Conversational AI serving 22 client brands in production as isolated Kubernetes services — a hand-written LangGraph state machine with tool calling, hybrid BM25 + FAISS retrieval, per-customer memory, guardrails and human handoff, traced with Langfuse and LangSmith.",
+          stack: ["LangGraph", "Python", "FastAPI", "Kubernetes"],
         },
         {
-          title: "AI Agents & n8n Automations",
+          title: "Healthcare RPA Suite",
           description:
-            "AI agents and n8n automations running in production for BasicX and its clients — integrating systems and adding intelligence to real business processes to accelerate delivery.",
-          stack: ["n8n", "AI Agents", "Python", "APIs"],
+            "20+ automations for healthcare provider processes, delivered end-to-end from requirements to production — removing over 500 hours of manual processing per month across multiple business fronts and handling tens of thousands of records monthly.",
+          stack: ["Python", "RPA", "Selenium"],
         },
         {
           title: "Enterprise RPA Automations",
@@ -267,10 +268,10 @@ export const content: Record<Locale, Dictionary> = {
     },
     hero: {
       greeting: "Olá, meu nome é",
-      title: "Engenheiro de IA & Automação",
-      subtitle: "Fundador & CTO na FEROQ",
+      title: "Engenheiro de IA Aplicada",
+      subtitle: "Agentes de IA & Automação · Fundador na FEROQ",
       pitch:
-        "Engenheiro de software full-stack especializado em automação inteligente — construindo soluções de RPA, agentes de IA e aplicações web que geram impacto real no negócio.",
+        "Construo agentes de IA que rodam em produção — sistemas multiagente com retrieval, guardrails e tracing, atendendo 22 marcas em Kubernetes. Antes disso, mais de 20 automações de RPA me ensinaram o que realmente quebra em um processo de negócio.",
       viewWork: "Ver meu trabalho",
       getInTouch: "Entrar em contato",
       downloadCV: "Baixar CV",
@@ -278,18 +279,19 @@ export const content: Record<Locale, Dictionary> = {
     about: {
       title: "Sobre mim",
       paragraphs: [
-        "Sou engenheiro de software full-stack especializado em automação inteligente, com experiência prática construindo soluções de RPA, agentes de IA e aplicações web full-stack. Trabalho com Python, JavaScript e Java, bancos de dados SQL & NoSQL, APIs, Cloud & DevOps, e plataformas de automação como n8n.",
-        "No último ano, venho aplicando IA diretamente em sistemas de produção e processos reais de negócio — não só na teoria — construindo agentes de IA, integrando sistemas e entregando automações que geram impacto mensurável para o negócio, incluindo reduções significativas de custo operacional e tamanho de equipe.",
-        "Aprendo rápido, resolvo problemas e trabalho bem em equipe. Gosto de tecnologia, desenvolvimento de software, cloud computing, IA, games, e-sports, viagens e aprender coisas novas.",
+        "Sou engenheiro de IA aplicada e construo agentes que aguentam o contato com usuários reais. Ajudo a construir e opero uma plataforma multi-tenant de agentes de IA que atende 22 marcas em produção sobre Kubernetes — uma máquina de estados escrita à mão em LangGraph, com tool calling, retrieval híbrido, memória por cliente, guardrails e transferência para humano, com tracing de ponta a ponta.",
+        "Antes de migrar para arquitetura de agentes, entreguei mais de 20 automações de RPA em produção — e é por isso que enxergo IA de um jeito diferente: sei o que de fato quebra em um processo de negócio, não apenas como contornar com prompt. Esse trabalho eliminou mais de 500 horas de processamento manual por mês em diferentes frentes do negócio e movimenta dezenas de milhares de registros mensais.",
+        "Meu stack é Python e TypeScript — LangGraph, FastAPI, PostgreSQL, MongoDB e Redis, Next.js e React, com Kubernetes e CI/CD para entrega. Aprendo rápido, resolvo problemas e trabalho bem em equipe. Gosto de tecnologia, cloud computing, IA, games, e-sports, viagens e aprender coisas novas.",
       ],
     },
     skills: {
       title: "Skills",
       groups: [
-        { label: "Linguagens", items: ["Python", "JavaScript", "TypeScript", "Java"] },
-        { label: "IA & Automação", items: ["Agentes de IA", "n8n", "RPA", "Selenium", "OpenCV"] },
-        { label: "Full-Stack", items: ["Node.js", "React", "APIs REST", "Desenvolvimento Web"] },
-        { label: "Dados & Cloud", items: ["SQL", "NoSQL", "Cloud", "DevOps", "Pandas"] },
+        { label: "IA & Agentes", items: ["Agentes de IA", "LangGraph", "LangChain", "RAG", "Guardrails"] },
+        { label: "Linguagens", items: ["Python", "TypeScript", "JavaScript", "Java"] },
+        { label: "Backend & Web", items: ["FastAPI", "Node.js", "React", "Next.js", "APIs REST"] },
+        { label: "Automação", items: ["RPA", "n8n", "Selenium", "OpenCV"] },
+        { label: "Dados & Cloud", items: ["Kubernetes", "PostgreSQL", "MongoDB", "Redis", "CI/CD"] },
       ],
     },
     projects: {
@@ -298,17 +300,17 @@ export const content: Record<Locale, Dictionary> = {
       viewLive: "Ver online →",
       items: [
         {
-          title: "Suíte de RPA para Saúde",
+          title: "Plataforma Multi-Tenant de Agentes de IA",
           description:
-            "Mais de 20 automações para processos de provedores de saúde, entregues de ponta a ponta — do levantamento de requisitos à produção — reduzindo o tamanho da equipe operacional e os custos ao substituir tarefas manuais e repetitivas por RPA confiável e escalável.",
-          stack: ["Python", "RPA", "Selenium"],
+            "IA conversacional atendendo 22 marcas em produção como serviços isolados em Kubernetes — uma máquina de estados escrita à mão em LangGraph, com tool calling, retrieval híbrido BM25 + FAISS, memória por cliente, guardrails e transferência para humano, com tracing via Langfuse e LangSmith.",
+          stack: ["LangGraph", "Python", "FastAPI", "Kubernetes"],
           repoUrl: GITHUB,
         },
         {
-          title: "Agentes de IA & Automações n8n",
+          title: "Suíte de RPA para Saúde",
           description:
-            "Agentes de IA e automações com n8n rodando em produção para a BasicX e seus clientes — integrando sistemas e agregando inteligência a processos reais de negócio para acelerar a entrega.",
-          stack: ["n8n", "Agentes de IA", "Python", "APIs"],
+            "Mais de 20 automações para processos de provedores de saúde, entregues de ponta a ponta — do levantamento de requisitos à produção — eliminando mais de 500 horas de processamento manual por mês em diferentes frentes do negócio e movimentando dezenas de milhares de registros mensais.",
+          stack: ["Python", "RPA", "Selenium"],
           repoUrl: GITHUB,
         },
         {
