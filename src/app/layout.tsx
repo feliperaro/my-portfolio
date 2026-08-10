@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://feliperoque.dev"),
+  metadataBase: new URL("https://feliperamosroque.vercel.app"),
   title: {
     default: "Felipe Ramos Roque — AI & Automation Engineer",
     template: "%s — Felipe Ramos Roque",
@@ -22,6 +22,26 @@ export const metadata: Metadata = {
     description:
       "Founder & CTO @ FEROQ. Full-stack engineer specialized in intelligent automation, RPA and AI agents.",
     type: "website",
+    url: "https://feliperamosroque.vercel.app",
+    siteName: "Felipe Roque",
+    locale: "en_US",
+    images: [
+      {
+        // Square (800x800), so link previews render as a profile-style thumbnail.
+        url: "/images/me.jpg",
+        width: 800,
+        height: 800,
+        alt: "Felipe Roque — AI & Automation Engineer",
+      },
+    ],
+  },
+  twitter: {
+    // "summary" suits a square image; summary_large_image would crop it to 2:1.
+    card: "summary",
+    title: "Felipe Roque — AI & Automation Engineer",
+    description:
+      "Founder & CTO @ FEROQ. Full-stack engineer specialized in intelligent automation, RPA and AI agents.",
+    images: ["/images/me.jpg"],
   },
 };
 

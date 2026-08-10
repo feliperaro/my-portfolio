@@ -80,7 +80,8 @@ export type Dictionary = {
   };
 };
 
-const GITHUB = "https://github.com/feliperaro";
+export const GITHUB = "https://github.com/feliperaro";
+export const LINKEDIN = "https://www.linkedin.com/in/felipe-ramos-roque-b901a417b/";
 
 export const content: Record<Locale, Dictionary> = {
   en: {
@@ -156,7 +157,7 @@ export const content: Record<Locale, Dictionary> = {
           period: "2021 — Present",
         },
         {
-          role: "IT Consultant",
+          role: "AI Engineer",
           org: "BasicX Solutions",
           url: "https://basicx-solutions.vercel.app/",
           location: "São Paulo, SP, Brazil",
@@ -331,7 +332,7 @@ export const content: Record<Locale, Dictionary> = {
           period: "Fev 2021 — Presente",
         },
         {
-          role: "Consultor de Tecnologia",
+          role: "Engenheiro de IA",
           org: "BasicX Solutions",
           url: "https://basicx-solutions.vercel.app/",
           location: "São Paulo, SP, Brasil",
