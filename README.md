@@ -1,34 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# my-portfolio
 
-## Getting Started
+Personal site and CV, at [feliperamosroque.vercel.app](https://feliperamosroque.vercel.app).
+Next.js App Router, TypeScript, Tailwind, bilingual in English and Portuguese.
 
-First, run the development server:
+## Structure
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```
+src/app/
+  i18n/content.ts        every string on the site, both locales, one file
+  components/            hero, about, skills, projects, experience, contact
+  layout.tsx             metadata, Open Graph, and the language provider
+cv/
+  *.html                 the CVs; single source of truth for the .docx
+  build-docx.py          regenerates every .docx from its .html
+  linkedin-profile.md    paste-ready LinkedIn copy, kept in step with the CVs
+public/
+  cv.pdf                 what the site's "Download CV" button serves
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`content.ts` holds both locales in one typed object, so a string added to
+English without its Portuguese counterpart fails the build rather than falling
+back silently at runtime.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Running
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm install
+npm run dev
+```
 
-## Learn More
+## The CVs
 
-To learn more about Next.js, take a look at the following resources:
+Three ATS-safe variants: single column, no tables, no columns, no text boxes, no
+images, nothing in a header or footer. Everything lives in the document body as
+real selectable text, because that is what a parser can read.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The `.html` files are the source. After editing one:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+python cv/build-docx.py
+```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+`cv/README.md` covers the rest — how to regenerate `public/cv.pdf`, how to keep
+each variant inside two pages, and the factual claims that must not drift between
+the CVs, the LinkedIn copy and this site.
