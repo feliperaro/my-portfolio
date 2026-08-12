@@ -52,6 +52,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        {/*
+          Runs before first paint so a returning dark-mode visitor never sees a
+          white flash. React cannot do this: its effects run after the browser
+          has already painted. Kept deliberately tiny and dependency-free.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{if(localStorage.getItem("portfolio-theme")==="dark"){document.documentElement.setAttribute("data-theme","dark")}}catch(e){}`,
+          }}
+        />
+      </head>
       <body>
         <LanguageProvider>{children}</LanguageProvider>
       </body>

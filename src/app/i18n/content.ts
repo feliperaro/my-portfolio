@@ -108,7 +108,7 @@ export const content: Record<Locale, Dictionary> = {
       paragraphs: [
         "I'm an applied AI engineer who builds agents that survive contact with real users. I co-build and operate a multi-tenant AI agent platform serving 22 client brands in production on Kubernetes — a hand-written LangGraph state machine with tool calling, hybrid retrieval, per-customer memory, guardrails and human handoff, traced end to end.",
         "Before moving into agent architecture I delivered 20+ production RPA automations, which is why I approach AI differently from most: I know what actually breaks in a business workflow, not just how to prompt around it. That work removed over 500 hours of manual processing per month across multiple business fronts and handles tens of thousands of records monthly.",
-        "My stack is Python and TypeScript — LangGraph, FastAPI, PostgreSQL, MongoDB and Redis, Next.js and React, with Kubernetes and CI/CD for delivery. I'm a quick learner, problem solver, and strong team player. I love technology, cloud computing, AI, games, e-sports, traveling, and learning new things.",
+        "My stack is Python and TypeScript — LangGraph, FastAPI, PostgreSQL, MongoDB and Redis, Next.js and React, with Kubernetes and CI/CD for delivery. I use Claude Code daily for development and code review, and treat reviewing and refining AI-generated code as part of the job rather than a shortcut around it. Portuguese native, English fluent, open to remote work with global teams.",
       ],
     },
     skills: {
@@ -123,9 +123,16 @@ export const content: Record<Locale, Dictionary> = {
     },
     projects: {
       title: "Projects",
-      note: "Selected work from my professional experience. Live demos and repositories available on request.",
+      note: "Client work is closed-source. The two repositories linked here are public, and the first one runs its own evaluation suite on a fresh clone without an API key.",
       viewLive: "View live →",
       items: [
+        {
+          title: "support-agent",
+          description:
+            "An open-source support agent built to show production practice rather than a demo: hybrid retrieval, tool-level access control that refuses privileged actions before identity is verified, output guardrails, and an evaluation suite that scores the agent's behavior in CI with no API key.",
+          stack: ["Python", "LangGraph", "Anthropic API", "GitHub Actions"],
+          repoUrl: "https://github.com/feliperaro/support-agent",
+        },
         {
           title: "Multi-Tenant AI Agent Platform",
           description:
@@ -139,10 +146,11 @@ export const content: Record<Locale, Dictionary> = {
           stack: ["Python", "RPA", "Selenium"],
         },
         {
-          title: "Enterprise RPA Automations",
+          title: "Correios Tracking Automation",
           description:
-            "RPA solutions across finance, HR, insurance, health and logistics teams — from process documentation to development, dashboards and production deployment, with ongoing support.",
-          stack: ["Python", "Pandas", "OpenCV", "AutoHotkey"],
+            "Python RPA against a site with no API: drives package tracking through Selenium, with structured logging and JSON output. Small, public, and representative of the automation work that is otherwise all behind client NDAs.",
+          stack: ["Python", "Selenium"],
+          repoUrl: "https://github.com/feliperaro/automacao-correios",
         },
       ],
     },
@@ -151,12 +159,8 @@ export const content: Record<Locale, Dictionary> = {
       workLabel: "Work",
       educationLabel: "Education",
       work: [
-        {
-          role: "Founder, CEO & CTO · IT Consultant",
-          org: "FEROQ",
-          location: "Worldwide",
-          period: "2021 — Present",
-        },
+        // BasicX leads rather than FEROQ, even though FEROQ started earlier. It
+        // is the current employed role, and it is what the CVs open with.
         {
           role: "AI Engineer",
           org: "BasicX Solutions",
@@ -164,6 +168,12 @@ export const content: Record<Locale, Dictionary> = {
           location: "São Paulo, SP, Brazil",
           mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brazil",
           period: "Oct 2025 — Present",
+        },
+        {
+          role: "Founder, CEO & CTO · IT Consultant",
+          org: "FEROQ",
+          location: "Worldwide",
+          period: "2021 — Present",
         },
         {
           role: "Senior RPA Developer",
@@ -281,7 +291,7 @@ export const content: Record<Locale, Dictionary> = {
       paragraphs: [
         "Sou engenheiro de IA aplicada e construo agentes que aguentam o contato com usuários reais. Ajudo a construir e opero uma plataforma multi-tenant de agentes de IA que atende 22 marcas em produção sobre Kubernetes — uma máquina de estados escrita à mão em LangGraph, com tool calling, retrieval híbrido, memória por cliente, guardrails e transferência para humano, com tracing de ponta a ponta.",
         "Antes de migrar para arquitetura de agentes, entreguei mais de 20 automações de RPA em produção — e é por isso que enxergo IA de um jeito diferente: sei o que de fato quebra em um processo de negócio, não apenas como contornar com prompt. Esse trabalho eliminou mais de 500 horas de processamento manual por mês em diferentes frentes do negócio e movimenta dezenas de milhares de registros mensais.",
-        "Meu stack é Python e TypeScript — LangGraph, FastAPI, PostgreSQL, MongoDB e Redis, Next.js e React, com Kubernetes e CI/CD para entrega. Aprendo rápido, resolvo problemas e trabalho bem em equipe. Gosto de tecnologia, cloud computing, IA, games, e-sports, viagens e aprender coisas novas.",
+        "Meu stack é Python e TypeScript — LangGraph, FastAPI, PostgreSQL, MongoDB e Redis, Next.js e React, com Kubernetes e CI/CD para entrega. Uso Claude Code todos os dias para desenvolvimento e code review, e trato revisar e refinar código gerado por IA como parte do trabalho, não como um atalho. Português nativo, inglês fluente, aberto a trabalho remoto com times globais.",
       ],
     },
     skills: {
@@ -296,29 +306,34 @@ export const content: Record<Locale, Dictionary> = {
     },
     projects: {
       title: "Projetos",
-      note: "Trabalhos selecionados da minha experiência profissional. Demos e repositórios disponíveis sob solicitação.",
+      note: "O trabalho para clientes é fechado. Os dois repositórios linkados aqui são públicos, e o primeiro roda a própria suíte de avaliação em um clone novo, sem chave de API.",
       viewLive: "Ver online →",
       items: [
+        {
+          title: "support-agent",
+          description:
+            "Um agente de suporte open-source feito para mostrar prática de produção, não uma demo: retrieval híbrido, controle de acesso na camada de ferramentas que recusa ações privilegiadas antes da verificação de identidade, guardrails de saída e uma suíte de avaliação que pontua o comportamento do agente na CI, sem chave de API.",
+          stack: ["Python", "LangGraph", "Anthropic API", "GitHub Actions"],
+          repoUrl: "https://github.com/feliperaro/support-agent",
+        },
         {
           title: "Plataforma Multi-Tenant de Agentes de IA",
           description:
             "IA conversacional atendendo 22 marcas em produção como serviços isolados em Kubernetes — uma máquina de estados escrita à mão em LangGraph, com tool calling, retrieval híbrido BM25 + FAISS, memória por cliente, guardrails e transferência para humano, com tracing via Langfuse e LangSmith.",
           stack: ["LangGraph", "Python", "FastAPI", "Kubernetes"],
-          repoUrl: GITHUB,
         },
         {
           title: "Suíte de RPA para Saúde",
           description:
             "Mais de 20 automações para processos de provedores de saúde, entregues de ponta a ponta — do levantamento de requisitos à produção — eliminando mais de 500 horas de processamento manual por mês em diferentes frentes do negócio e movimentando dezenas de milhares de registros mensais.",
           stack: ["Python", "RPA", "Selenium"],
-          repoUrl: GITHUB,
         },
         {
-          title: "Automações RPA Corporativas",
+          title: "Automação de Rastreio nos Correios",
           description:
-            "Soluções de RPA para times de financeiro, RH, seguros, saúde e logística — da documentação de processos ao desenvolvimento, dashboards e deploy em produção, com suporte contínuo.",
-          stack: ["Python", "Pandas", "OpenCV", "AutoHotkey"],
-          repoUrl: GITHUB,
+            "RPA em Python contra um site sem API: conduz o rastreio de encomendas via Selenium, com logging estruturado e saída em JSON. Pequeno, público e representativo do trabalho de automação que, de resto, está todo sob NDA.",
+          stack: ["Python", "Selenium"],
+          repoUrl: "https://github.com/feliperaro/automacao-correios",
         },
       ],
     },
@@ -328,18 +343,18 @@ export const content: Record<Locale, Dictionary> = {
       educationLabel: "Formação",
       work: [
         {
-          role: "Fundador, CEO & CTO · Consultor de Tecnologia",
-          org: "FEROQ",
-          location: "Worldwide",
-          period: "Fev 2021 — Presente",
-        },
-        {
           role: "Engenheiro de IA",
           org: "BasicX Solutions",
           url: "https://basicx-solutions.vercel.app/",
           location: "São Paulo, SP, Brasil",
           mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brasil",
           period: "Out 2025 — Presente",
+        },
+        {
+          role: "Fundador, CEO & CTO · Consultor de Tecnologia",
+          org: "FEROQ",
+          location: "Worldwide",
+          period: "Fev 2021 — Presente",
         },
         {
           role: "Desenvolvedor RPA Sênior",
@@ -410,7 +425,7 @@ export const content: Record<Locale, Dictionary> = {
     },
     contact: {
       title: "Entre em contato",
-      text: "Aberto a oportunidades com pessoas e empresas focadas em mudar o mundo através de tecnologia, automação e inova��ão. Tem um projeto em mente ou quer colaborar? Minha caixa de entrada est�� sempre aberta.",
+      text: "Aberto a oportunidades com pessoas e empresas focadas em mudar o mundo através de tecnologia, automação e inovação. Tem um projeto em mente ou quer colaborar? Minha caixa de entrada está sempre aberta.",
       cta: "Diga olá",
     },
     footer: {
