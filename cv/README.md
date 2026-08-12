@@ -29,6 +29,25 @@ CVs, `linkedin-profile.md`, and the portfolio site — must agree with them.
 - **Azure means Azure OpenAI Service** (provider integration), not Azure
   infrastructure depth.
 - **No client names** appear on any surface; sector references only.
+- **Claude Code is used daily for development and code review**, including reviewing
+  and refining AI-generated code. Confirmed by Felipe. Do not stretch this into
+  building agent tooling for other developers, or into any other vendor's tool.
+
+## Checking the page count
+
+The DOM ratio below is a guide, not the answer — `break-inside: avoid` on `.entry`
+can push a whole block to a third page while the ratio still reads under 2.0. The
+only reliable check is to render and count:
+
+```bash
+python -m http.server 8899 &   # from this directory
+"/c/Program Files/Google/Chrome/Application/chrome.exe" --headless=new --disable-gpu \
+  --no-pdf-header-footer --print-to-pdf=/tmp/x.pdf \
+  "http://127.0.0.1:8899/felipe-roque-fullstack-engineer.html"
+python -c "import re;print(len(re.findall(rb'/MediaBox', open('/tmp/x.pdf','rb').read())))"
+```
+
+Two is the target. Ratios around 1.85 render as two pages; 1.94 did not.
 
 ## Making the PDF
 

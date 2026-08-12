@@ -50,7 +50,7 @@ Applied AI engineer with 5+ years building production systems that automate comp
 
 Before moving into agent architecture I delivered 20+ production RPA automations, which is why I approach AI differently from most: I know what actually breaks in a business workflow, not just how to prompt around it. That work removed over 500 hours of manual processing per month across multiple business fronts and handles tens of thousands of records monthly. I've since migrated no-code n8n workflows into tested, maintainable Python services — the same shift, one process at a time.
 
-My stack is Python and TypeScript: LangGraph and LangChain, FastAPI, hybrid BM25 and FAISS retrieval with reranking, PostgreSQL, MongoDB and Redis, Next.js and React on the front end, Kubernetes and GitLab CI for delivery. I integrate with ERP, warehouse management, CRM, ticketing, and the WhatsApp Business Platform. Postgraduate in Artificial Intelligence for Developers (FIAP).
+My stack is Python and TypeScript: LangGraph and LangChain, FastAPI, hybrid BM25 and FAISS retrieval with reranking, PostgreSQL, MongoDB and Redis, Next.js and React on the front end, Kubernetes and GitLab CI for delivery. I integrate with ERP, warehouse management, CRM, ticketing, and the WhatsApp Business Platform. I work with Claude Code daily for development and code review, and treat reviewing and refining AI-generated code as part of the job rather than a shortcut around it. Postgraduate in Artificial Intelligence for Developers (FIAP).
 
 I'm open to remote roles with global teams working on applied AI and automation. Portuguese native, English fluent — I studied and lived in Canada. Let's connect.
 ```
@@ -101,6 +101,7 @@ This is your current role and it now leads the experience section on all three C
 • Instrumented production agents with Langfuse and LangSmith tracing over OpenTelemetry, hardened with concurrency tests covering multi-replica handoff locking and message debouncing.
 • Built configuration as a product: Pydantic-validated per-tenant YAML with a web builder providing versioning and diffing, plus a CI job asserting deployed configuration matches the repository.
 • Delivered supporting automation — an ERP-to-WMS order fulfillment integrator, a deterministic payroll-billing audit engine with a human approval gate, and migrations of n8n no-code workflows into tested Python services.
+• Use Claude Code daily for feature development and code review, reviewing and refining AI-generated code before it reaches the shared test suite and CI.
 ```
 
 > **Accuracy notes, since these are checkable.** You are 203 of 422 commits on the
@@ -165,6 +166,12 @@ your top 3 pinned skills prominently, so order matters.
 13. n8n
 14. Node.js
 15. React
+16. AI-Assisted Development
+
+Add "Claude Code" as a skill too if LinkedIn offers it in the picker. It is
+increasingly a literal line item in job descriptions — the Strider full-stack
+posting names it in the required stack — and recruiters are starting to filter on
+it. If the picker has no entry, "AI-Assisted Development" carries the keyword.
 
 RPA drops from third to seventh deliberately. It is still there for recruiter
 filters, but leading with it now anchors you to the role you are moving out of.
