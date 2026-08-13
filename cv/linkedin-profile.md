@@ -52,8 +52,12 @@ Before moving into agent architecture I delivered 20+ production RPA automations
 
 My stack is Python and TypeScript: LangGraph and LangChain, FastAPI, hybrid BM25 and FAISS retrieval with reranking, PostgreSQL, MongoDB and Redis, Next.js and React on the front end, Kubernetes and GitLab CI for delivery. I integrate with ERP, warehouse management, CRM, ticketing, and the WhatsApp Business Platform. I work with Claude Code daily for development and code review, and treat reviewing and refining AI-generated code as part of the job rather than a shortcut around it. Postgraduate in Artificial Intelligence for Developers (FIAP).
 
-I'm open to remote roles with global teams working on applied AI and automation. Portuguese native, English fluent — I studied and lived in Canada. Let's connect.
+I'm open to remote roles with global teams working on applied AI and automation, as an employee or an international contractor. I'm based in Brazil (UTC-3), which gives full overlap with US business hours. Portuguese native, English fluent — I studied and lived in Canada. Let's connect.
 ```
+
+> Keep this last paragraph in step with the CV contact blocks and the site hero,
+> which make the same two claims: US-hours overlap and contractor availability.
+> See the drift list in `README.md` for the limits on both.
 
 ---
 
@@ -77,10 +81,10 @@ substantiates the English claim on the profile.
 Keep these consistent with the CVs. LinkedIn renders bullets fine — start each
 line with `•` and keep them to two lines each.
 
-### FEROQ — Founder, CEO & CTO · IT Consultant (2021 – Present)
+### FEROQ — Founder & Principal Consultant (2021 – Present)
 
 ```
-• Founded and lead a technology consultancy delivering AI agents, intelligent process automation, and full-stack applications to clients across healthcare, finance, and logistics.
+• Run an independent technology consultancy delivering AI agents, intelligent process automation, and full-stack applications to clients across healthcare, finance, and logistics.
 • Architect and ship multi-agent systems using LangChain and LangGraph, handling tool use, retrieval, memory, state management, and coordination between agents.
 • Instrument production agents with tracing, evaluation frameworks, and guardrails, managing prompt and version changes to keep behavior reliable and cost-effective.
 • Integrate AI solutions with enterprise platforms including CRM (Salesforce), ERP, ticketing, and data warehouse systems via REST APIs and webhooks.

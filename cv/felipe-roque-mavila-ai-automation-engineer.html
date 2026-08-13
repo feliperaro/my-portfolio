@@ -12,7 +12,7 @@
   body {
     font-family: Calibri, "Segoe UI", Arial, sans-serif;
     font-size: 10pt;
-    line-height: 1.28;
+    line-height: 1.22;
     color: #000;
     background: #fff;
     max-width: 190mm;
@@ -42,14 +42,14 @@
     font-size: 10.5pt;
     text-transform: uppercase;
     letter-spacing: 0.6pt;
-    margin: 11pt 0 4pt;
+    margin: 9pt 0 3pt;
     padding-bottom: 2pt;
     border-bottom: 1pt solid #000;
   }
 
   h3 {
     font-size: 10pt;
-    margin: 7pt 0 0;
+    margin: 6pt 0 0;
   }
 
   .meta {
@@ -60,8 +60,8 @@
 
   p { margin: 0 0 5pt; }
 
-  ul { margin: 2pt 0 5pt; padding-left: 15pt; }
-  li { margin-bottom: 2pt; }
+  ul { margin: 2pt 0 4pt; padding-left: 15pt; }
+  li { margin-bottom: 1.5pt; }
 
   .skills p { margin: 0 0 3pt; }
 
@@ -87,16 +87,15 @@
 <p>
   Senior AI and automation engineer with 5+ years building production-grade automation for complex business
   processes. Co-built and operates a multi-tenant AI agent platform serving 22 client brands in production on
-  Kubernetes - a hand-written LangGraph state machine covering tool use, hybrid retrieval, memory, state handling,
-  and agent coordination, instrumented with tracing, guardrails, and behavioral tests for reliable production
-  behavior. Having delivered 20+ production RPA automations before moving into agent architecture, brings both
-  sides of the enterprise automation shift: the process knowledge to understand what actually breaks in a business
-  workflow, and the engineering to replace it with observable multi-agent systems. Owns projects end to end and
-  independently - process discovery, workflow redesign, solution architecture, development with automated testing
-  and CI/CD, cloud deployment, monitoring, and ongoing support - working directly with client stakeholders in a
-  consulting delivery model. Automation delivered across multiple business fronts has removed over 500 hours of
-  manual processing per month, handling tens of thousands of records monthly. Postgraduate in Artificial
-  Intelligence for Developers. Fluent English and Portuguese; based in Brazil.
+  Kubernetes - a hand-written LangGraph state machine covering tool use, hybrid retrieval, memory, and agent
+  coordination, instrumented with tracing, guardrails, and behavioral tests. Having delivered 20+ production RPA
+  automations before moving into agent architecture, brings both sides of the enterprise automation shift: the
+  process knowledge to understand what actually breaks in a business workflow, and the engineering to replace it
+  with observable multi-agent systems. Owns projects end to end and independently - process discovery, workflow
+  redesign, architecture, development with automated testing and CI/CD, deployment, monitoring, and support -
+  working directly with client stakeholders in a consulting delivery model. Automation delivered across multiple
+  business fronts has removed over 500 hours of manual processing per month, handling tens of thousands of records
+  monthly. Postgraduate in Artificial Intelligence for Developers. Fluent English and Portuguese; based in Brazil.
 </p>
 
 <h2>Technical Skills</h2>
@@ -119,8 +118,7 @@
   <ul>
     <li>Co-build and operate a multi-tenant conversational AI platform on WhatsApp, deployed as isolated Kubernetes services for 22 client brands across healthcare, veterinary, retail marketplace, real estate, fitness, and beauty verticals.</li>
     <li>Engineered the core agent as a hand-written LangGraph StateGraph - intent classification, lead extraction and persistence, retrieval, profile loading, a tool-calling agent loop, an LLM supervisor, and human-handoff detection - with checkpointed conversation state.</li>
-    <li>Built a hybrid retrieval layer combining BM25 and FAISS through Reciprocal Rank Fusion with cross-encoder reranking, over per-tenant isolated vector stores.</li>
-    <li>Designed a routing-agent and named-specialist architecture, with up to nine domain specialists per tenant, each bound to its own knowledge base and tool set.</li>
+    <li>Built a hybrid retrieval layer combining BM25 and FAISS through Reciprocal Rank Fusion with cross-encoder reranking over per-tenant isolated vector stores, feeding a routing-agent and named-specialist architecture of up to nine domain specialists per tenant, each bound to its own knowledge base and tool set.</li>
     <li>Implemented a supervisor and guardrail layer enforcing brand voice, output format, age gating, and crisis-trigger detection, backed by a behavioral test suite.</li>
     <li>Instrumented production agents with Langfuse and LangSmith tracing over OpenTelemetry, and hardened them with concurrency tests covering multi-replica handoff locking and message debouncing.</li>
     <li>Built configuration as a product: Pydantic-validated per-tenant YAML with a web builder providing versioning and diffing, plus a CI job asserting deployed configuration matches the repository.</li>
@@ -129,13 +127,12 @@
 </div>
 
 <div class="entry">
-  <h3>Founder, CEO &amp; CTO - IT Consultant</h3>
+  <h3>Founder &amp; Principal Consultant</h3>
   <p class="meta">FEROQ - Worldwide | 2021 - Present</p>
   <ul>
-    <li>Founded and lead a technology consultancy delivering AI agents, intelligent process automation, and full-stack applications to clients across healthcare, finance, and logistics, in a professional-services delivery model.</li>
+    <li>Run an independent technology consultancy delivering AI agents, intelligent process automation, and full-stack applications to clients across healthcare, finance, and logistics, in a professional-services delivery model.</li>
     <li>Design AI agents and orchestrated n8n workflows for client engagements, integrating enterprise systems, internal tools, and third-party REST APIs.</li>
-    <li>Own every project end to end with minimal supervision: process discovery, workflow redesign, solution architecture, development, cloud deployment, monitoring, and ongoing support.</li>
-    <li>Run requirements discovery directly with client stakeholders, converting current-state operations into automation specifications, scope, and acceptance criteria.</li>
+    <li>Own every project end to end with minimal supervision - running requirements discovery directly with client stakeholders, then workflow redesign, solution architecture, development, cloud deployment, monitoring, and ongoing support.</li>
   </ul>
 </div>
 
@@ -146,8 +143,7 @@
     <li>Delivered 20+ production automations for healthcare provider operations, owning each from current-state process analysis and documentation through development, production deployment, and support.</li>
     <li>Redesigned manual, repetitive back-office workflows across multiple business fronts for automation, removing over 500 hours of manual processing per month and reducing recurring operating cost while improving throughput consistency.</li>
     <li>Built AI agents and orchestrated automations running in production for internal teams and client accounts, integrating disparate business systems including CRM, ERP, and ticketing platforms to shorten delivery cycles.</li>
-    <li>Engineered Python automations using Selenium, Pandas, and OpenCV to drive web, desktop, and image-based interfaces where no API was available.</li>
-    <li>Implemented monitoring and operational dashboards over deployed automations, and hardened them against upstream system changes with structured error handling, retries, and diagnostics.</li>
+    <li>Engineered Python automations using Selenium, Pandas, and OpenCV to drive web, desktop, and image-based interfaces where no API was available, with monitoring dashboards, structured error handling, retries, and diagnostics that hardened them against upstream system changes.</li>
   </ul>
 </div>
 

@@ -13,7 +13,11 @@ export default function Projects() {
 
       <p className="mb-8 max-w-2xl text-text-muted">{t.projects.note}</p>
 
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
+      {/*
+        Two columns rather than three: there are four projects, and a 3-wide
+        grid strands the fourth card beside a column of empty space.
+      */}
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
         {t.projects.items.map((project, i) => (
           <article
             key={i}

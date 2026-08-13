@@ -21,6 +21,18 @@ export default function Navbar() {
   return (
     <header className="nav-surface sticky top-0 z-50 border-b border-border backdrop-blur">
       <nav className="section-container relative flex h-16 items-center justify-between">
+        {/*
+          Brand — also the only way back to the home page from /feroq, which
+          otherwise had no route home in the chrome at all.
+        */}
+        <Link
+          href="/"
+          aria-label="Felipe Ramos Roque — home"
+          className="font-mono text-sm font-semibold tracking-tight text-text transition-colors hover:text-accent"
+        >
+          felipe<span className="text-accent">.</span>roque
+        </Link>
+
         {/* Desktop links — centered */}
         <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 md:flex">
           {links.map((link) => (
@@ -55,10 +67,15 @@ export default function Navbar() {
           </li>
         </ul>
 
-        {/* Contact — right side */}
+        {/*
+          Contact — right side. The links above are absolutely positioned so
+          they centre on the viewport rather than on the remaining space, which
+          leaves only the brand and this in the flow. ml-auto is what pins it
+          right; without it, justify-between parks it next to the brand.
+        */}
         <Link
           href="/#contact"
-          className="hidden rounded-lg bg-accent px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-accent-hover md:block"
+          className="ml-auto hidden rounded-lg bg-accent px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-accent-hover md:block"
         >
           {t.nav.contact}
         </Link>

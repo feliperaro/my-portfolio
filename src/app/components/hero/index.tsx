@@ -21,7 +21,19 @@ export default function Hero() {
 
       <p className="mt-2 font-mono text-sm text-accent">{t.hero.subtitle}</p>
 
-      <p className="mt-6 max-w-2xl text-base text-text-muted sm:text-lg">{t.hero.pitch}</p>
+      {/*
+        The first thing a remote-hiring recruiter filters on. Kept above the
+        pitch so it survives the two seconds they spend before scrolling.
+      */}
+      <p className="mt-5 flex max-w-2xl items-start gap-2 text-sm text-text-muted">
+        <span
+          aria-hidden="true"
+          className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-emerald-500"
+        />
+        {t.hero.availability}
+      </p>
+
+      <p className="mt-5 max-w-2xl text-base text-text-muted sm:text-lg">{t.hero.pitch}</p>
 
       <div className="mt-8 flex flex-wrap items-center gap-3 sm:mt-10 sm:gap-4">
         <Link

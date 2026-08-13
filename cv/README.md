@@ -9,6 +9,34 @@ real selectable text).
 | `felipe-roque-applied-ai-engineer.*` | **Primary.** Applied AI / Forward-Deployed / AI Solutions Engineer roles |
 | `felipe-roque-mavila-ai-automation-engineer.*` | Mavila Consulting — AI Automation Engineer (AI Agents, Azure, Process Automation) |
 | `felipe-roque-fullstack-engineer.*` | General full-stack / software engineering roles |
+| `felipe-roque-itx-agentic-ai-engineer.*` | ITX Corp — Senior Software Engineer, Agentic AI Development (Remote, LATAM) |
+
+The applied-AI and full-stack variants carry a **Selected Projects** section
+linking `github.com/feliperaro/support-agent`. That repository is the only public,
+runnable evidence behind the agent claims, so it is load-bearing: if it changes,
+check that the CV bullet still describes what it actually does. `support-agent`
+is listed first in both, including on the full-stack variant where the portfolio
+site follows it — a personal site is the weaker proof and should not lead.
+
+Education is reverse-chronological on all three, and the two-month Cantek course
+is deliberately absent: it overlaps the Tamwood period, which already carries the
+Canada claim, and dropping it bought two lines of headroom on the tightest CV.
+
+The Mavila and ITX variants are each tailored to one posting. Mavila keeps that
+posting's "Remote, Full-Time (40h/week)" contact line and has no Selected Projects
+section. ITX puts **LATAM** in the location line, because that posting screens on
+it ("limited to candidates based in LATAM"), and leads its skills with the
+posting's own section names — Agentic AI, RAG & Retrieval, LLM Integration,
+Evaluation/Observability/Guardrails, Identity & Access. Do not sync either with the
+general variants by reflex.
+
+The ITX posting asks for CrewAI, AutoGen, Semantic Kernel, GCP Vertex AI,
+Databricks, Snowflake, BigQuery, and Pinecone. **None of these appear on the CV,
+because none are true.** The posting says certifications are "a plus, not a
+screening requirement" and accepts "demonstrable proficiency in agentic
+development" instead — which is what `support-agent` and the platform work are
+there to be. Adding an unearned framework name to match a keyword would trade a
+real advantage for a question that cannot be answered in an interview.
 
 ## Claims that must not drift
 
@@ -32,22 +60,64 @@ CVs, `linkedin-profile.md`, and the portfolio site — must agree with them.
 - **Claude Code is used daily for development and code review**, including reviewing
   and refining AI-generated code. Confirmed by Felipe. Do not stretch this into
   building agent tooling for other developers, or into any other vendor's tool.
+- **FEROQ is a trading name, not a company.** Felipe confirmed it has no legal
+  entity separate from him, no employees, and no co-founders. The title is
+  therefore **"Founder & Principal Consultant"** — never "CEO", never "CTO", and
+  never anything implying headcount ("lead a team", "our engineers", "at the scale
+  of a startup team"). "Consultancy" is fine; a solo consultancy is still a
+  consultancy. The delivery scope claimed — discovery, architecture, development,
+  deployment, support — is real and needs no inflation.
+- **"Available as an international contractor"** appears on the applied-AI and
+  full-stack contact blocks and in the site hero. Felipe confirmed this. It is a
+  statement about invoicing arrangements, not about visa status or work
+  authorization in any country — do not escalate it into either.
+- **"Full overlap with US business hours"** is true (UTC−3 sits one to two hours
+  ahead of US Eastern). Do not extend the same claim to European hours, where the
+  overlap is a morning only.
 
 ## Checking the page count
 
-The DOM ratio below is a guide, not the answer — `break-inside: avoid` on `.entry`
-can push a whole block to a third page while the ratio still reads under 2.0. The
-only reliable check is to render and count:
+Render and count — two pages is the target:
 
 ```bash
 python -m http.server 8899 &   # from this directory
 "/c/Program Files/Google/Chrome/Application/chrome.exe" --headless=new --disable-gpu \
   --no-pdf-header-footer --print-to-pdf=/tmp/x.pdf \
   "http://127.0.0.1:8899/felipe-roque-fullstack-engineer.html"
-python -c "import re;print(len(re.findall(rb'/MediaBox', open('/tmp/x.pdf','rb').read())))"
+python -c "from pypdf import PdfReader;print(len(PdfReader('/tmp/x.pdf').pages))"
 ```
 
-Two is the target. Ratios around 1.85 render as two pages; 1.94 did not.
+**Do not trust the DOM height ratio.** It is not merely approximate, it is
+non-monotonic: the applied-AI variant renders as two pages at ratio 1.891, while
+the Mavila variant rendered as *three* at 1.796. `break-inside: avoid` on `.entry`
+moves whole blocks, so total height does not determine page count.
+
+When it does overflow, find out what spilled rather than trimming blind:
+
+```bash
+python -c "
+from pypdf import PdfReader
+for i, p in enumerate(PdfReader('/tmp/x.pdf').pages, 1):
+    lines = [l for l in p.extract_text().splitlines() if l.strip()]
+    print(f'page {i}: {len(lines)} lines | first: {lines[0][:60]}')
+"
+```
+
+That is how the Mavila three-pager was diagnosed: page 3 held nothing but the last
+three Education entries, so the fix was ~6 lines of bullet merging, not a redesign.
+
+Chrome's `--print-to-pdf` needs an **absolute** output path. A relative one is
+accepted silently and the file is never written where you expect — which will
+leave you verifying a stale PDF.
+
+It also needs `--user-data-dir` pointed somewhere disposable when a normal Chrome
+window is already open. Without it the headless run exits **0, prints nothing,
+and writes no file** — the same silent failure as the relative path, and the same
+trap: you end up counting the pages of the previous render.
+
+```bash
+--user-data-dir=/c/Users/<you>/AppData/Local/Temp/chrome-print
+```
 
 ## Making the PDF
 

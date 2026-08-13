@@ -136,11 +136,11 @@ STYLES = {
     NAME:     (18, True,  False, 0,  2),
     HEADLINE: (11, True,  False, 0,  2),
     CONTACT:  (9, False, False, 0,  10),
-    SECTION:  (10.5, True, False, 11, 4),
+    SECTION:  (10.5, True, False, 9, 3),
     ENTRY:    (10, True,  False, 6,  0),
     META:     (9, False, True,  0,  2),
     BODY:     (10, False, False, 0, 4),
-    BULLET:   (10, False, False, 0, 2),
+    BULLET:   (10, False, False, 0, 1.5),
 }
 
 
@@ -156,7 +156,10 @@ def build(html_path: Path, docx_path: Path):
     normal.font.size = Pt(10)
     normal.font.color.rgb = RGBColor(0, 0, 0)
     normal.paragraph_format.space_after = Pt(0)
-    normal.paragraph_format.line_spacing = 1.05
+    # Tracks the HTML's line-height (1.22). Word's line_spacing and CSS
+    # line-height are not the same scale, so this is the empirical pairing
+    # that keeps the .docx paginating like the printed PDF.
+    normal.paragraph_format.line_spacing = 1.0
 
     for section in doc.sections:
         section.top_margin = section.bottom_margin = Pt(40)
