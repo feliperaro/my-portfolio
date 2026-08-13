@@ -10,6 +10,15 @@ real selectable text).
 | `felipe-roque-mavila-ai-automation-engineer.*` | Mavila Consulting — AI Automation Engineer (AI Agents, Azure, Process Automation) |
 | `felipe-roque-fullstack-engineer.*` | General full-stack / software engineering roles |
 
+The applied-AI and full-stack variants carry a **Selected Projects** section
+linking `github.com/feliperaro/support-agent`. That repository is the only public,
+runnable evidence behind the agent claims, so it is load-bearing: if it changes,
+check that the CV bullet still describes what it actually does.
+
+The Mavila variant is tailored to one posting — it keeps that posting's
+"Remote, Full-Time (40h/week)" contact line and has no Selected Projects section.
+Do not sync it with the other two by reflex.
+
 ## Claims that must not drift
 
 These were established by checking the source repositories, and every surface —
@@ -32,22 +41,55 @@ CVs, `linkedin-profile.md`, and the portfolio site — must agree with them.
 - **Claude Code is used daily for development and code review**, including reviewing
   and refining AI-generated code. Confirmed by Felipe. Do not stretch this into
   building agent tooling for other developers, or into any other vendor's tool.
+- **FEROQ is a trading name, not a company.** Felipe confirmed it has no legal
+  entity separate from him, no employees, and no co-founders. The title is
+  therefore **"Founder & Principal Consultant"** — never "CEO", never "CTO", and
+  never anything implying headcount ("lead a team", "our engineers", "at the scale
+  of a startup team"). "Consultancy" is fine; a solo consultancy is still a
+  consultancy. The delivery scope claimed — discovery, architecture, development,
+  deployment, support — is real and needs no inflation.
+- **"Available as an international contractor"** appears on the applied-AI and
+  full-stack contact blocks and in the site hero. Felipe confirmed this. It is a
+  statement about invoicing arrangements, not about visa status or work
+  authorization in any country — do not escalate it into either.
+- **"Full overlap with US business hours"** is true (UTC−3 sits one to two hours
+  ahead of US Eastern). Do not extend the same claim to European hours, where the
+  overlap is a morning only.
 
 ## Checking the page count
 
-The DOM ratio below is a guide, not the answer — `break-inside: avoid` on `.entry`
-can push a whole block to a third page while the ratio still reads under 2.0. The
-only reliable check is to render and count:
+Render and count — two pages is the target:
 
 ```bash
 python -m http.server 8899 &   # from this directory
 "/c/Program Files/Google/Chrome/Application/chrome.exe" --headless=new --disable-gpu \
   --no-pdf-header-footer --print-to-pdf=/tmp/x.pdf \
   "http://127.0.0.1:8899/felipe-roque-fullstack-engineer.html"
-python -c "import re;print(len(re.findall(rb'/MediaBox', open('/tmp/x.pdf','rb').read())))"
+python -c "from pypdf import PdfReader;print(len(PdfReader('/tmp/x.pdf').pages))"
 ```
 
-Two is the target. Ratios around 1.85 render as two pages; 1.94 did not.
+**Do not trust the DOM height ratio.** It is not merely approximate, it is
+non-monotonic: the applied-AI variant renders as two pages at ratio 1.891, while
+the Mavila variant rendered as *three* at 1.796. `break-inside: avoid` on `.entry`
+moves whole blocks, so total height does not determine page count.
+
+When it does overflow, find out what spilled rather than trimming blind:
+
+```bash
+python -c "
+from pypdf import PdfReader
+for i, p in enumerate(PdfReader('/tmp/x.pdf').pages, 1):
+    lines = [l for l in p.extract_text().splitlines() if l.strip()]
+    print(f'page {i}: {len(lines)} lines | first: {lines[0][:60]}')
+"
+```
+
+That is how the Mavila three-pager was diagnosed: page 3 held nothing but the last
+three Education entries, so the fix was ~6 lines of bullet merging, not a redesign.
+
+Chrome's `--print-to-pdf` needs an **absolute** output path. A relative one is
+accepted silently and the file is never written where you expect — which will
+leave you verifying a stale PDF.
 
 ## Making the PDF
 

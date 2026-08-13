@@ -12,7 +12,7 @@
   body {
     font-family: Calibri, "Segoe UI", Arial, sans-serif;
     font-size: 10pt;
-    line-height: 1.28;
+    line-height: 1.22;
     color: #000;
     background: #fff;
     max-width: 190mm;
@@ -42,14 +42,14 @@
     font-size: 10.5pt;
     text-transform: uppercase;
     letter-spacing: 0.6pt;
-    margin: 11pt 0 4pt;
+    margin: 9pt 0 3pt;
     padding-bottom: 2pt;
     border-bottom: 1pt solid #000;
   }
 
   h3 {
     font-size: 10pt;
-    margin: 7pt 0 0;
+    margin: 6pt 0 0;
   }
 
   .meta {
@@ -60,8 +60,8 @@
 
   p { margin: 0 0 5pt; }
 
-  ul { margin: 2pt 0 5pt; padding-left: 15pt; }
-  li { margin-bottom: 2pt; }
+  ul { margin: 2pt 0 4pt; padding-left: 15pt; }
+  li { margin-bottom: 1.5pt; }
 
   .skills p { margin: 0 0 3pt; }
 
@@ -80,8 +80,9 @@
 <h1>Felipe Ramos Roque</h1>
 <p class="headline">Applied AI Engineer | AI Agents &amp; Multi-Agent Systems | Process Automation | Python, TypeScript, LangGraph</p>
 <p class="contact">
-  São Paulo, SP, Brazil (Open to Remote) &bull; feliperoque.dev@gmail.com<br />
-  linkedin.com/in/felipe-ramos-roque-b901a417b &bull; github.com/feliperaro &bull; feliperamosroque.vercel.app
+  São Paulo, Brazil (UTC-3) &bull; feliperoque.dev@gmail.com<br />
+  linkedin.com/in/felipe-ramos-roque-b901a417b &bull; github.com/feliperaro &bull; feliperamosroque.vercel.app<br />
+  Open to remote roles worldwide - full overlap with US business hours - available as an international contractor
 </p>
 
 <h2>Professional Summary</h2>
@@ -126,10 +127,10 @@
 </div>
 
 <div class="entry">
-  <h3>Founder, CEO &amp; CTO - IT Consultant</h3>
+  <h3>Founder &amp; Principal Consultant</h3>
   <p class="meta">FEROQ - Worldwide | 2021 - Present</p>
   <ul>
-    <li>Founded and lead a technology consultancy delivering AI agents, intelligent process automation, and full-stack applications to clients across healthcare, finance, and logistics.</li>
+    <li>Run an independent technology consultancy delivering AI agents, intelligent process automation, and full-stack applications to clients across healthcare, finance, and logistics.</li>
     <li>Own the full delivery lifecycle with minimal supervision: requirements discovery, solution architecture, development, cloud deployment, monitoring, and ongoing client support.</li>
     <li>Build and maintain applications in Python, Node.js, TypeScript, and React with automated test suites and CI/CD pipelines.</li>
     <li>Run requirements discovery directly with client stakeholders, converting current-state operations into automation specifications, scope, and acceptance criteria.</li>
@@ -141,12 +142,10 @@
   <p class="meta">Fiibo - Fortaleza, CE, Brazil | April 2024 - September 2025</p>
   <ul>
     <li>Delivered 20+ production RPA automations for healthcare provider operations, owning each end to end from process discovery and documentation through development, deployment, and support.</li>
-    <li>Replaced manual, repetitive back-office workflows across multiple business fronts with reliable, scalable automation, removing over 500 hours of manual processing per month and reducing recurring operating cost.</li>
-    <li>Automated processing of tens of thousands of records per month, improving throughput consistency and eliminating a class of manual data-entry error.</li>
+    <li>Replaced manual, repetitive back-office workflows across multiple business fronts with reliable, scalable automation - removing over 500 hours of manual processing per month, automating tens of thousands of records monthly, and eliminating a class of manual data-entry error.</li>
     <li>Built AI agents and n8n automations running in production for internal teams and client accounts, integrating disparate systems to shorten delivery cycles.</li>
     <li>Developed automations in Python using Selenium, Pandas, and OpenCV to interact with web, desktop, and image-based interfaces where no API was available.</li>
-    <li>Produced operational dashboards for automation monitoring, giving stakeholders visibility into throughput, failures, and realized business impact.</li>
-    <li>Provided production support and continuous improvement for deployed automations, diagnosing failures and hardening processes against system changes.</li>
+    <li>Produced operational dashboards for automation monitoring and provided ongoing production support, giving stakeholders visibility into throughput and failures while hardening processes against upstream system changes.</li>
   </ul>
 </div>
 
@@ -165,6 +164,16 @@
   <ul>
     <li>Developed Python automation services and internal tools supporting business operations, including web scraping, file processing, and system integrations.</li>
     <li>Built and consumed REST APIs, wrote SQL and data transformation routines for reporting, and supported automations running in production.</li>
+  </ul>
+</div>
+
+<h2>Selected Projects</h2>
+
+<div class="entry">
+  <h3>support-agent - Python, LangGraph, Anthropic API, Pytest, GitHub Actions</h3>
+  <ul>
+    <li>Open-source support agent at github.com/feliperaro/support-agent, built to show production practice rather than a demo: a LangGraph classify-retrieve-act loop with hybrid retrieval, tool-level access control that refuses privileged actions before identity is verified, and output guardrails that block invented pricing.</li>
+    <li>Paired it with an evaluation harness that scores behavior structurally - tool calls, refusals, trajectory order, retrieval grounding - rather than response wording, running on a fresh clone with no API key and gated in CI against a score floor.</li>
   </ul>
 </div>
 

@@ -55,10 +55,15 @@ export default function Navbar() {
           </li>
         </ul>
 
-        {/* Contact — right side */}
+        {/*
+          Contact — right side. The links above are absolutely positioned so
+          they centre on the viewport rather than on the remaining space, which
+          leaves this as the only in-flow child; without ml-auto, justify-between
+          has nothing to push against and parks it on the left.
+        */}
         <Link
           href="/#contact"
-          className="hidden rounded-lg bg-accent px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-accent-hover md:block"
+          className="ml-auto hidden rounded-lg bg-accent px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-accent-hover md:block"
         >
           {t.nav.contact}
         </Link>

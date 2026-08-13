@@ -23,13 +23,13 @@ export type Dictionary = {
     skills: string;
     projects: string;
     experience: string;
-    blog: string;
     contact: string;
   };
   hero: {
     greeting: string;
     title: string;
     subtitle: string;
+    availability: string;
     pitch: string;
     viewWork: string;
     getInTouch: string;
@@ -72,11 +72,22 @@ export type Dictionary = {
     light: string;
     dark: string;
   };
-  blog: {
-    title: string;
-    construction: string;
-    loading: string;
-    error: string;
+  feroq: {
+    eyebrow: string;
+    tagline: string;
+    intro: string;
+    ctaPrimary: string;
+    ctaSecondary: string;
+    servicesTitle: string;
+    services: { title: string; description: string }[];
+    approachTitle: string;
+    approach: { title: string; description: string }[];
+    aboutTitle: string;
+    aboutParagraphs: string[];
+    contactTitle: string;
+    contactText: string;
+    contactCta: string;
+    backLink: string;
   };
 };
 
@@ -90,13 +101,14 @@ export const content: Record<Locale, Dictionary> = {
       skills: "Skills",
       projects: "Projects",
       experience: "Experience",
-      blog: "Blog",
       contact: "Contact",
     },
     hero: {
       greeting: "Hi, my name is",
       title: "Applied AI Engineer",
       subtitle: "AI Agents & Automation · Founder @ FEROQ",
+      availability:
+        "Open to remote roles worldwide · Based in Brazil (UTC−3), full overlap with US business hours · Available as an international contractor",
       pitch:
         "I build AI agents that run in production — multi-agent systems with retrieval, guardrails and tracing, serving 22 client brands on Kubernetes. Before that, 20+ RPA automations taught me what actually breaks in a business process.",
       viewWork: "View my work",
@@ -170,7 +182,7 @@ export const content: Record<Locale, Dictionary> = {
           period: "Oct 2025 — Present",
         },
         {
-          role: "Founder, CEO & CTO · IT Consultant",
+          role: "Founder & Principal Consultant",
           org: "FEROQ",
           location: "Worldwide",
           period: "2021 — Present",
@@ -258,12 +270,63 @@ export const content: Record<Locale, Dictionary> = {
       light: "Light",
       dark: "Dark",
     },
-    blog: {
-      title: "My Posts",
-      construction:
-        "This page is currently under construction. Exciting things coming soon! ✨",
-      loading: "Loading posts...",
-      error: "Failed to fetch posts",
+    // FEROQ is a trading name, not a registered company — Felipe is the only
+    // person behind it. Nothing here may imply staff, offices, or headcount,
+    // and the 22-brand platform belongs to his BasicX role, not to FEROQ.
+    feroq: {
+      eyebrow: "Independent consultancy · Since 2021",
+      tagline: "AI agents and process automation, delivered end to end.",
+      intro:
+        "FEROQ is the practice I run for direct client work: applied AI, intelligent process automation, and the software that has to exist around them. One engineer, accountable from the first discovery call through to production support — no handoffs, no account managers, nobody standing between you and the person writing the code.",
+      ctaPrimary: "Start a conversation",
+      ctaSecondary: "See my engineering work",
+      servicesTitle: "What I take on",
+      services: [
+        {
+          title: "AI agents that survive production",
+          description:
+            "Not demos. Agents with retrieval over your own documents, tool access scoped to what they are actually allowed to do, guardrails on what they say, and tracing so you can see why they did it. Built to be measured, not just shipped.",
+        },
+        {
+          title: "Intelligent process automation",
+          description:
+            "The repetitive, high-volume work your team still does by hand — data entry, reconciliation, moving records between systems that refuse to talk to each other. Automated in Python, with monitoring and error handling for the day the upstream system changes.",
+        },
+        {
+          title: "The software around it",
+          description:
+            "APIs, internal tools, dashboards and web applications in TypeScript and Python. The integration work that makes an automation genuinely useful is usually most of the job, so I do that too.",
+        },
+      ],
+      approachTitle: "How I work",
+      approach: [
+        {
+          title: "Discovery before code",
+          description:
+            "I start by watching what actually happens today, including the exceptions your team handles without thinking about them. Most automation projects fail here rather than in the code.",
+        },
+        {
+          title: "One person accountable",
+          description:
+            "You work directly with me for requirements, architecture, delivery and support. Nothing gets lost being passed between a salesperson, an analyst and a developer.",
+        },
+        {
+          title: "Built to be maintained",
+          description:
+            "Automated tests, CI/CD and monitoring from the start. What I deliver should keep running when I am not watching it, and make sense to whoever picks it up next.",
+        },
+      ],
+      aboutTitle: "Who you would be working with",
+      aboutParagraphs: [
+        "FEROQ is me — Felipe Ramos Roque, an applied AI engineer based in São Paulo. I have taken on independent client work under this name since 2021, alongside full-time engineering roles.",
+        "Day to day I co-build and operate a multi-tenant AI agent platform running in production on Kubernetes: LangGraph state machines with hybrid retrieval, guardrails and end-to-end tracing. Before moving into agent architecture I delivered 20+ production RPA automations for healthcare operations, which is why I approach AI differently from most — I know what breaks in a business process, not just how to prompt around it.",
+        "Portuguese native, English fluent. I work remotely with clients worldwide from UTC−3, which overlaps a full US business day.",
+      ],
+      contactTitle: "Have a process worth automating?",
+      contactText:
+        "Tell me what the work looks like today — what your team does by hand, where it breaks, and what it costs you. If it is a good fit I will tell you how I would approach it. If it is not, I will say so.",
+      contactCta: "Email me",
+      backLink: "Felipe's engineering portfolio",
     },
   },
 
@@ -273,13 +336,14 @@ export const content: Record<Locale, Dictionary> = {
       skills: "Skills",
       projects: "Projetos",
       experience: "Experiência",
-      blog: "Blog",
       contact: "Contato",
     },
     hero: {
       greeting: "Olá, meu nome é",
       title: "Engenheiro de IA Aplicada",
       subtitle: "Agentes de IA & Automação · Fundador na FEROQ",
+      availability:
+        "Aberto a vagas remotas no mundo todo · No Brasil (UTC−3), sobreposição total com o horário comercial dos EUA · Disponível como contractor internacional",
       pitch:
         "Construo agentes de IA que rodam em produção — sistemas multiagente com retrieval, guardrails e tracing, atendendo 22 marcas em Kubernetes. Antes disso, mais de 20 automações de RPA me ensinaram o que realmente quebra em um processo de negócio.",
       viewWork: "Ver meu trabalho",
@@ -351,7 +415,7 @@ export const content: Record<Locale, Dictionary> = {
           period: "Out 2025 — Presente",
         },
         {
-          role: "Fundador, CEO & CTO · Consultor de Tecnologia",
+          role: "Fundador & Consultor Principal",
           org: "FEROQ",
           location: "Worldwide",
           period: "Fev 2021 — Presente",
@@ -439,12 +503,60 @@ export const content: Record<Locale, Dictionary> = {
       light: "Claro",
       dark: "Escuro",
     },
-    blog: {
-      title: "Meus Posts",
-      construction:
-        "Esta página está em construção. Coisas empolgantes chegando em breve! ✨",
-      loading: "Carregando posts...",
-      error: "Falha ao carregar os posts",
+    feroq: {
+      eyebrow: "Consultoria independente · Desde 2021",
+      tagline: "Agentes de IA e automação de processos, de ponta a ponta.",
+      intro:
+        "A FEROQ é como atendo clientes diretamente: IA aplicada, automação inteligente de processos e o software que precisa existir em volta disso. Um engenheiro, responsável desde a primeira conversa de levantamento até o suporte em produção — sem repasses, sem gerente de conta, sem ninguém entre você e quem escreve o código.",
+      ctaPrimary: "Vamos conversar",
+      ctaSecondary: "Ver meu trabalho de engenharia",
+      servicesTitle: "O que eu assumo",
+      services: [
+        {
+          title: "Agentes de IA que aguentam produção",
+          description:
+            "Não são demos. Agentes com retrieval sobre os seus próprios documentos, acesso a ferramentas restrito ao que eles realmente podem fazer, guardrails sobre o que dizem e tracing para você ver por que agiram assim. Feitos para serem medidos, não apenas entregues.",
+        },
+        {
+          title: "Automação inteligente de processos",
+          description:
+            "O trabalho repetitivo e de alto volume que seu time ainda faz na mão — digitação, conciliação, mover registros entre sistemas que se recusam a conversar. Automatizado em Python, com monitoramento e tratamento de erro para o dia em que o sistema de origem mudar.",
+        },
+        {
+          title: "O software em volta",
+          description:
+            "APIs, ferramentas internas, dashboards e aplicações web em TypeScript e Python. O trabalho de integração que torna uma automação realmente útil costuma ser a maior parte do serviço, então eu faço isso também.",
+        },
+      ],
+      approachTitle: "Como eu trabalho",
+      approach: [
+        {
+          title: "Levantamento antes do código",
+          description:
+            "Começo observando o que de fato acontece hoje, incluindo as exceções que seu time resolve no automático sem nem perceber. A maioria dos projetos de automação falha aí, não no código.",
+        },
+        {
+          title: "Uma pessoa responsável",
+          description:
+            "Você fala diretamente comigo em requisitos, arquitetura, entrega e suporte. Nada se perde sendo repassado entre um vendedor, um analista e um desenvolvedor.",
+        },
+        {
+          title: "Feito para ser mantido",
+          description:
+            "Testes automatizados, CI/CD e monitoramento desde o início. O que eu entrego precisa continuar rodando quando eu não estiver olhando, e fazer sentido para quem pegar depois.",
+        },
+      ],
+      aboutTitle: "Com quem você vai trabalhar",
+      aboutParagraphs: [
+        "A FEROQ sou eu — Felipe Ramos Roque, engenheiro de IA aplicada, em São Paulo. Atendo clientes de forma independente sob esse nome desde 2021, em paralelo a posições full-time de engenharia.",
+        "No dia a dia ajudo a construir e opero uma plataforma multi-tenant de agentes de IA rodando em produção sobre Kubernetes: máquinas de estado em LangGraph com retrieval híbrido, guardrails e tracing de ponta a ponta. Antes de migrar para arquitetura de agentes, entreguei mais de 20 automações de RPA em produção para operações de saúde — e é por isso que enxergo IA de um jeito diferente: sei o que quebra em um processo de negócio, não apenas como contornar com prompt.",
+        "Português nativo, inglês fluente. Atendo clientes remotamente no mundo todo a partir do UTC−3, com sobreposição a um dia comercial inteiro nos EUA.",
+      ],
+      contactTitle: "Tem um processo que vale automatizar?",
+      contactText:
+        "Me conte como o trabalho funciona hoje — o que seu time faz na mão, onde quebra e quanto isso custa. Se fizer sentido, eu digo como abordaria. Se não fizer, eu falo também.",
+      contactCta: "Me mande um e-mail",
+      backLink: "Portfólio de engenharia do Felipe",
     },
   },
 };
