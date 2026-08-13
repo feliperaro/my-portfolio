@@ -4,7 +4,9 @@ import type { Metadata } from "next";
 // component (it reads the language provider) and client components cannot export
 // metadata themselves.
 export const metadata: Metadata = {
-  title: "FEROQ — AI & Automation Consultancy",
+  // Absolute, so the root layout's "%s — Felipe Ramos Roque" template does not
+  // append a second dash-clause to a title that already names the practice.
+  title: { absolute: "FEROQ — AI & Automation Consultancy" },
   description:
     "FEROQ is Felipe Ramos Roque's independent consultancy: AI agents that run in production, intelligent process automation, and the software around them. One engineer, accountable end to end.",
   alternates: { canonical: "/feroq" },

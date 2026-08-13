@@ -65,13 +65,6 @@ export type Dictionary = {
     built: string;
     rights: string;
   };
-  gate: {
-    welcome: string;
-    prompt: string;
-    themePrompt: string;
-    light: string;
-    dark: string;
-  };
   feroq: {
     eyebrow: string;
     tagline: string;
@@ -184,6 +177,10 @@ export const content: Record<Locale, Dictionary> = {
         {
           role: "Founder & Principal Consultant",
           org: "FEROQ",
+          // Internal: Timeline renders a same-tab link for a root-relative
+          // href. Without this the consultancy page has no inbound link from
+          // the portfolio at all, which is how it sat orphaned.
+          url: "/feroq",
           location: "Worldwide",
           period: "2021 — Present",
         },
@@ -262,13 +259,6 @@ export const content: Record<Locale, Dictionary> = {
     footer: {
       built: "Designed & built by Felipe Ramos Roque",
       rights: "All rights reserved",
-    },
-    gate: {
-      welcome: "Welcome",
-      prompt: "Choose your language",
-      themePrompt: "Choose a theme",
-      light: "Light",
-      dark: "Dark",
     },
     // FEROQ is a trading name, not a registered company — Felipe is the only
     // person behind it. Nothing here may imply staff, offices, or headcount,
@@ -417,8 +407,10 @@ export const content: Record<Locale, Dictionary> = {
         {
           role: "Fundador & Consultor Principal",
           org: "FEROQ",
+          url: "/feroq",
           location: "Worldwide",
-          period: "Fev 2021 — Presente",
+          // Bare year, to match the English entry and the CVs.
+          period: "2021 — Presente",
         },
         {
           role: "Desenvolvedor RPA Sênior",
@@ -495,13 +487,6 @@ export const content: Record<Locale, Dictionary> = {
     footer: {
       built: "Projetado & desenvolvido por Felipe Ramos Roque",
       rights: "Todos os direitos reservados",
-    },
-    gate: {
-      welcome: "Bem-vindo",
-      prompt: "Escolha seu idioma",
-      themePrompt: "Escolha um tema",
-      light: "Claro",
-      dark: "Escuro",
     },
     feroq: {
       eyebrow: "Consultoria independente · Desde 2021",

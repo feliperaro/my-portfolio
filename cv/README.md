@@ -13,7 +13,13 @@ real selectable text).
 The applied-AI and full-stack variants carry a **Selected Projects** section
 linking `github.com/feliperaro/support-agent`. That repository is the only public,
 runnable evidence behind the agent claims, so it is load-bearing: if it changes,
-check that the CV bullet still describes what it actually does.
+check that the CV bullet still describes what it actually does. `support-agent`
+is listed first in both, including on the full-stack variant where the portfolio
+site follows it — a personal site is the weaker proof and should not lead.
+
+Education is reverse-chronological on all three, and the two-month Cantek course
+is deliberately absent: it overlaps the Tamwood period, which already carries the
+Canada claim, and dropping it bought two lines of headroom on the tightest CV.
 
 The Mavila variant is tailored to one posting — it keeps that posting's
 "Remote, Full-Time (40h/week)" contact line and has no Selected Projects section.
@@ -90,6 +96,15 @@ three Education entries, so the fix was ~6 lines of bullet merging, not a redesi
 Chrome's `--print-to-pdf` needs an **absolute** output path. A relative one is
 accepted silently and the file is never written where you expect — which will
 leave you verifying a stale PDF.
+
+It also needs `--user-data-dir` pointed somewhere disposable when a normal Chrome
+window is already open. Without it the headless run exits **0, prints nothing,
+and writes no file** — the same silent failure as the relative path, and the same
+trap: you end up counting the pages of the previous render.
+
+```bash
+--user-data-dir=/c/Users/<you>/AppData/Local/Temp/chrome-print
+```
 
 ## Making the PDF
 

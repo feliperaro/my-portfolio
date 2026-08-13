@@ -1,8 +1,33 @@
 "use client";
 
+import Link from "next/link";
 import SectionTitle from "../section-title";
 import { useLanguage } from "../../i18n/language-provider";
 import { TimelineItem } from "../../i18n/content";
+
+/*
+  Org links are external company sites, so they open in a new tab -- except
+  FEROQ, whose page lives on this site. Sending a visitor off-site and back
+  again in a new tab for an internal route is the kind of thing people notice.
+*/
+function OrgLink({ url, label }: { url: string; label: string }) {
+  const className =
+    "font-medium text-text transition-colors hover:text-accent";
+
+  if (url.startsWith("/")) {
+    return (
+      <Link href={url} className={className}>
+        {label}
+      </Link>
+    );
+  }
+
+  return (
+    <a href={url} target="_blank" rel="noreferrer" className={className}>
+      {label}
+    </a>
+  );
+}
 
 function Timeline({ items }: { items: TimelineItem[] }) {
   return (
@@ -14,14 +39,7 @@ function Timeline({ items }: { items: TimelineItem[] }) {
           <h4 className="mt-1 font-semibold text-text">{item.role}</h4>
           <p className="text-text-muted">
             {item.url ? (
-              <a
-                href={item.url}
-                target="_blank"
-                rel="noreferrer"
-                className="font-medium text-text transition-colors hover:text-accent"
-              >
-                {item.org}
-              </a>
+              <OrgLink url={item.url} label={item.org} />
             ) : (
               <span className="font-medium text-text">{item.org}</span>
             )}
