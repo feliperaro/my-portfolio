@@ -120,10 +120,14 @@ export const content: Record<Locale, Dictionary> = {
       title: "Skills",
       groups: [
         { label: "AI & Agents", items: ["AI Agents", "LangGraph", "LangChain", "RAG", "Guardrails"] },
+        // Evaluation and tracing are the half of agent work that job posts screen
+        // on and portfolios forget. Six groups also fill the 2-column grid evenly;
+        // five left the last one alone in its row.
+        { label: "Evaluation & Observability", items: ["Evals", "Langfuse", "LangSmith", "OpenTelemetry"] },
         { label: "Languages", items: ["Python", "TypeScript", "JavaScript", "Java"] },
         { label: "Backend & Web", items: ["FastAPI", "Node.js", "React", "Next.js", "REST APIs"] },
         { label: "Automation", items: ["RPA", "n8n", "Selenium", "OpenCV"] },
-        { label: "Data & Cloud", items: ["Kubernetes", "PostgreSQL", "MongoDB", "Redis", "CI/CD"] },
+        { label: "Data & Cloud", items: ["Kubernetes", "Azure OpenAI", "PostgreSQL", "MongoDB", "Redis", "CI/CD"] },
       ],
     },
     projects: {
@@ -352,10 +356,11 @@ export const content: Record<Locale, Dictionary> = {
       title: "Skills",
       groups: [
         { label: "IA & Agentes", items: ["Agentes de IA", "LangGraph", "LangChain", "RAG", "Guardrails"] },
+        { label: "Avaliação & Observabilidade", items: ["Evals", "Langfuse", "LangSmith", "OpenTelemetry"] },
         { label: "Linguagens", items: ["Python", "TypeScript", "JavaScript", "Java"] },
         { label: "Backend & Web", items: ["FastAPI", "Node.js", "React", "Next.js", "APIs REST"] },
         { label: "Automação", items: ["RPA", "n8n", "Selenium", "OpenCV"] },
-        { label: "Dados & Cloud", items: ["Kubernetes", "PostgreSQL", "MongoDB", "Redis", "CI/CD"] },
+        { label: "Dados & Cloud", items: ["Kubernetes", "Azure OpenAI", "PostgreSQL", "MongoDB", "Redis", "CI/CD"] },
       ],
     },
     projects: {

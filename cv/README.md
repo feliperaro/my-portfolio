@@ -9,6 +9,7 @@ real selectable text).
 | `felipe-roque-applied-ai-engineer.*` | **Primary.** Applied AI / Forward-Deployed / AI Solutions Engineer roles |
 | `felipe-roque-mavila-ai-automation-engineer.*` | Mavila Consulting — AI Automation Engineer (AI Agents, Azure, Process Automation) |
 | `felipe-roque-fullstack-engineer.*` | General full-stack / software engineering roles |
+| `felipe-roque-itx-agentic-ai-engineer.*` | ITX Corp — Senior Software Engineer, Agentic AI Development (Remote, LATAM) |
 
 The applied-AI and full-stack variants carry a **Selected Projects** section
 linking `github.com/feliperaro/support-agent`. That repository is the only public,
@@ -21,9 +22,21 @@ Education is reverse-chronological on all three, and the two-month Cantek course
 is deliberately absent: it overlaps the Tamwood period, which already carries the
 Canada claim, and dropping it bought two lines of headroom on the tightest CV.
 
-The Mavila variant is tailored to one posting — it keeps that posting's
-"Remote, Full-Time (40h/week)" contact line and has no Selected Projects section.
-Do not sync it with the other two by reflex.
+The Mavila and ITX variants are each tailored to one posting. Mavila keeps that
+posting's "Remote, Full-Time (40h/week)" contact line and has no Selected Projects
+section. ITX puts **LATAM** in the location line, because that posting screens on
+it ("limited to candidates based in LATAM"), and leads its skills with the
+posting's own section names — Agentic AI, RAG & Retrieval, LLM Integration,
+Evaluation/Observability/Guardrails, Identity & Access. Do not sync either with the
+general variants by reflex.
+
+The ITX posting asks for CrewAI, AutoGen, Semantic Kernel, GCP Vertex AI,
+Databricks, Snowflake, BigQuery, and Pinecone. **None of these appear on the CV,
+because none are true.** The posting says certifications are "a plus, not a
+screening requirement" and accepts "demonstrable proficiency in agentic
+development" instead — which is what `support-agent` and the platform work are
+there to be. Adding an unearned framework name to match a keyword would trade a
+real advantage for a question that cannot be answered in an interview.
 
 ## Claims that must not drift
 

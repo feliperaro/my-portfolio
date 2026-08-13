@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Felipe Roque - Senior Software Engineer, Agentic AI - CV</title>
+<style>
+  /* ATS-safe: single column, no tables, no floats, no columns, no images, black text. */
+  @page { size: A4; margin: 14mm 15mm; }
+
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  body {
+    font-family: Calibri, "Segoe UI", Arial, sans-serif;
+    font-size: 10pt;
+    line-height: 1.22;
+    color: #000;
+    background: #fff;
+    max-width: 190mm;
+    margin: 0 auto;
+    padding: 14mm 15mm;
+  }
+
+  h1 {
+    font-size: 18pt;
+    line-height: 1.1;
+    margin: 0 0 2pt;
+    letter-spacing: 0.3pt;
+  }
+
+  .headline {
+    font-size: 11pt;
+    font-weight: bold;
+    margin: 0 0 4pt;
+  }
+
+  .contact {
+    font-size: 9pt;
+    margin: 0 0 12pt;
+  }
+
+  h2 {
+    font-size: 10.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.6pt;
+    margin: 9pt 0 3pt;
+    padding-bottom: 2pt;
+    border-bottom: 1pt solid #000;
+  }
+
+  h3 {
+    font-size: 10pt;
+    margin: 6pt 0 0;
+  }
+
+  .meta {
+    font-size: 9pt;
+    font-style: italic;
+    margin: 0 0 3pt;
+  }
+
+  p { margin: 0 0 5pt; }
+
+  ul { margin: 2pt 0 4pt; padding-left: 15pt; }
+  li { margin-bottom: 1.5pt; }
+
+  .skills p { margin: 0 0 3pt; }
+
+  a { color: #000; text-decoration: none; }
+
+  /* Keep a job block from splitting across pages where the browser allows it. */
+  .entry { break-inside: avoid; page-break-inside: avoid; }
+
+  @media print {
+    body { padding: 0; max-width: none; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Felipe Ramos Roque</h1>
+<p class="headline">Senior Software Engineer - Agentic AI | Multi-Agent Systems, RAG &amp; LLM Guardrails | Python, LangGraph</p>
+<p class="contact">
+  São Paulo, Brazil (LATAM, UTC-3) &bull; feliperoque.dev@gmail.com<br />
+  linkedin.com/in/felipe-ramos-roque-b901a417b &bull; github.com/feliperaro &bull; feliperamosroque.vercel.app<br />
+  Remote &bull; full overlap with US business hours &bull; available as an international contractor
+</p>
+
+<h2>Professional Summary</h2>
+<p>
+  Senior engineer with 5+ years building production software in Python, now focused on agentic AI. Co-built and operates
+  a multi-tenant agent platform serving 22 client brands in production on Kubernetes: a hand-written LangGraph state
+  machine with tool calling, hybrid retrieval, per-tenant isolation, guardrails and end-to-end tracing. Treats the
+  unglamorous half of agentic work as the job - evaluation, observability, and making sure an agent cannot reach data or
+  actions the caller is not entitled to. Having delivered 20+ production RPA automations before moving into agent
+  architecture, brings the process knowledge to understand what actually breaks in a business workflow and the
+  engineering to replace it with reliable, observable multi-agent systems. Postgraduate in Artificial Intelligence for
+  Developers. Fluent in English and Portuguese.
+</p>
+
+<h2>Technical Skills</h2>
+<div class="skills">
+  <p><strong>Agentic AI &amp; Orchestration:</strong> AI Agent Development, Multi-Agent Systems, Agent Orchestration, LangGraph (StateGraph), LangChain, Tool Use &amp; Function Calling, Routing &amp; Specialist Agents, Memory &amp; State Management, Prompt Engineering</p>
+  <p><strong>RAG &amp; Retrieval:</strong> Retrieval-Augmented Generation (RAG), Hybrid Retrieval (BM25 + FAISS), Reciprocal Rank Fusion, Cross-Encoder Reranking, Embeddings, Vector Stores (FAISS, Chroma), Multi-Tenant Knowledge Bases, Retrieval Grounding</p>
+  <p><strong>LLM Integration:</strong> OpenAI, Anthropic, Azure OpenAI Service, LLM APIs, Streaming, Structured Output, Cost and Latency Tuning, Model Evaluation and Selection</p>
+  <p><strong>Evaluation, Observability &amp; Guardrails:</strong> LLM Evaluation Harnesses, Behavioral Testing, AI Guardrails, Output Validation, Agent Tracing (Langfuse, LangSmith), OpenTelemetry, Responsible AI Practices</p>
+  <p><strong>Identity &amp; Access in Agentic Systems:</strong> Tool-Level Access Control, Identity Verification Before Privileged Actions, Per-Tenant Data Isolation, Token-Based API Authentication, Scoped Service Integrations</p>
+  <p><strong>Programming &amp; APIs:</strong> Python, TypeScript, JavaScript, Java, SQL, FastAPI, Node.js, React, Next.js, REST API Design &amp; Integration, Webhooks, Automated Testing, CI/CD, Git</p>
+  <p><strong>Data &amp; Cloud:</strong> Ingestion and Transformation Pipelines, Vector-Store Indexing and Refresh, ETL, Pandas, PostgreSQL, MongoDB, Redis, Kubernetes, Docker, GitLab CI, Agile (Kanban)</p>
+  <p><strong>Process Automation:</strong> RPA (Robotic Process Automation), Process Discovery, n8n, Selenium, OpenCV, Web Scraping</p>
+  <p><strong>Languages Spoken:</strong> Portuguese (Native), English (Fluent)</p>
+</div>
+
+<h2>Professional Experience</h2>
+
+<div class="entry">
+  <h3>AI Engineer</h3>
+  <p class="meta">BasicX Solutions - São Paulo, SP, Brazil | October 2025 - Present</p>
+  <ul>
+    <li>Co-build and operate a multi-tenant conversational AI platform on WhatsApp, deployed as isolated Kubernetes services for 22 client brands across healthcare, veterinary, retail marketplace, real estate, fitness, and beauty verticals.</li>
+    <li>Engineered the core agent as a hand-built LangGraph StateGraph - intent classification, lead extraction and persistence, retrieval, profile loading, a tool-calling agent loop, an LLM supervisor, and human-handoff detection - with checkpointed conversation state.</li>
+    <li>Designed a routing-agent and named-specialist architecture, with up to nine domain specialists per tenant, each bound to its own knowledge base and tool set so an agent can only reach the data and actions its tenant and role permit.</li>
+    <li>Built a hybrid retrieval layer combining BM25 and FAISS through Reciprocal Rank Fusion with cross-encoder reranking over per-tenant isolated vector stores, and own the ingestion and transformation pipelines that keep those stores indexed and refreshed so agents answer from current context rather than stale embeddings.</li>
+    <li>Implemented a supervisor and guardrail layer enforcing brand voice, output format, age gating, and crisis-trigger detection, backed by a behavioral test suite that gates changes in CI.</li>
+    <li>Instrumented production agents with Langfuse and LangSmith tracing over OpenTelemetry, and hardened them with concurrency tests covering multi-replica handoff locking and message debouncing.</li>
+    <li>Integrate business systems through token-authenticated REST APIs and webhooks - ERP, warehouse management, CRM, and the WhatsApp Business Platform - exposing them to agents as scoped, individually permissioned tools.</li>
+    <li>Work at pace in an Agile team, evaluating emerging agent frameworks, orchestration tooling, and LLM providers against cost, latency, and reliability before adopting them.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <h3>Founder &amp; Principal Consultant</h3>
+  <p class="meta">FEROQ - Worldwide | 2021 - Present</p>
+  <ul>
+    <li>Run an independent technology consultancy delivering AI agents, intelligent process automation, and full-stack applications to clients across healthcare, finance, and logistics.</li>
+    <li>Own the full delivery lifecycle with minimal supervision: requirements discovery, solution architecture, development, cloud deployment, monitoring, and ongoing client support.</li>
+    <li>Run discovery directly with client stakeholders, converting current-state operations into specifications and acceptance criteria, and explaining technical trade-offs to non-technical decision makers.</li>
+    <li>Build and maintain applications in Python, Node.js, TypeScript, and React with automated test suites and CI/CD pipelines.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <h3>Senior RPA Developer</h3>
+  <p class="meta">Fiibo - Fortaleza, CE, Brazil | April 2024 - September 2025</p>
+  <ul>
+    <li>Delivered 20+ production RPA automations for healthcare provider operations, owning each end to end from process discovery and documentation through development, deployment, and support.</li>
+    <li>Replaced manual, repetitive back-office workflows across multiple business fronts with reliable, scalable automation - removing over 500 hours of manual processing per month, automating tens of thousands of records monthly, and eliminating a class of manual data-entry error.</li>
+    <li>Built AI agents and n8n automations running in production for internal teams and client accounts, integrating disparate systems to shorten delivery cycles.</li>
+    <li>Developed automations in Python using Selenium, Pandas, and OpenCV to interact with web, desktop, and image-based interfaces where no API was available, handling regulated patient and payroll data under access controls.</li>
+    <li>Produced operational dashboards for automation monitoring and provided ongoing production support, giving stakeholders visibility into throughput and failures while hardening processes against upstream system changes.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <h3>RPA Analyst Developer</h3>
+  <p class="meta">Cadmus IT Solutions - São Paulo, SP, Brazil | March 2022 - September 2022</p>
+  <ul>
+    <li>Delivered RPA solutions for finance, HR, insurance, health, and logistics teams, covering process documentation, development, and production rollout.</li>
+    <li>Automated high-volume data entry and reconciliation with Python and Pandas, partnering with business analysts to convert as-is process maps into automation specifications and acceptance criteria.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <h3>Python Developer</h3>
+  <p class="meta">BPA Technologies - São Paulo, SP, Brazil | December 2020 - March 2022</p>
+  <ul>
+    <li>Developed Python automation services and internal tools supporting business operations, including web scraping, file processing, and system integrations.</li>
+    <li>Built and consumed REST APIs, wrote SQL and data transformation routines for reporting, and supported automations running in production.</li>
+  </ul>
+</div>
+
+<h2>Selected Projects</h2>
+
+<div class="entry">
+  <h3>support-agent - Python, LangGraph, Anthropic API, Pytest, GitHub Actions</h3>
+  <ul>
+    <li>Open-source agentic system at github.com/feliperaro/support-agent, built to show production practice rather than a demo: a LangGraph classify-retrieve-act loop with hybrid retrieval, tool-level access control that refuses privileged actions before the caller's identity is verified, and output guardrails that block invented pricing.</li>
+    <li>Paired it with an evaluation harness that scores behavior structurally - tool calls, refusals, trajectory order, retrieval grounding - rather than response wording, running on a fresh clone with no API key and gated in CI against a score floor.</li>
+  </ul>
+</div>
+
+<h2>Education</h2>
+
+<div class="entry">
+  <h3>Postgraduate Degree, Artificial Intelligence for Developers</h3>
+  <p class="meta">FIAP (Postech) - São Paulo, Brazil | August 2024 - June 2025</p>
+</div>
+
+<div class="entry">
+  <h3>Associate Degree, Information Technology</h3>
+  <p class="meta">Tamwood Careers College - Toronto, Canada | July 2023 - December 2023</p>
+</div>
+
+<div class="entry">
+  <h3>Bachelor's Degree, Systems Analysis and Development</h3>
+  <p class="meta">FIAP - São Paulo, SP, Brazil | February 2020 - December 2021</p>
+</div>
+
+<div class="entry">
+  <h3>Technical Degree, Information Technology</h3>
+  <p class="meta">Senac - Taboão da Serra, SP, Brazil | February 2019 - July 2020</p>
+</div>
+
+</body>
+</html>
