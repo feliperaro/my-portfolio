@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Felipe Roque - Senior Automation and AI Engineer - CV</title>
+<style>
+  /* ATS-safe: single column, no tables, no floats, no columns, no images, black text. */
+  @page { size: A4; margin: 14mm 15mm; }
+
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  body {
+    font-family: Calibri, "Segoe UI", Arial, sans-serif;
+    font-size: 10pt;
+    line-height: 1.22;
+    color: #000;
+    background: #fff;
+    max-width: 190mm;
+    margin: 0 auto;
+    padding: 14mm 15mm;
+    /* ATS: keep fi/fl/ff out of the PDF text layer, or "Artificial" extracts as
+       "Arti<ligature>cial" and keyword matching misses it. */
+    font-variant-ligatures: none;
+    -webkit-font-feature-settings: "liga" 0, "clig" 0;
+    font-feature-settings: "liga" 0, "clig" 0;
+  }
+
+  h1 {
+    font-size: 18pt;
+    line-height: 1.1;
+    margin: 0 0 2pt;
+    letter-spacing: 0.3pt;
+  }
+
+  .headline {
+    font-size: 11pt;
+    font-weight: bold;
+    margin: 0 0 4pt;
+  }
+
+  .contact {
+    font-size: 9pt;
+    margin: 0 0 12pt;
+  }
+
+  h2 {
+    font-size: 10.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.6pt;
+    margin: 9pt 0 3pt;
+    padding-bottom: 2pt;
+    border-bottom: 1pt solid #000;
+  }
+
+  h3 {
+    font-size: 10pt;
+    margin: 6pt 0 0;
+  }
+
+  .meta {
+    font-size: 9pt;
+    font-style: italic;
+    margin: 0 0 3pt;
+  }
+
+  p { margin: 0 0 5pt; }
+
+  ul { margin: 2pt 0 4pt; padding-left: 15pt; }
+  li { margin-bottom: 1.5pt; }
+
+  .skills p { margin: 0 0 3pt; }
+
+  a { color: #000; text-decoration: none; }
+
+  /* Keep a job block from splitting across pages where the browser allows it. */
+  .entry { break-inside: avoid; page-break-inside: avoid; }
+
+  @media print {
+    body { padding: 0; max-width: none; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Felipe Ramos Roque</h1>
+<p class="headline">Senior Automation &amp; AI Engineer | Business Systems Integration | Python, SQL, LLM APIs (Claude, GPT)</p>
+<p class="contact">
+  São Paulo, Brazil (UTC-3) &bull; Remote, Full-Time (40h/week) &bull; feliperoque.dev@gmail.com<br />
+  linkedin.com/in/felipe-ramos-roque-b901a417b &bull; github.com/feliperaro &bull; feliperamosroque.vercel.app<br />
+  Full overlap with US business hours - available as an international contractor
+</p>
+
+<h2>Professional Summary</h2>
+<p>
+  Senior automation and AI engineer with 5+ years owning internal process automation end to end - process
+  discovery, integration design, development, deployment, and production support. Connects business systems
+  through custom Python services and pipelines, including Google Workspace APIs, ERP and warehouse systems, CRMs,
+  and third-party REST APIs, with SQL and Pandas behind the reporting. Integrates LLM APIs - Anthropic Claude,
+  OpenAI, Azure OpenAI Service - into operational workflows, and co-built a multi-tenant AI agent platform now
+  serving 22 client brands in production on Kubernetes. Delivered 20+ production automations for healthcare
+  provider operations, removing over 500 hours of manual processing per month and handling tens of thousands of
+  records monthly, working with patient and provider data under least-privilege access and masking. Postgraduate
+  in Artificial Intelligence for Developers. Fluent in English and Portuguese.
+</p>
+
+<h2>Technical Skills</h2>
+<div class="skills">
+  <p><strong>Languages &amp; Core:</strong> Python, SQL, TypeScript, JavaScript, Java, FastAPI, Node.js, Pandas, Automated Testing (Pytest), CI/CD Pipelines, Git</p>
+  <p><strong>Business Systems Integration:</strong> Google Workspace APIs (Sheets, Drive, Gmail, Calendar), Google Apps Script, Service-Account Authentication &amp; OAuth Scopes, ERP Systems, Warehouse Management (WMS), CRM Platforms, Ticketing Systems, REST API Design &amp; Integration, Webhooks, WhatsApp Business Platform, Meta Graph API</p>
+  <p><strong>AI &amp; LLM Integration:</strong> Anthropic Claude API, OpenAI API, Azure OpenAI Service, Prompt Engineering, Tool Use &amp; Function Calling, AI Agent Development, LangGraph, LangChain, Retrieval-Augmented Generation (RAG), Hybrid Retrieval (BM25 + FAISS), AI Guardrails, Agent Tracing (Langfuse, LangSmith), Behavioral Testing</p>
+  <p><strong>Process Automation:</strong> RPA (Robotic Process Automation), Business-Process Reengineering, Process Discovery &amp; Documentation, Workflow Orchestration, n8n, Scheduled Jobs &amp; Pipelines, Selenium, OpenCV, Web Scraping</p>
+  <p><strong>Data &amp; Reporting:</strong> SQL Query Development, PostgreSQL, MongoDB, Redis, ETL, Data Warehouse Integration, Operational Dashboards, Reporting Automation</p>
+  <p><strong>Cloud &amp; Infrastructure:</strong> Kubernetes, Docker, Multi-Tenant Architecture, Cloud Deployment, GitLab CI, Monitoring &amp; Error Handling</p>
+  <p><strong>Sensitive Data Practice:</strong> Healthcare Provider Operations, Patient and Provider Data Handling, Least-Privilege Access, Credential Isolation, Masking in Logs and Dashboards, Human Approval Gates, LGPD (Brazilian data protection law)</p>
+  <p><strong>Languages Spoken:</strong> Portuguese (Native), English (Fluent)</p>
+</div>
+
+<h2>Professional Experience</h2>
+
+<div class="entry">
+  <h3>AI Engineer</h3>
+  <p class="meta">BasicX Solutions - São Paulo, SP, Brazil | October 2025 - Present</p>
+  <ul>
+    <li>Co-build and operate a multi-tenant conversational AI platform on WhatsApp, deployed as isolated Kubernetes services for 22 client brands across healthcare, veterinary, retail marketplace, real estate, fitness, and beauty verticals.</li>
+    <li>Integrate LLM APIs (Anthropic Claude, OpenAI, Azure OpenAI Service) into production workflows through a hand-built LangGraph state machine - intent classification, lead extraction and persistence, retrieval, a tool-calling agent loop, and human-handoff detection - over checkpointed conversation state.</li>
+    <li>Build the operational automation around the platform: an ERP-to-WMS order fulfillment integrator, a deterministic payroll-billing audit engine with a human approval gate, and migrations of n8n no-code workflows into tested Python services.</li>
+    <li>Automate internal reporting into Google Workspace, so business teams read pipeline output in the tools they already work in rather than in a separate system.</li>
+    <li>Enforce a supervisor and guardrail layer over model output - brand voice, output format, age gating, and crisis-trigger detection - backed by a behavioral test suite.</li>
+    <li>Instrument production services with Langfuse and LangSmith tracing over OpenTelemetry, and hold deployed configuration to the repository through Pydantic-validated per-tenant YAML and a CI assertion job.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <h3>Founder &amp; Principal Consultant</h3>
+  <p class="meta">FEROQ - Worldwide | 2021 - Present</p>
+  <ul>
+    <li>Run an independent technology consultancy delivering process automation, AI-driven workflows, and full-stack applications to clients across healthcare, finance, and logistics.</li>
+    <li>Act as the single technical owner of each engagement with minimal supervision: requirements discovery with stakeholders, solution architecture, development, cloud deployment, monitoring, and ongoing support.</li>
+    <li>Integrate client business systems - Google Workspace APIs, ERPs, CRMs, and third-party REST APIs - into custom Python and Node.js pipelines with automated tests and CI/CD.</li>
+    <li>Convert current-state operations into automation specifications, scope, and acceptance criteria, working directly with the business owners of each process.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <h3>Senior RPA Developer</h3>
+  <p class="meta">Fiibo - Fortaleza, CE, Brazil | April 2024 - September 2025</p>
+  <ul>
+    <li>Delivered 20+ production automations for healthcare provider operations, owning each end to end from process discovery and documentation through development, deployment, and support.</li>
+    <li>Replaced manual, repetitive back-office workflows across multiple business fronts - removing over 500 hours of manual processing per month, automating tens of thousands of records monthly, and eliminating a class of manual data-entry error.</li>
+    <li>Connected each automation to the systems the business already ran on - Google Workspace APIs, internal web and desktop applications, and vendor portals - through REST APIs where they existed and Python with Selenium, Pandas, and OpenCV where they did not.</li>
+    <li>Handled patient and provider data throughout under least-privilege access, isolated credentials, and masking in logs and dashboards, in line with Brazil's LGPD.</li>
+    <li>Built AI agents and n8n automations running in production for internal teams and client accounts, and produced operational dashboards giving stakeholders visibility into throughput and failures.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <h3>RPA Analyst Developer</h3>
+  <p class="meta">Cadmus IT Solutions - São Paulo, SP, Brazil | March 2022 - September 2022</p>
+  <ul>
+    <li>Delivered automation for finance, HR, insurance, health, and logistics teams, covering process documentation, development, and production rollout.</li>
+    <li>Automated high-volume data entry and reconciliation with Python, SQL, and Pandas, partnering with business analysts to convert as-is process maps into automation specifications and acceptance criteria.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <h3>Python Developer</h3>
+  <p class="meta">BPA Technologies - São Paulo, SP, Brazil | December 2020 - March 2022</p>
+  <ul>
+    <li>Developed Python automation services and internal tools supporting business operations, including web scraping, file processing, and integrations with Google Workspace and other business systems.</li>
+    <li>Built and consumed REST APIs, wrote SQL and data transformation routines for reporting, and supported automations running in production.</li>
+  </ul>
+</div>
+
+<h2>Selected Projects</h2>
+
+<div class="entry">
+  <h3>support-agent - Python, Anthropic Claude API, LangGraph, Pytest, GitHub Actions</h3>
+  <ul>
+    <li>Open-source operational agent at github.com/feliperaro/support-agent, built to show production practice rather than a demo: a classify-retrieve-act loop on the Claude API with tool-level access control that refuses privileged actions before identity is verified, and output guardrails that block invented pricing.</li>
+    <li>Paired with an evaluation harness that scores behavior structurally - tool calls, refusals, trajectory order, retrieval grounding - rather than response wording, running on a fresh clone with no API key and gated in CI against a score floor.</li>
+  </ul>
+</div>
+
+<h2>Education</h2>
+
+<div class="entry">
+  <h3>Postgraduate Degree, Artificial Intelligence for Developers</h3>
+  <p class="meta">FIAP (Postech) - São Paulo, Brazil | August 2024 - June 2025</p>
+</div>
+
+<div class="entry">
+  <h3>Associate Degree, Information Technology</h3>
+  <p class="meta">Tamwood Careers College - Toronto, Canada | July 2023 - December 2023</p>
+</div>
+
+<div class="entry">
+  <h3>Bachelor's Degree, Systems Analysis and Development</h3>
+  <p class="meta">FIAP - São Paulo, SP, Brazil | February 2020 - December 2021</p>
+</div>
+
+<div class="entry">
+  <h3>Technical Degree, Information Technology</h3>
+  <p class="meta">Senac - Taboão da Serra, SP, Brazil | February 2019 - July 2020</p>
+</div>
+
+</body>
+</html>

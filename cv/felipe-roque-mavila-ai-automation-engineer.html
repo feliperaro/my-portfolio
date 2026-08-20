@@ -18,6 +18,11 @@
     max-width: 190mm;
     margin: 0 auto;
     padding: 14mm 15mm;
+    /* ATS: keep fi/fl/ff out of the PDF text layer, or "Artificial" extracts as
+       "Arti<ligature>cial" and keyword matching misses it. */
+    font-variant-ligatures: none;
+    -webkit-font-feature-settings: "liga" 0, "clig" 0;
+    font-feature-settings: "liga" 0, "clig" 0;
   }
 
   h1 {

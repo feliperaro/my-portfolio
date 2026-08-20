@@ -1,6 +1,6 @@
 # CV — ATS-optimized
 
-Three English variants, single-column and ATS-safe (no tables, columns, text boxes,
+Five English variants, single-column and ATS-safe (no tables, columns, text boxes,
 images, icons, or header/footer content — everything lives in the document body as
 real selectable text).
 
@@ -10,6 +10,23 @@ real selectable text).
 | `felipe-roque-mavila-ai-automation-engineer.*` | Mavila Consulting — AI Automation Engineer (AI Agents, Azure, Process Automation) |
 | `felipe-roque-fullstack-engineer.*` | General full-stack / software engineering roles |
 | `felipe-roque-itx-agentic-ai-engineer.*` | ITX Corp — Senior Software Engineer, Agentic AI Development (Remote, LATAM) |
+| `felipe-roque-senior-automation-ai-engineer.*` | Senior Automation & AI Engineer — US client via recruiter, internal process automation (NetSuite/Google Workspace/LLM APIs) |
+
+Four application surfaces are written out here as well, and all must stay in step
+with the CVs and with the drift list below:
+
+| File | Use it for |
+| --- | --- |
+| `linkedin-profile.md` | LinkedIn headline, About, and experience bullets |
+| `strider-profile.md` | Strider profile — the same roles in Strider's S.T.A.R.T. format |
+| `mavila-application-answers.md` | Free-text answers on the Mavila application form |
+| `automation-ai-recruiter-reply.md` | Reply to the Senior Automation & AI Engineer approach, sent with that variant attached |
+
+`strider-profile.md` deliberately renames three job titles, because Strider's own
+guidance rules out "Analyst", "Programmer", and language-based titles. That is the
+one place a surface is allowed to disagree with the CVs, and the file explains why.
+The Azure answer in `mavila-application-answers.md` states plainly that Container Apps
+and Function Apps are not hands-on experience — do not "fix" that.
 
 The applied-AI and full-stack variants carry a **Selected Projects** section
 linking `github.com/feliperaro/support-agent`. That repository is the only public,
@@ -18,7 +35,7 @@ check that the CV bullet still describes what it actually does. `support-agent`
 is listed first in both, including on the full-stack variant where the portfolio
 site follows it — a personal site is the weaker proof and should not lead.
 
-Education is reverse-chronological on all three, and the two-month Cantek course
+Education is reverse-chronological on all of them, and the two-month Cantek course
 is deliberately absent: it overlaps the Tamwood period, which already carries the
 Canada claim, and dropping it bought two lines of headroom on the tightest CV.
 
@@ -37,6 +54,16 @@ screening requirement" and accepts "demonstrable proficiency in agentic
 development" instead — which is what `support-agent` and the platform work are
 there to be. Adding an unearned framework name to match a keyword would trade a
 real advantage for a question that cannot be answered in an interview.
+
+The senior-automation variant answers a recruiter approach for a US client's
+internal-automation role: NetSuite, Google Workspace, Python, SQL, LLM APIs, and
+healthcare/HIPAA as a "nice to have". It reorders the skills block to lead with
+Python and SQL and with Business Systems Integration, and it is the only variant
+carrying a **Sensitive Data Practice** line. It keeps `support-agent` in Selected
+Projects, because that posting names Claude explicitly and the repository is the
+public evidence of Claude API work. `automation-ai-recruiter-reply.md` is the
+covering message and states both gaps in Felipe's own voice - do not soften it
+into a claim.
 
 ## Claims that must not drift
 
@@ -74,6 +101,22 @@ CVs, `linkedin-profile.md`, and the portfolio site — must agree with them.
 - **"Full overlap with US business hours"** is true (UTC−3 sits one to two hours
   ahead of US Eastern). Do not extend the same claim to European hours, where the
   overlap is a morning only.
+- **Google Workspace API work is real and spans all four roles** - Felipe confirmed
+  Sheets and Drive read/write, Apps Script, the Gmail and Calendar APIs, and
+  setting up service-account authentication himself. The individual capabilities
+  are therefore listed **unattributed, in Technical Skills only**; each experience
+  bullet says "Google Workspace APIs" and stops there. Do not pin Apps Script or
+  service accounts to a specific employer - the confirmation covered the roles and
+  the capabilities as two separate lists, not as a cross-product.
+- **NetSuite is not claimed anywhere, because it is not true.** The recruiter's
+  posting names it; the adjacent truths that stand in for it are the ERP-to-WMS
+  order fulfillment integrator, plus ERP, CRM, WMS, and ticketing integration.
+- **HIPAA is not claimed, and PHI is deliberately not used as a keyword.** The
+  healthcare work ran under Brazil's LGPD. What transfers is the handling
+  discipline - least-privilege access, isolated credentials, masking in logs and
+  dashboards, human approval gates - and that is how every surface must word it.
+  Adding "HIPAA" to a skills line to clear an ATS filter would create a question
+  that cannot be answered on the call.
 
 ## Checking the page count
 
@@ -119,6 +162,12 @@ trap: you end up counting the pages of the previous render.
 --user-data-dir=/c/Users/<you>/AppData/Local/Temp/chrome-print
 ```
 
+That same `--user-data-dir` then becomes its own trap: Chrome caches the page in
+it, so a re-render after editing the HTML silently reprints the **old** version.
+The tell is a byte-identical PDF. Point `--user-data-dir` at a fresh directory
+(or add `?v=2` to the URL) whenever you have just changed the file you are
+printing.
+
 ## Making the PDF
 
 1. Open the `.html` file in Chrome.
@@ -147,7 +196,7 @@ sometimes drops the `@page` size, so the local server is the reliable path.
 
 ## Keeping it to two pages
 
-All three variants are tuned to just under two A4 pages. Adding bullets will push
+All variants are tuned to just under two A4 pages. Adding bullets will push
 them over, and a CV that spills a few lines onto page three reads worse than a
 tight two-page one. To check without printing, serve this directory and measure
 the rendered height against the A4 content box (269mm tall at the CSS margins):
@@ -186,3 +235,26 @@ This rewrites every `.docx` from its matching `.html`. Requires `python-docx`
 - Keywords written out in full with the common abbreviation in parentheses on first
   use, e.g. "RPA (Robotic Process Automation)".
 - Plain hyphens instead of en/em dashes, and no ligatures or unusual glyphs.
+- Ligatures are switched off in CSS, not just avoided in the source text. Calibri
+  ships `fi`/`fl`/`ff` ligatures, and Chrome writes them into the PDF text layer as
+  single codepoints - so "Artificial" extracts as "Artiﬁcial" and an ATS
+  searching "Artificial Intelligence" scores zero. The `body` rule that prevents it:
+
+  ```css
+  font-variant-ligatures: none;
+  -webkit-font-feature-settings: "liga" 0, "clig" 0;
+  font-feature-settings: "liga" 0, "clig" 0;
+  ```
+
+  All five variants carry this rule, and `public/cv.pdf` was re-rendered from the
+  applied-AI variant afterwards - it previously shipped 24 ligatures and failed the
+  "Artificial Intelligence" check. Keep the rule in any new variant, and verify
+  after any render:
+
+  ```bash
+  python -c "
+  from pypdf import PdfReader
+  t = ''.join(p.extract_text() for p in PdfReader('out.pdf').pages)
+  print(len([c for c in t if c in 'ﬀﬁﬂﬃﬄ']), 'ligatures')
+  "
+  ```
