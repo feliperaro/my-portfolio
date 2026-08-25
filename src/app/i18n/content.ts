@@ -29,7 +29,6 @@ export type Dictionary = {
     greeting: string;
     title: string;
     subtitle: string;
-    availability: string;
     pitch: string;
     viewWork: string;
     getInTouch: string;
@@ -100,8 +99,6 @@ export const content: Record<Locale, Dictionary> = {
       greeting: "Hi, my name is",
       title: "Applied AI Engineer",
       subtitle: "AI Agents & Automation · Founder @ FEROQ",
-      availability:
-        "Open to remote roles worldwide · Based in Brazil (UTC−3), full overlap with US business hours · Available as an international contractor",
       pitch:
         "I build AI agents that run in production — multi-agent systems with retrieval, guardrails and tracing, serving 22 client brands on Kubernetes. Before that, 20+ RPA automations taught me what actually breaks in a business process.",
       viewWork: "View my work",
@@ -336,8 +333,6 @@ export const content: Record<Locale, Dictionary> = {
       greeting: "Olá, meu nome é",
       title: "Engenheiro de IA Aplicada",
       subtitle: "Agentes de IA & Automação · Fundador na FEROQ",
-      availability:
-        "Aberto a vagas remotas no mundo todo · No Brasil (UTC−3), sobreposição total com o horário comercial dos EUA · Disponível como contractor internacional",
       pitch:
         "Construo agentes de IA que rodam em produção — sistemas multiagente com retrieval, guardrails e tracing, atendendo 22 marcas em Kubernetes. Antes disso, mais de 20 automações de RPA me ensinaram o que realmente quebra em um processo de negócio.",
       viewWork: "Ver meu trabalho",
