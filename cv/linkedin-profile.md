@@ -37,21 +37,30 @@ and because item 7 is still open.
    paragraph per role, which is true only once the site is deployed. Pin it after the
    deploy, not before.
 
-> **The old About was carrying the exact claim this file forbids.** It read
-> "Proficient in Python, JavaScript, React.js, **AWS cloud services**, and agile
-> development methodologies" — see the AWS box below, which was written on the
-> assumption that the claim existed only in an audit's suggestion. It did not: it was
-> live on the profile. It also led with "Full-stack Software Engineer" rather than AI,
-> and claimed automations that "reduced operational costs", a cost-reduction claim
-> with nothing behind it. All three are gone with the replacement.
+> **The profile that was replaced was written by the audit.** Reading the audit
+> itself — COD3RS, `app.coders.com.br/analises/3785`, dated 24 Jul 2026 — settles
+> where the old copy came from: its suggested About is *verbatim* what was live, and
+> its suggested headline is the live headline with one word changed. Someone pasted
+> the audit's output onto the profile.
+>
+> That matters because of what came with it. The About it wrote claimed "Proficient
+> in Python, JavaScript, React.js, **AWS cloud services**" — the one claim the box
+> below forbids — plus automations that "reduced operational costs", a cost-reduction
+> claim with nothing behind it, and it led with "Full-stack Software Engineer" rather
+> than AI. All three were live until 2026-09-09, and all three are gone now.
+>
+> So the AWS box below was right about the origin and wrong about the reach: the
+> suggestion did come from an audit, and it had *already been acted on*.
 
 **FEROQ is held.** See the banner on its section. Its live title reads "Software
 Engineer · Self-employed", which *understates* the entry — leave it understated while
 the entry is held, rather than raising a title on the least-evidenced role.
 
 > **Do not add AWS.** The profile audit suggested "proficient in AWS cloud services"
-> and an AWS certification. That is not your stack. The `public/images/aws.png`
-> formerly in this repo (now deleted) is likely what the audit picked up on.
+> and an AWS Certified Developer certification. That is not your stack. The
+> `public/images/aws.png` formerly in this repo (now deleted) is likely what the audit
+> picked up on — and the suggestion was already pasted into the live About once, so
+> this box is a correction, not a precaution.
 >
 > Azure is different, and it improved: the agent platform genuinely supports Azure
 > OpenAI as an LLM and embedding provider, so the CVs now say "Azure OpenAI Service"
@@ -430,12 +439,56 @@ section is noise rather than signal.
 
 ---
 
-## What I did not act on from the audit
+## The audit itself, and what I rejected from it
 
-- **AWS** — not your stack. See the warning at the top.
-- **Certifications** — the suggestion to get AWS Certified Developer or UiPath
-  certification is reasonable career advice, but it's future work, not a profile
-  edit. If you do pursue one, Azure Fundamentals (AZ-900) is the better fit given
-  the roles you're targeting.
-- **Posting weekly in English** — sound advice, entirely up to you; nothing to
-  paste here.
+**Source:** COD3RS, `app.coders.com.br/analises/3785`, run 24 Jul 2026 against the
+old profile URL. Overall 6.4/10 — 63.5/100. By section:
+
+| Section | Score |
+| --- | --- |
+| Foto de perfil | 5/5 |
+| Número de conexões | 4/5 |
+| Headline | 7.5/10 |
+| Ajustes finais | 7/10 |
+| Skills e endossos | 7/10 |
+| About | 10/15 |
+| Experiências | 13/20 |
+| Atividade e networking | 5/10 |
+| Projetos & certificações | 4/10 |
+| **Idiomas** | **1/5** |
+
+The audit was right about the shape of the problem — Languages absent, BasicX and
+Fiibo empty, no Projects, skills unordered — and all of that is now fixed. Read it
+for the diagnosis, not the prescription: its own suggested copy is what created two
+of the problems this file exists to prevent.
+
+**Rejected, and why:**
+
+- **AWS.** "Proficient in AWS cloud services" and an AWS Certified Developer
+  certification. Not the stack. Already pasted into the live About once — see the top
+  of this file.
+- **UiPath or Automation Anywhere certification.** Reasonable-sounding, and exactly
+  backwards for the target. RPA was moved from third to seventh in the skills list on
+  purpose; paying for a certification that anchors the profile to the role being
+  moved *out of* works against the whole pivot. If a certification is worth the time,
+  it should point where the career is going.
+- **"Reduced operational costs."** The audit wrote this into its About draft with no
+  figure behind it. The real numbers — 500+ hours/month, 22 brands, 20+ automations —
+  are already in the copy as lower bounds of Felipe's own estimates. Inventing a
+  softer, unmeasured version of a claim that already exists in a measured form is
+  strictly worse.
+- **TOEFL or IELTS.** The Canadian study period (Tamwood, Jul–Dec 2023) already
+  substantiates the English claim on the profile, at no cost.
+- **"Add quantitative metrics to every role."** Generic advice that has to be applied
+  carefully here: `experience-source.md` holds three of five roles as unverified, and
+  the temptation to reach for a number is the exact failure mode it was written to
+  catch. Metrics go in when a question comes back answered, not before.
+
+**Accepted but still open:**
+
+- **Activity.** 5/10, and the weakest thing left. The profile has never posted —
+  "You haven't posted yet" — against 2,155 followers. Nothing in this file can fix
+  that; it is not copy to paste.
+- **International connections.** 4/5 already, slow to move, worth doing gradually.
+- **A GitHub link in the top card.** Contact info carries the portfolio; GitHub
+  reaches recruiters only through the Projects entry today.

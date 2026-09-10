@@ -55,11 +55,14 @@ BPA. Every pasted line was verified character-for-character against
 Three things the audit had wrong, found only by editing the profile rather than
 reading it:
 
-- **About was not empty.** It lazy-renders below the fold and the audit missed it.
-  What was live claimed "proficient in ... **AWS cloud services**" — the one claim
-  `linkedin-profile.md` explicitly forbids, which that file assumed existed only as an
-  audit's suggestion. It was live on the profile for as long as the profile has had an
-  About.
+- **About was not empty**, and reading the audit itself the next day explained why
+  the earlier pass got it wrong twice over. The audit — COD3RS,
+  `app.coders.com.br/analises/3785`, 24 Jul 2026 — did not miss About; it *rewrote*
+  it, and its draft is verbatim what was live. Its headline suggestion is the live
+  headline with one word changed. The old profile was the audit's output, pasted in.
+  That draft claimed "proficient in ... **AWS cloud services**", the one claim
+  `linkedin-profile.md` forbids — so that warning was written about a suggestion that
+  had already been acted on months earlier.
 - **"Artificial Intelligence (AI)", "AI Agents" and "LangGraph" were not among the 59
   skills.** The problem was never only ordering.
 - **The current-company setting does not always hold.** Switching the top card to
