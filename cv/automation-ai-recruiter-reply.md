@@ -54,6 +54,6 @@ Looking forward to speaking.
 
 Best regards,
 Felipe Ramos Roque
-linkedin.com/in/felipe-ramos-roque-b901a417b
+linkedin.com/in/feliperamosroque
 github.com/feliperaro
 feliperamosroque.vercel.app

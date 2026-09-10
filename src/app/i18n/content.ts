@@ -9,6 +9,16 @@ export type TimelineItem = {
   period: string;
 };
 
+/*
+  Work entries carry a description; education entries do not. Two types rather
+  than one optional field, so that an English description added without its
+  Portuguese counterpart fails the build -- which is the guarantee this file
+  exists to provide.
+*/
+export type WorkItem = TimelineItem & {
+  description: string;
+};
+
 export type Project = {
   title: string;
   description: string;
@@ -52,7 +62,7 @@ export type Dictionary = {
     title: string;
     workLabel: string;
     educationLabel: string;
-    work: TimelineItem[];
+    work: WorkItem[];
     education: TimelineItem[];
   };
   contact: {
@@ -84,7 +94,23 @@ export type Dictionary = {
 };
 
 export const GITHUB = "https://github.com/feliperaro";
-export const LINKEDIN = "https://www.linkedin.com/in/felipe-ramos-roque-b901a417b/";
+export const LINKEDIN = "https://www.linkedin.com/in/feliperamosroque/";
+
+/*
+  Digits only, in full international form: country code, then area code, then
+  the number -- no +, no spaces, no dashes. A Brazilian mobile therefore looks
+  like "5511987654321". wa.me rejects anything else, silently, by opening a
+  "phone number shared via url is invalid" page rather than a chat.
+
+  Empty until the number is confirmed. SocialBtns drops any entry with a blank
+  href, so leaving it empty ships nothing rather than shipping a dead link --
+  which matters here, because a push to this branch deploys to production.
+*/
+export const WHATSAPP_NUMBER = "5511952690231";
+
+export const WHATSAPP = WHATSAPP_NUMBER
+  ? `https://wa.me/${WHATSAPP_NUMBER}`
+  : "";
 
 export const content: Record<Locale, Dictionary> = {
   en: {
@@ -174,6 +200,8 @@ export const content: Record<Locale, Dictionary> = {
           location: "São Paulo, SP, Brazil",
           mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brazil",
           period: "Oct 2025 — Present",
+          description:
+            "Co-build and operate a multi-tenant conversational AI platform on WhatsApp, running as isolated Kubernetes services for 22 client brands. The core agent is a hand-written LangGraph state machine covering retrieval, tool use, guardrails, and human handoff, traced end to end in production.",
         },
         {
           role: "Founder & Principal Consultant",
@@ -184,6 +212,8 @@ export const content: Record<Locale, Dictionary> = {
           url: "/feroq",
           location: "Worldwide",
           period: "2021 — Present",
+          description:
+            "Independent consultancy delivering AI agents, intelligent process automation, and full-stack applications to clients across healthcare, finance, and logistics. I own each engagement end to end — process discovery, architecture, development, cloud deployment, and support.",
         },
         {
           role: "Senior RPA Developer",
@@ -192,6 +222,8 @@ export const content: Record<Locale, Dictionary> = {
           location: "Fortaleza, CE, Brazil",
           mapsUrl: "https://maps.google.com/?q=Fortaleza,+CE,+Brazil",
           period: "Apr 2024 — Sep 2025",
+          description:
+            "Delivered 20+ production automations for healthcare provider operations, owning each from current-state analysis through deployment and support. Redesigned manual back-office workflows across multiple business fronts, removing over 500 hours of manual processing per month.",
         },
         {
           role: "RPA Analyst Developer",
@@ -200,6 +232,8 @@ export const content: Record<Locale, Dictionary> = {
           location: "São Paulo, SP, Brazil",
           mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brazil",
           period: "Mar 2022 — Sep 2022",
+          description:
+            "Automated employee onboarding and offboarding end to end across HR, IT asset management, and finance, provisioning and revoking system access across internal platforms. Led the squad's Python RPA work and introduced its first engineering standards.",
         },
         {
           role: "Python Developer",
@@ -208,6 +242,8 @@ export const content: Record<Locale, Dictionary> = {
           location: "São Paulo, SP, Brazil",
           mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brazil",
           period: "Dec 2020 — Mar 2022",
+          description:
+            "Delivered process automation into client operations across insurance, healthcare, financial services, logistics, and consumer products, at a firm providing RPA as a service. Owned four to five automations from process discovery through production rollout.",
         },
       ],
       education: [
@@ -403,6 +439,8 @@ export const content: Record<Locale, Dictionary> = {
           location: "São Paulo, SP, Brasil",
           mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brasil",
           period: "Out 2025 — Presente",
+          description:
+            "Co-construo e opero uma plataforma multi-tenant de IA conversacional no WhatsApp, rodando como serviços isolados em Kubernetes para 22 marcas. O agente central é uma máquina de estados LangGraph escrita à mão, cobrindo retrieval, uso de ferramentas, guardrails e transferência para humano, com tracing ponta a ponta em produção.",
         },
         {
           role: "Fundador & Consultor Principal",
@@ -411,6 +449,8 @@ export const content: Record<Locale, Dictionary> = {
           location: "Worldwide",
           // Bare year, to match the English entry and the CVs.
           period: "2021 — Presente",
+          description:
+            "Consultoria independente entregando agentes de IA, automação inteligente de processos e aplicações full-stack para clientes em saúde, finanças e logística. Conduzo cada projeto de ponta a ponta — descoberta do processo, arquitetura, desenvolvimento, deploy em nuvem e suporte.",
         },
         {
           role: "Desenvolvedor RPA Sênior",
@@ -419,6 +459,8 @@ export const content: Record<Locale, Dictionary> = {
           location: "Fortaleza, CE, Brasil",
           mapsUrl: "https://maps.google.com/?q=Fortaleza,+CE,+Brasil",
           period: "Abr 2024 — Set 2025",
+          description:
+            "Entreguei mais de 20 automações em produção para as operações de um provedor de saúde, conduzindo cada uma da análise do processo atual até o deploy e o suporte. Redesenhei fluxos manuais de back-office em várias frentes, removendo mais de 500 horas de processamento manual por mês.",
         },
         {
           role: "Analista e Desenvolvedor RPA",
@@ -427,6 +469,8 @@ export const content: Record<Locale, Dictionary> = {
           location: "São Paulo, SP, Brasil",
           mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brasil",
           period: "Mar 2022 — Set 2022",
+          description:
+            "Automatizei admissão e desligamento de funcionários de ponta a ponta em RH, gestão de ativos de TI e finanças, provisionando e revogando acessos em plataformas internas. Liderei tecnicamente o trabalho de RPA em Python do time e introduzi seus primeiros padrões de engenharia.",
         },
         {
           role: "Desenvolvedor Python",
@@ -435,6 +479,8 @@ export const content: Record<Locale, Dictionary> = {
           location: "São Paulo, SP, Brasil",
           mapsUrl: "https://maps.google.com/?q=São+Paulo,+SP,+Brasil",
           period: "Dez 2020 — Mar 2022",
+          description:
+            "Entreguei automação de processos para operações de clientes em seguros, saúde, serviços financeiros, logística e bens de consumo, numa empresa que fornece RPA como serviço. Fui dono de quatro a cinco automações da descoberta do processo até o rollout em produção.",
         },
       ],
       education: [

@@ -1,7 +1,53 @@
 # LinkedIn profile copy — paste-ready
 
 Written to match the CVs in this directory, so the two never contradict each other.
-Everything here reflects confirmed experience.
+Nothing here is invented — but not all of it is *confirmed*, which is a different
+thing. `experience-source.md` tracks which roles have been verified against a written
+question list and which only ever came from an audit. Check it before pasting a role.
+
+## Order to work in — done on 2026-09-09 except one item
+
+Everything below was applied to the live profile on 2026-09-09, in this order. The
+sequence is kept because it is the order to redo this in if it ever has to be redone,
+and because item 7 is still open.
+
+1. ~~**The three stale titles.**~~ **Done.** BasicX `Information Technology Consultant`
+   → **AI Engineer**; Fiibo `RPA Developer` → **Senior RPA Developer**; Tamwood end
+   date `Jan 2024` → **Dec 2023**. These were the only *contradictions already public*
+   rather than gaps. The CVs were right in all three, so nothing in this repo changed.
+2. ~~**Profile URL.**~~ **Done** — `linkedin.com/in/feliperamosroque` resolves. The
+   seven-file repo pass followed it, in the same session.
+3. ~~**The three empty sections**: About, Languages, Projects.~~ **Done.** One
+   correction to what this file used to claim: **About was not empty.** The
+   2026-09-09 audit missed it because the profile lazy-renders. What was there is
+   worse than empty — see the note below.
+4. ~~**Two corrections that are not gaps.**~~ **Done.** FIAP now reads
+   `Postgraduate Degree, Artificial Intelligence for Developers`. The top card now
+   shows **Basicx Solutions** instead of FEROQ. That second one **did not hold on the
+   first save** — LinkedIn reverted it to the FEROQ role once, silently, and it took a
+   second pass. Re-check it after any future intro edit.
+5. ~~**Headline**, then **Skills**.~~ **Done.** Headline is Option 1. The five pinned
+   top skills are now Python · Artificial Intelligence (AI) · AI Agents · LangGraph ·
+   Robotic Process Automation (RPA), in that order.
+6. ~~**The roles.**~~ **Done** for all four unheld entries: BPA and Cadmus had their
+   first-person prose replaced, BasicX and Fiibo went from no description to the full
+   bullet sets. Every line was verified character-for-character against this file after
+   saving.
+7. **Featured — still open, and the only item that is.** Its portfolio card promises a
+   paragraph per role, which is true only once the site is deployed. Pin it after the
+   deploy, not before.
+
+> **The old About was carrying the exact claim this file forbids.** It read
+> "Proficient in Python, JavaScript, React.js, **AWS cloud services**, and agile
+> development methodologies" — see the AWS box below, which was written on the
+> assumption that the claim existed only in an audit's suggestion. It did not: it was
+> live on the profile. It also led with "Full-stack Software Engineer" rather than AI,
+> and claimed automations that "reduced operational costs", a cost-reduction claim
+> with nothing behind it. All three are gone with the replacement.
+
+**FEROQ is held.** See the banner on its section. Its live title reads "Software
+Engineer · Self-employed", which *understates* the entry — leave it understated while
+the entry is held, rather than raising a title on the least-evidenced role.
 
 > **Do not add AWS.** The profile audit suggested "proficient in AWS cloud services"
 > and an AWS certification. That is not your stack. The `public/images/aws.png`
@@ -12,6 +58,30 @@ Everything here reflects confirmed experience.
 > rather than the weaker "Microsoft Azure (working knowledge)". That is accurate, but
 > it is provider integration, not Azure infrastructure depth — do not stretch it into
 > AKS, Function Apps, or Container Apps.
+
+---
+
+## Profile URL — changed 2026-09-09
+
+It used to be the default LinkedIn assigns, with a random hash on the end
+(`felipe-ramos-roque-b901a417b`), which reads on a CV contact line as a profile
+nobody finished setting up. It is now:
+
+```
+linkedin.com/in/feliperamosroque
+```
+
+**This was a seven-file change, not a LinkedIn-only one**, and all seven are done.
+The old URL was written into five CVs, the site, and the recruiter reply draft:
+
+- `cv/felipe-roque-*.html` — all five contact blocks
+- `cv/automation-ai-recruiter-reply.md`
+- `src/app/i18n/content.ts` — the `LINKEDIN` constant
+
+LinkedIn does not redirect the old URL, so **every CV sent before 2026-09-09 now
+points at a dead link.** Nothing can be done about those; it is the reason this was
+done early rather than after another round of applications. Still outstanding from
+this change: regenerate the `.docx` files and `public/cv.pdf` from the updated HTML.
 
 ---
 
@@ -61,10 +131,35 @@ I'm open to remote roles with global teams working on applied AI and automation,
 
 ---
 
-## Languages section — currently missing, add it
+## Featured — empty, and the most visible thing you can fix
 
-The audit scored this 1/5 because the section is empty. This is the single
-cheapest fix on the profile. Add via *Add profile section → Additional → Languages*:
+Featured sits directly under About and above Experience. It is the only place on
+the profile where you choose what a recruiter looks at first; empty, it drops them
+straight from prose into job titles.
+
+Pin three, in this order:
+
+1. **support-agent** — `github.com/feliperaro/support-agent`. The one artifact that
+   shows production practice rather than a demo. Title the card so the value reads
+   without a click: "Open-source AI support agent — LangGraph, guardrails, and a
+   structural evaluation harness".
+2. **The portfolio** — `feliperamosroque.vercel.app`. The per-role paragraphs that
+   make this card worth pinning — they answer the "what did he actually do" question
+   the LinkedIn bullets have to compress — are written but **not yet deployed**. Pin
+   this only after the site ships them, or the card promises something the page does
+   not have.
+3. **The CV** — link or upload the applied-AI variant, which is what
+   `public/cv.pdf` serves.
+
+Stop at three. Featured scrolls horizontally past that, and a fourth card is
+effectively unpinned.
+
+---
+
+## Languages section — added 2026-09-09
+
+The audit scored this 1/5 because the section did not exist. It does now, added via
+*Add profile section → Additional → Languages*, with exactly these values:
 
 | Language | Proficiency to select |
 | --- | --- |
@@ -83,6 +178,16 @@ line with `•` and keep them to two lines each.
 
 ### FEROQ — Founder & Principal Consultant (2021 – Present)
 
+> **HELD — do not paste this yet.** Two questions decide whether these bullets are
+> FEROQ's work at all: are the "multi-agent systems using LangChain and LangGraph" and
+> the "tracing, evaluation frameworks, and guardrails" client deliveries, or are they
+> the BasicX platform described a second time? With BasicX already live on the profile,
+> publishing this puts the same system under two employers on one screen — worse than
+> a missing entry. See questions 7 and 8 in `experience-source.md`.
+>
+> When the answers come: work that belongs to BasicX **moves** to BasicX. FEROQ is not
+> deleted or emptied to resolve the overlap.
+
 ```
 • Run an independent technology consultancy delivering AI agents, intelligent process automation, and full-stack applications to clients across healthcare, finance, and logistics.
 • Architect and ship multi-agent systems using LangChain and LangGraph, handling tool use, retrieval, memory, state management, and coordination between agents.
@@ -95,6 +200,14 @@ line with `•` and keep them to two lines each.
 ### BasicX Solutions — AI Engineer (Oct 2025 – Present)
 
 This is your current role and it now leads the experience section on all three CVs.
+
+> **Architecture verified, attribution not.** Every system named below is confirmed to
+> exist by reading the repositories. What is unconfirmed is how much of each is yours
+> versus the team's — question 4 in `experience-source.md`. Three claims here were
+> already corrected from the code rather than by asking, and those corrections are
+> already in the copy: "co-build" (203 of 422 commits), the payroll audit engine that
+> is a deterministic rules engine and not AI, and the Chatwoot fork whose authorship is
+> upstream. Paste as written; do not restore a stronger verb.
 
 ```
 • Co-build and operate a multi-tenant conversational AI platform on WhatsApp, deployed as isolated Kubernetes services for 22 client brands across healthcare, veterinary, retail marketplace, real estate, fitness, and beauty verticals.
@@ -118,6 +231,12 @@ This is your current role and it now leads the experience section on all three C
 
 ### Fiibo — Senior RPA Developer (Apr 2024 – Sep 2025)
 
+> **Unverified, but publishing.** The 500-hour figure is Felipe's own estimate and
+> `README.md` already frames it as a lower bound, so it stays. The fragile line is the
+> fourth bullet — "Built AI agents... running in production" is the RPA-to-AI bridge the
+> whole pivot rests on, and it is one generic sentence. It is the first thing an
+> interview will push on. Question 11 in `experience-source.md` is what sharpens it.
+
 ```
 • Delivered 20+ production automations for healthcare provider operations, owning each from current-state process analysis through development, production deployment, and support.
 • Redesigned manual, repetitive back-office workflows across multiple business fronts, removing over 500 hours of manual processing per month and reducing recurring operating cost while improving throughput consistency.
@@ -130,28 +249,136 @@ This is your current role and it now leads the experience section on all three C
 ### Cadmus IT Solutions — RPA Analyst Developer (Mar 2022 – Sep 2022)
 
 ```
-• Delivered process automation for finance, HR, insurance, health, and logistics teams, covering documentation, development, and production rollout.
-• Automated high-volume data entry and reconciliation with Python and Pandas, eliminating manual handling of recurring spreadsheet and system workflows.
-• Partnered with business analysts and process owners to convert as-is process maps into automation specifications and acceptance criteria.
+Python RPA developer on Cadmus's Automation and Innovation team, automating the company's own internal operations across HR, IT asset management, and finance.
+
+• Automated employee onboarding and offboarding end to end, provisioning and revoking system access across internal platforms — replacing a manual, error-prone process split between HR and IT.
+• Delivered roughly six automations in seven months: three built new, and three inherited unfinished or failing in production and rebuilt, including correcting business logic that did not match what process owners actually needed.
+• Gathered requirements directly with process owners, then developed, tested, deployed, and supported each automation in production.
+• Led the squad's Python RPA work — one to two other developers plus up to three interns — and introduced the standards the team worked to: development conventions, project structure, code review, and documentation, where none had existed before.
+• Built every automation in Python and its ecosystem rather than on a commercial RPA platform.
 ```
+
+> **Two corrections from `experience-source.md`, both checkable.** The sector list
+> here used to read "finance, HR, insurance, health, and logistics" — insurance,
+> health, and logistics belong to **BPA** and had been copied onto Cadmus in error.
+> And the work was **internal**, not client delivery, which is the opposite of BPA.
+>
+> **Never write "Tech Lead" or "Team Lead" as the title.** It stayed "RPA Analyst
+> Developer" for all seven months; there was no promotion and no people management.
+> "Led the squad's Python RPA work" is accurate, and keeping the headcount visible
+> — one to two developers, up to three interns — is more credible than the bare
+> verb. Same discipline as the FEROQ rule: claim the work, never the org chart.
 
 ### BPA Technologies — Python Developer (Dec 2020 – Mar 2022)
 
 ```
-• Developed Python automation services and internal tools supporting business operations, including web scraping, file processing, and system integrations.
-• Built and consumed REST APIs to connect internal systems with third-party services.
-• Wrote SQL queries and data transformation routines supporting reporting and process validation.
-• Supported deployment, troubleshooting, and maintenance of automations running in production.
+Python developer at an RPA-as-a-service provider, delivering process automation into client operations across insurance, healthcare, financial services, logistics, and consumer products — including one of Brazil's largest insurers, a major health-plan operator, and a national consumer-goods brand.
+
+• Owned four to five automations end to end — process discovery and documentation, development, testing, deployment, and production rollout — and supported a wider portfolio running in production.
+• Built every automation on the company's in-house Python RPA framework, working in a squad of four to five developers under a tech lead, with pair programming and shared code standards.
+• Automated web, desktop, and file-based workflows using Selenium, Pandas, Openpyxl, OpenCV, AutoHotkey, and web scripting where no interface existed — and through REST APIs, spreadsheets, and Google Workspace where one did.
+• Wrote SQL and data transformation routines behind operational reporting, and built dashboards giving business stakeholders and technical support visibility into process insights, error rates, and run status.
+• Handled production support alongside development: triaging tickets, resolving automation defects, and supporting key users directly.
+• Grew into full ownership of delivery — by my final months I was taking automations end to end without tech-lead guidance.
 ```
+
+> **This entry used to describe the wrong job.** It said "internal tools supporting
+> business operations", which reads as automating BPA's own back office. BPA sells
+> RPA as a service; the work was client delivery into other companies.
+>
+> **No client names**, per the rule in `README.md` — and for a US audience the
+> operative reason is different anyway: Porto Seguro, GNDI, and Caloi carry no
+> recognition abroad. Scale reads where names do not.
+>
+> **Healthcare starts here, in 2020** — GNDI is a health-plan operator — not in
+> 2024 at Fiibo, as every surface used to imply. But attach **no data-handling
+> claim** to it: whether that work touched member data is unconfirmed, so the
+> sensitive-data practice line still starts at Fiibo.
 
 ---
 
-## Skills — reorder and trim
+## Education — all four were already there; both fields fixed 2026-09-09
+
+Missing from *this file* until now, but not from the profile: the 2026-09-09 audit
+found all four entries live. Two things are wrong on them, and both matter more than
+they look — the FIAP postgraduate degree is what supports "Applied AI Engineer" as a
+title, and Tamwood is what substantiates the English claim in the Languages section.
+
+- **FIAP reads `Postech, IA para Devs`** — Portuguese, on an English profile, in the
+  entry that carries the AI credential. Retype it as the table below has it.
+- **Tamwood ends `Jan 2024` on the profile**; it should read **Dec 2023**.
+
+| School | Degree | Field of study | Dates |
+| --- | --- | --- | --- |
+| FIAP (Postech) | Postgraduate Degree | Artificial Intelligence for Developers | Aug 2024 – Jun 2025 |
+| Tamwood Careers College | Associate Degree | Information Technology | Jul 2023 – Dec 2023 |
+| FIAP | Bachelor's Degree | Systems Analysis and Development | Feb 2020 – Dec 2021 |
+| Senac | Technical Degree | Information Technology | Feb 2019 – Jul 2020 |
+
+LinkedIn's degree and field are free text. Enter them exactly as written — an ATS
+reading the profile matches on the string, not on a picker value.
+
+> **The Tamwood date is settled: Jul 2023 – Dec 2023.** `experience-source.md` had
+> recorded Jan 2024 against Dec 2023 on every other surface; Felipe confirmed Dec 2023
+> on 2026-09-09 and the outlier was corrected. Type the table as written.
+
+---
+
+## Projects — support-agent added 2026-09-09
+
+LinkedIn keeps Projects separate from Featured, and it earns its place even with
+the same repo pinned above: Projects is indexed by search, Featured is not.
+
+**Project name**
+
+```
+support-agent — open-source AI support agent
+```
+
+**Description**
+
+```
+A support agent built to show production practice rather than a demo: a LangGraph classify-retrieve-act loop with hybrid retrieval, tool-level access control that refuses privileged actions before identity is verified, and output guardrails that block invented pricing.
+
+Paired with an evaluation harness that scores behavior structurally - tool calls, refusals, trajectory order, retrieval grounding - rather than response wording, running on a fresh clone with no API key and gated in CI against a score floor.
+```
+
+The entry is live with the name and description above, unassociated with any
+employer — it is Felipe's own work, not a deliverable of one.
+
+> **The repo link could not be attached.** LinkedIn's *Add media → Add a link* step
+> returned "We couldn't generate a preview for this link" for
+> `github.com/feliperaro/support-agent`. The repo is public and the URL is correct —
+> verified with `gh repo view` — so this is LinkedIn's fetcher failing on GitHub, not
+> a bad link. The Projects entry stands without it; the repo still reaches recruiters
+> through Featured, which takes the same URL through a different path. Worth retrying
+> the media attachment later.
+
+---
+
+## Skills — top five re-pinned 2026-09-09; the long tail is still untrimmed
 
 The audit's advice here is right: pin the ones recruiters filter on. LinkedIn shows
 your top 3 pinned skills prominently, so order matters.
 
-**Pin these three:** Python · Artificial Intelligence (AI) · AI Agents
+**You have 59 today, and the two surfacing at the top are Pandas and PostgreSQL, both
+attributed to Fiibo.** Neither is wrong; both are the wrong thing to lead with for the
+roles being targeted. This is the gap between having the skills listed and having them
+ordered — 59 entries means the list is doing no filtering work at all.
+
+**Done 2026-09-09** — the five pinned top skills are now, in order: Python
+(Programming Language) · Artificial Intelligence (AI) · AI Agents · LangGraph ·
+Robotic Process Automation (RPA). They replaced Software Development · RPA · Python ·
+JavaScript · React.js.
+
+**Three of those five did not exist among the 59.** "Artificial Intelligence (AI)",
+"AI Agents" and "LangGraph" all returned *No results found* under "Currently in your
+Skills section" and had to be added from LinkedIn's catalogue. That is the sharper
+version of the 59-skills problem: it was not just badly ordered, it was missing the
+three terms the target roles are actually filtered on.
+
+**Still open:** the long tail below the pinned five. Fifty-nine entries, led by Pandas
+and PostgreSQL, both attributed to Fiibo. The list below is the target.
 
 **Then keep roughly these 15, in this order:**
 
@@ -183,6 +410,23 @@ filters, but leading with it now anchors you to the role you are moving out of.
 Remove generic or duplicated entries (e.g. "Software Development" alongside
 "Programming", or single-purpose tools nobody searches for). Fewer, sharper skills
 beat a long tail.
+
+---
+
+## Licenses & certifications — 18 is too many, and one is off-message
+
+Not covered before this file's 2026-09-09 pass, because nobody had looked at the live
+profile. Eighteen entries is a scroll, and a scroll is where a recruiter stops reading.
+
+The FIAP postgraduate degree belongs in Education, where it already is, and carries the
+AI credential on its own. Below it, keep the certificates that match what you are
+applying for and let the rest go: an "Automate the Boring Stuff with Python" Udemy
+certificate (Sep 2022) sits oddly next to five years of production Python, and
+**Blockchain Advanced** points at a career you are not pursuing.
+
+This is optional and reversible — LinkedIn keeps nothing you delete, so decide once.
+If trimming feels wrong, the cheaper version is to leave them and accept that the
+section is noise rather than signal.
 
 ---
 
