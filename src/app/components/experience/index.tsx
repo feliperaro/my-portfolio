@@ -29,7 +29,16 @@ function OrgLink({ url, label }: { url: string; label: string }) {
   );
 }
 
-function Timeline({ items }: { items: TimelineItem[] }) {
+/*
+  Education entries have no description, so the field is optional here even
+  though WorkItem requires it. That keeps one Timeline for both lists without
+  weakening the guarantee on the work entries themselves.
+*/
+function Timeline({
+  items,
+}: {
+  items: (TimelineItem & { description?: string })[];
+}) {
   return (
     <ol className="relative border-l border-border">
       {items.map((item, i) => (
@@ -57,6 +66,12 @@ function Timeline({ items }: { items: TimelineItem[] }) {
               item.location
             )}
           </p>
+
+          {item.description ? (
+            <p className="mt-2 max-w-prose text-sm leading-relaxed text-text-muted">
+              {item.description}
+            </p>
+          ) : null}
         </li>
       ))}
     </ol>
