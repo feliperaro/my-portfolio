@@ -181,15 +181,30 @@ image-based PDF.
 
 ### The site's Download CV button
 
-The portfolio's hero links to `/cv.pdf`, served from `public/cv.pdf`. That is the
-**applied AI engineer** variant. Regenerate it whenever that variant changes —
-serve this directory and print it headlessly:
+The portfolio's hero links to `/cv.pdf`, served from `public/cv.pdf`. Since
+2026-09-16 that is the **senior automation and AI engineer** variant, not the
+applied-AI one.
+
+**Why it changed:** the site hero headline became "Senior AI & Automation Engineer
+| RPA & Cloud Solutions | Python & TypeScript Developer | Innovating Business
+Processes", and the Download CV button sits three lines under it. Serving the
+applied-AI variant meant a recruiter read one headline and downloaded a PDF whose
+title said something else. The senior-automation variant now carries that exact
+headline, so the button agrees with the line above it.
+
+**The rule this creates:** whenever the site hero headline changes, the CV that
+`public/cv.pdf` is rendered from has to change with it, or that contradiction
+comes straight back. The other four variants keep their own headlines — they are
+targeted at different roles and are not what the site serves.
+
+Regenerate it whenever that variant changes — serve this directory and print it
+headlessly:
 
 ```bash
 python -m http.server 8899 &
 "/c/Program Files/Google/Chrome/Application/chrome.exe" --headless=new --disable-gpu \
   --no-pdf-header-footer --print-to-pdf="../public/cv.pdf" \
-  "http://127.0.0.1:8899/felipe-roque-applied-ai-engineer.html"
+  "http://127.0.0.1:8899/felipe-roque-senior-automation-ai-engineer.html"
 ```
 
 Verify it lands on two pages afterwards. A `file://` URL also works but Chrome
@@ -247,9 +262,11 @@ This rewrites every `.docx` from its matching `.html`. Requires `python-docx`
   font-feature-settings: "liga" 0, "clig" 0;
   ```
 
-  All five variants carry this rule, and `public/cv.pdf` was re-rendered from the
-  applied-AI variant afterwards - it previously shipped 24 ligatures and failed the
-  "Artificial Intelligence" check. Keep the rule in any new variant, and verify
+  All five variants carry this rule, and `public/cv.pdf` was re-rendered
+  afterwards - it previously shipped 24 ligatures and failed the
+  "Artificial Intelligence" check. (It came from the applied-AI variant then;
+  since 2026-09-16 it comes from the senior-automation one — see above.) Keep the
+  rule in any new variant, and verify
   after any render:
 
   ```bash
