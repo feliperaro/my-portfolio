@@ -125,7 +125,7 @@ export const content: Record<Locale, Dictionary> = {
       greeting: "Hi, my name is",
       title: "Senior AI & Automation Engineer",
       subtitle:
-        "RPA & Cloud Solutions · Python & JavaScript Developer · Innovating Business Processes",
+        "RPA & Cloud Solutions · Python & TypeScript Developer · Innovating Business Processes",
       pitch:
         "I build AI agents that run in production — multi-agent systems with retrieval, guardrails and tracing, serving 22 client brands on Kubernetes. Before that, 20+ RPA automations taught me what actually breaks in a business process.",
       viewWork: "View my work",
@@ -370,7 +370,7 @@ export const content: Record<Locale, Dictionary> = {
       greeting: "Olá, meu nome é",
       title: "Engenheiro Sênior de IA & Automação",
       subtitle:
-        "RPA & Soluções em Nuvem · Desenvolvedor Python & JavaScript · Inovando Processos de Negócio",
+        "RPA & Soluções em Nuvem · Desenvolvedor Python & TypeScript · Inovando Processos de Negócio",
       pitch:
         "Construo agentes de IA que rodam em produção — sistemas multiagente com retrieval, guardrails e tracing, atendendo 22 marcas em Kubernetes. Antes disso, mais de 20 automações de RPA me ensinaram o que realmente quebra em um processo de negócio.",
       viewWork: "Ver meu trabalho",

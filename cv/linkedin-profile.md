@@ -94,24 +94,65 @@ this change: regenerate the `.docx` files and `public/cv.pdf` from the updated H
 
 ---
 
-## Headline
+## Headline — chosen 2026-09-09, and it is none of the options below
 
-LinkedIn allows 220 characters. Option 1 is the recommendation — it leads with
-seniority and the keywords recruiters actually search, without padding.
+**Live on LinkedIn and on the site hero (119 chars):**
 
-**Option 1 (recommended, 128 chars)**
+```
+Senior AI & Automation Engineer | RPA & Cloud Solutions | Python & JavaScript Developer | Innovating Business Processes
+```
+
+Felipe's choice, made with the trade-off stated and reaffirmed. It is the COD3RS
+audit's suggested headline — the same source as the About that carried the AWS
+claim, which is recorded at the top of this file. **Read the rest of this section
+as history, not as a recommendation to follow**: if you re-align LinkedIn to
+"Option 1" below you will reopen a divergence that was deliberately closed.
+
+What it gains: a seniority marker. The options below have none, and that gap is
+real — it is why the choice was made.
+
+What it costs, so nobody rediscovers it as a surprise:
+
+| Term | In the live headline? |
+| --- | --- |
+| Senior | yes |
+| AI Agents | no |
+| LangGraph | no |
+| TypeScript | no — says JavaScript |
+| Open to Remote | no |
+| RPA | yes, in second position |
+
+*AI Agents*, *LangGraph* and *Artificial Intelligence (AI)* are the three skills
+the 2026-09-09 pass found were **missing entirely** from the 59 on the profile —
+see the Skills section. They are also the terms the target roles filter on. The
+live headline names none of them. That is the price, and it was paid knowingly.
+
+The `layout.tsx` meta descriptions still carry multi-agent systems, retrieval,
+guardrails, tracing and LangGraph. That is deliberate: they are now the only place
+on the page a search engine finds those terms. Do not "tidy" them into agreement
+with the headline.
+
+---
+
+### The options that were not chosen
+
+LinkedIn allows 220 characters. Option 1 was the recommendation before the choice
+above superseded it — it leads with the searched keywords, but carries no
+seniority marker at all.
+
+**Option 1 (not chosen, 128 chars)**
 
 ```
 Applied AI Engineer | AI Agents & Multi-Agent Systems | LangGraph, Python, TypeScript | Process Automation & RPA | Open to Remote
 ```
 
-**Option 2 — heavier on proof (130 chars)**
+**Option 2 — not chosen, heavier on proof (130 chars)**
 
 ```
 Applied AI Engineer | Production AI Agents Serving 22 Brands on Kubernetes | LangGraph, RAG, Python | RPA to AI Migration | Remote
 ```
 
-**Option 3 — leads with the current role (140 chars)**
+**Option 3 — not chosen, leads with the current role (140 chars)**
 
 ```
 AI Engineer @ BasicX Solutions | Multi-Tenant AI Agent Platform | LangGraph, RAG, Guardrails & Tracing | Python & TypeScript | Founder @ FEROQ

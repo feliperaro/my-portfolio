@@ -95,7 +95,8 @@ CVs, `linkedin-profile.md`, and the portfolio site — must agree with them.
   consultancy. The delivery scope claimed — discovery, architecture, development,
   deployment, support — is real and needs no inflation.
 - **"Available as an international contractor"** appears on the applied-AI and
-  full-stack contact blocks and in the site hero. Felipe confirmed this. It is a
+  full-stack contact blocks. It is **no longer in the site hero** — commit d340593
+  removed that line at Felipe's request. Felipe confirmed the claim itself. It is a
   statement about invoicing arrangements, not about visa status or work
   authorization in any country — do not escalate it into either.
 - **"Full overlap with US business hours"** is true (UTC−3 sits one to two hours
