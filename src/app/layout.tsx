@@ -12,15 +12,15 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://feliperamosroque.vercel.app"),
   title: {
-    default: "Felipe Ramos Roque — Applied AI Engineer",
+    default: "Felipe Ramos Roque — Senior AI & Automation Engineer",
     template: "%s — Felipe Ramos Roque",
   },
   description:
-    "Applied AI engineer building production AI agents — multi-agent systems with retrieval, guardrails and tracing, serving 22 client brands on Kubernetes. Python, TypeScript, LangGraph.",
+    "Senior AI & automation engineer building production AI agents — multi-agent systems with retrieval, guardrails and tracing, serving 22 client brands on Kubernetes. Python, TypeScript, LangGraph.",
   openGraph: {
-    title: "Felipe Ramos Roque — Applied AI Engineer",
+    title: "Felipe Ramos Roque — Senior AI & Automation Engineer",
     description:
-      "Applied AI engineer building production AI agents — multi-agent systems with retrieval, guardrails and tracing. Python, TypeScript, LangGraph.",
+      "Senior AI & automation engineer building production AI agents — multi-agent systems with retrieval, guardrails and tracing. Python, TypeScript, LangGraph.",
     type: "website",
     url: "https://feliperamosroque.vercel.app",
     siteName: "Felipe Roque",
@@ -31,16 +31,16 @@ export const metadata: Metadata = {
         url: "/images/me.jpg",
         width: 800,
         height: 800,
-        alt: "Felipe Roque — Applied AI Engineer",
+        alt: "Felipe Roque — Senior AI & Automation Engineer",
       },
     ],
   },
   twitter: {
     // "summary" suits a square image; summary_large_image would crop it to 2:1.
     card: "summary",
-    title: "Felipe Roque — Applied AI Engineer",
+    title: "Felipe Roque — Senior AI & Automation Engineer",
     description:
-      "Applied AI engineer building production AI agents — multi-agent systems with retrieval, guardrails and tracing. Python, TypeScript, LangGraph.",
+      "Senior AI & automation engineer building production AI agents — multi-agent systems with retrieval, guardrails and tracing. Python, TypeScript, LangGraph.",
     images: ["/images/me.jpg"],
   },
 };
