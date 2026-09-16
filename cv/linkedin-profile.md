@@ -244,6 +244,42 @@ line with `•` and keep them to two lines each.
 > When the answers come: work that belongs to BasicX **moves** to BasicX. FEROQ is not
 > deleted or emptied to resolve the overlap.
 
+**An interim version is live as of 2026-09-16** — not the copy below, and not what
+was there before. The entry used to read:
+
+> • Specialized in apps, RPA and AI technologies, enhancing productivity across various business areas.
+> • Built web applications utilizing cutting-edge technologies to drive innovation and improve processes.
+> • Created automations that streamline operations, allowing businesses to operate more efficiently.
+
+Three sentences with no named system, no technology, no number and nothing an
+interviewer could ask about — on the first entry a visitor sees, covering the
+longest span in the career. It is now:
+
+```
+• Independent consulting practice delivering AI agents, process automation, and full-stack applications, built in Python and TypeScript.
+• Own each engagement end to end — process discovery, workflow design, architecture, development, cloud deployment, and ongoing support.
+```
+
+273 characters, shorter than what it replaced. It claims only what is settled: the
+delivery scope, which `README.md` records as real and needing no inflation, and the
+stack, which is the same across every role.
+
+Two wording choices that are not accidental:
+
+- **"each engagement", never "clients".** The plural would assert that there were
+  several, which is exactly question 4. "Each engagement" is true at one or at ten.
+- **Nothing about a company, a team, or founding it.** No "founder", no headcount.
+  Claim the work, never the org chart — the same rule that keeps the live title at
+  "Software Engineer · Self-employed".
+
+Everything the open questions gate stays out: the sectors (Q3), multi-agent systems
+and LangGraph (Q7), tracing and guardrails (Q8), CRM/ERP/ticketing (Q8), Salesforce
+(Q6), any client count (Q4).
+
+**This does not close the entry.** Five years and eight months described in two
+lines is still the weakest thing on the profile. It is a floor, not a finish — it
+stops the entry being embarrassing while the questions stay open.
+
 ```
 • Run an independent technology consultancy delivering AI agents, intelligent process automation, and full-stack applications to clients across healthcare, finance, and logistics.
 • Architect and ship multi-agent systems using LangChain and LangGraph, handling tool use, retrieval, memory, state management, and coordination between agents.
