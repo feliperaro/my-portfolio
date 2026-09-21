@@ -135,9 +135,9 @@ export const content: Record<Locale, Dictionary> = {
     about: {
       title: "About me",
       paragraphs: [
-        "I'm an applied AI engineer who builds agents that survive contact with real users. I co-build and operate a multi-tenant AI agent platform serving 22 client brands in production on Kubernetes — a hand-written LangGraph state machine with tool calling, hybrid retrieval, per-customer memory, guardrails and human handoff, traced end to end.",
+        "I'm an applied AI engineer who builds agents that survive contact with real users. I co-build and operate a multi-tenant AI agent platform serving 22 client brands in production — a hand-written LangGraph state machine with tool calling, hybrid retrieval, per-customer memory, guardrails and human handoff, traced end to end.",
         "Before moving into agent architecture I delivered 20+ production RPA automations, which is why I approach AI differently from most: I know what actually breaks in a business workflow, not just how to prompt around it. That work removed over 500 hours of manual processing per month across multiple business fronts and handles tens of thousands of records monthly.",
-        "My stack is Python and TypeScript — LangGraph, FastAPI, PostgreSQL, MongoDB and Redis, Next.js and React, with Kubernetes and CI/CD for delivery. I use Claude Code daily for development and code review, and treat reviewing and refining AI-generated code as part of the job rather than a shortcut around it. Portuguese native, English fluent, open to remote work with global teams.",
+        "My stack is Python and TypeScript — LangGraph, FastAPI, PostgreSQL, MongoDB and Redis, Next.js and React, with CI/CD for delivery. I use Claude Code daily for development and code review, and treat reviewing and refining AI-generated code as part of the job rather than a shortcut around it. Portuguese native, English fluent, open to remote work with global teams.",
       ],
     },
     skills: {
@@ -380,9 +380,9 @@ export const content: Record<Locale, Dictionary> = {
     about: {
       title: "Sobre mim",
       paragraphs: [
-        "Sou engenheiro de IA aplicada e construo agentes que aguentam o contato com usuários reais. Ajudo a construir e opero uma plataforma multi-tenant de agentes de IA que atende 22 marcas em produção sobre Kubernetes — uma máquina de estados escrita à mão em LangGraph, com tool calling, retrieval híbrido, memória por cliente, guardrails e transferência para humano, com tracing de ponta a ponta.",
+        "Sou engenheiro de IA aplicada e construo agentes que aguentam o contato com usuários reais. Ajudo a construir e opero uma plataforma multi-tenant de agentes de IA que atende 22 marcas em produção — uma máquina de estados escrita à mão em LangGraph, com tool calling, retrieval híbrido, memória por cliente, guardrails e transferência para humano, com tracing de ponta a ponta.",
         "Antes de migrar para arquitetura de agentes, entreguei mais de 20 automações de RPA em produção — e é por isso que enxergo IA de um jeito diferente: sei o que de fato quebra em um processo de negócio, não apenas como contornar com prompt. Esse trabalho eliminou mais de 500 horas de processamento manual por mês em diferentes frentes do negócio e movimenta dezenas de milhares de registros mensais.",
-        "Meu stack é Python e TypeScript — LangGraph, FastAPI, PostgreSQL, MongoDB e Redis, Next.js e React, com Kubernetes e CI/CD para entrega. Uso Claude Code todos os dias para desenvolvimento e code review, e trato revisar e refinar código gerado por IA como parte do trabalho, não como um atalho. Português nativo, inglês fluente, aberto a trabalho remoto com times globais.",
+        "Meu stack é Python e TypeScript — LangGraph, FastAPI, PostgreSQL, MongoDB e Redis, Next.js e React, com CI/CD para entrega. Uso Claude Code todos os dias para desenvolvimento e code review, e trato revisar e refinar código gerado por IA como parte do trabalho, não como um atalho. Português nativo, inglês fluente, aberto a trabalho remoto com times globais.",
       ],
     },
     skills: {
