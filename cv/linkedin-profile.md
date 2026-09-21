@@ -5,7 +5,7 @@ Nothing here is invented — but not all of it is *confirmed*, which is a differ
 thing. `experience-source.md` tracks which roles have been verified against a written
 question list and which only ever came from an audit. Check it before pasting a role.
 
-## Order to work in — done on 2026-09-09 except one item
+## Order to work in — done on 2026-09-09; the last item closed 2026-09-17
 
 Everything below was applied to the live profile on 2026-09-09, in this order. The
 sequence is kept because it is the order to redo this in if it ever has to be redone,
@@ -23,9 +23,13 @@ and because item 7 is still open.
    worse than empty — see the note below.
 4. ~~**Two corrections that are not gaps.**~~ **Done.** FIAP now reads
    `Postgraduate Degree, Artificial Intelligence for Developers`. The top card now
-   shows **Basicx Solutions** instead of FEROQ. That second one **did not hold on the
-   first save** — LinkedIn reverted it to the FEROQ role once, silently, and it took a
-   second pass. Re-check it after any future intro edit.
+   shows **Basicx Solutions** instead of FEROQ. That second one **does not hold.**
+   LinkedIn has silently reverted it to the FEROQ role three times now — 2026-09-09,
+   and twice on 2026-09-17, each time after saving something else (an experience
+   entry, then the Open-to-work preferences). It is not a one-off. **Re-set it last,
+   after every other edit in a session, and re-read the top card before closing the
+   tab.** The control is *Edit intro → Organization*; FEROQ wins by default because
+   it is the older current role.
 5. ~~**Headline**, then **Skills**.~~ **Done.** Headline is Option 1. The five pinned
    top skills are now Python · Artificial Intelligence (AI) · AI Agents · LangGraph ·
    Robotic Process Automation (RPA), in that order.
@@ -33,9 +37,9 @@ and because item 7 is still open.
    first-person prose replaced, BasicX and Fiibo went from no description to the full
    bullet sets. Every line was verified character-for-character against this file after
    saving.
-7. **Featured — still open, and the only item that is.** Its portfolio card promises a
-   paragraph per role, which is true only once the site is deployed. Pin it after the
-   deploy, not before.
+7. ~~**Featured.**~~ **Done 2026-09-17**, once the site was deployed and the portfolio
+   card could honestly promise a paragraph per role. Three cards are live — see the
+   Featured section below for what is in each and in what order.
 
 > **The profile that was replaced was written by the audit.** Reading the audit
 > itself — COD3RS, `app.coders.com.br/analises/3785`, dated 24 Jul 2026 — settles
@@ -166,13 +170,38 @@ AI Engineer @ BasicX Solutions | Multi-Tenant AI Agent Platform | LangGraph, RAG
 
 ---
 
-## About
+## About — re-pasted 2026-09-17, because the live version was silently truncated
 
-Four short paragraphs, results first, no hobbies. ~1,150 characters — well inside
+Four short paragraphs, results first, no hobbies. 1,744 characters — well inside
 LinkedIn's 2,600 limit.
 
+> **What was live was not this text.** The 2026-09-09 paste went in through
+> LinkedIn's editor, which drops characters while typing — the same bug recorded
+> against the experience fields. Three cuts survived unnoticed for eight days, and
+> each one removed the strongest clause in its paragraph:
+>
+> | Paragraph | What was missing from the live profile |
+> | --- | --- |
+> | 1 | everything after *"a multi-tenant AI agent platform"* — the 22 client brands, Kubernetes, the LangGraph state machine, retrieval, memory, guardrails, handoff, Langfuse and LangSmith |
+> | 3 | *"hybrid BM25 and FAISS retrieval with reranking"* |
+> | 4 | *"I'm based in Brazil (UTC-3), which gives full overlap with US business hours"* |
+>
+> The paragraph-4 cut is the expensive one: US-hours overlap is the single sentence
+> that answers a US recruiter's first objection to a candidate in Brazil, and it was
+> not on the profile.
+>
+> Re-pasted on 2026-09-17 through a synthetic `paste` event rather than typing, and
+> verified character-for-character (1,744 in, 1,744 out, four paragraphs).
+> **Never type into a LinkedIn field again — paste, then count.**
+>
+> **The opener changed with it.** It used to read *"Applied AI engineer"*, written
+> before the headline became "Senior AI & Automation Engineer" on 2026-09-16. It now
+> reads **"Senior AI & automation engineer"**, which is the same wording the site's
+> `layout.tsx` meta descriptions already use. The old opener was the last surface
+> still naming the rejected title.
+
 ```
-Applied AI engineer with 5+ years building production systems that automate complex business processes. I co-build and operate a multi-tenant AI agent platform serving 22 client brands in production on Kubernetes — a hand-written LangGraph state machine covering tool use, hybrid retrieval, per-customer memory, guardrails, and human handoff, instrumented end to end with Langfuse and LangSmith tracing.
+Senior AI & automation engineer with 5+ years building production systems that automate complex business processes. I co-build and operate a multi-tenant AI agent platform serving 22 client brands in production on Kubernetes — a hand-written LangGraph state machine covering tool use, hybrid retrieval, per-customer memory, guardrails, and human handoff, instrumented end to end with Langfuse and LangSmith tracing.
 
 Before moving into agent architecture I delivered 20+ production RPA automations, which is why I approach AI differently from most: I know what actually breaks in a business workflow, not just how to prompt around it. That work removed over 500 hours of manual processing per month across multiple business fronts and handles tens of thousands of records monthly. I've since migrated no-code n8n workflows into tested, maintainable Python services — the same shift, one process at a time.
 
@@ -187,28 +216,37 @@ I'm open to remote roles with global teams working on applied AI and automation,
 
 ---
 
-## Featured — empty, and the most visible thing you can fix
+## Featured — three cards, live 2026-09-17
 
 Featured sits directly under About and above Experience. It is the only place on
-the profile where you choose what a recruiter looks at first; empty, it drops them
-straight from prose into job titles.
+the profile where you choose what a recruiter looks at first; empty, it dropped them
+straight from prose into job titles. Three cards are pinned, left to right:
 
-Pin three, in this order:
-
-1. **support-agent** — `github.com/feliperaro/support-agent`. The one artifact that
-   shows production practice rather than a demo. Title the card so the value reads
-   without a click: "Open-source AI support agent — LangGraph, guardrails, and a
-   structural evaluation harness".
-2. **The portfolio** — `feliperamosroque.vercel.app`. The per-role paragraphs that
-   make this card worth pinning — they answer the "what did he actually do" question
-   the LinkedIn bullets have to compress — are written but **not yet deployed**. Pin
-   this only after the site ships them, or the card promises something the page does
-   not have.
-3. **The CV** — link or upload the applied-AI variant, which is what
-   `public/cv.pdf` serves.
+1. **The CV** — `public/cv.pdf` uploaded as a *document*, not linked. Title
+   "CV — Senior AI & Automation Engineer". Uploading renders the first page inline,
+   which a link never does. It is the senior automation and AI variant, which is what
+   `public/cv.pdf` serves — re-upload it whenever that file is regenerated, because
+   LinkedIn keeps its own copy and will not follow the site.
+2. **support-agent** — `github.com/feliperaro/support-agent`, titled
+   "Open-source AI support agent — LangGraph, guardrails, and a structural
+   evaluation harness".
+3. **The portfolio** — `feliperamosroque.vercel.app`. Pinned only after the deploy,
+   so the "paragraph per role" the card promises is actually on the page.
 
 Stop at three. Featured scrolls horizontally past that, and a fourth card is
 effectively unpinned.
+
+> **LinkedIn's link previewer fails intermittently, and the failure is a lie.**
+> Both `github.com/feliperaro/support-agent` and `feliperamosroque.vercel.app`
+> returned *"We couldn't generate a preview for this link"* on the first attempt and
+> worked unchanged on the second. This is the same message the Projects media step
+> returned on 2026-09-09, which that section blames on GitHub — **that diagnosis was
+> wrong.** It is not GitHub. Retry before concluding anything about the URL.
+>
+> **The order is CV → support-agent → portfolio**, not the support-agent-first order
+> this file used to recommend. Featured has no reorder-by-drag that survived the
+> session; if the order matters more than the effort, it is one deletion and one
+> re-add.
 
 ---
 
@@ -224,6 +262,35 @@ The audit scored this 1/5 because the section did not exist. It does now, added 
 
 Your Canadian study period (Tamwood Careers College, Jul 2023 – Dec 2023) already
 substantiates the English claim on the profile.
+
+---
+
+## Open to work — configured 2026-09-17
+
+It had existed as a half-filled form since before this file did: one job title, no
+start date, and **On-site and Hybrid ticked with Remote unticked** — the exact
+inverse of what is being targeted, on the field that decides whether the profile
+surfaces in a recruiter's search at all. It is invisible on the page, which is why
+it survived three passes over the profile.
+
+| Field | Value |
+| --- | --- |
+| Job titles | Software Engineer · AI Engineer · Automation Engineer · Senior Software Engineer |
+| Location types | **Remote only** — On-site and Hybrid removed |
+| Locations | São Paulo, Brazil |
+| Start date | Flexible, casually looking |
+| Employment types | Full-time · **Contract** |
+| Visibility | **Recruiters only** — no #OpenToWork photo frame |
+
+Contract was added because the About and the CV contact lines both offer
+"employee or international contractor"; leaving it unticked contradicted them.
+
+**Two of Felipe's five chosen titles do not exist in LinkedIn's taxonomy.** "Senior
+AI Engineer" and "Applied AI Engineer" both return no option — the field only
+accepts standardized titles, so anything not in the picker cannot be entered at all.
+"Artificial Intelligence Engineer" was tried as a substitute and removed again: the
+card renders it identically to "AI Engineer", so it showed as a visible duplicate.
+Four titles is the honest maximum here, not five.
 
 ---
 
@@ -243,6 +310,42 @@ line with `•` and keep them to two lines each.
 >
 > When the answers come: work that belongs to BasicX **moves** to BasicX. FEROQ is not
 > deleted or emptied to resolve the overlap.
+
+**An interim version is live as of 2026-09-16** — not the copy below, and not what
+was there before. The entry used to read:
+
+> • Specialized in apps, RPA and AI technologies, enhancing productivity across various business areas.
+> • Built web applications utilizing cutting-edge technologies to drive innovation and improve processes.
+> • Created automations that streamline operations, allowing businesses to operate more efficiently.
+
+Three sentences with no named system, no technology, no number and nothing an
+interviewer could ask about — on the first entry a visitor sees, covering the
+longest span in the career. It is now:
+
+```
+• Independent consulting practice delivering AI agents, process automation, and full-stack applications, built in Python and TypeScript.
+• Own each engagement end to end — process discovery, workflow design, architecture, development, cloud deployment, and ongoing support.
+```
+
+273 characters, shorter than what it replaced. It claims only what is settled: the
+delivery scope, which `README.md` records as real and needing no inflation, and the
+stack, which is the same across every role.
+
+Two wording choices that are not accidental:
+
+- **"each engagement", never "clients".** The plural would assert that there were
+  several, which is exactly question 4. "Each engagement" is true at one or at ten.
+- **Nothing about a company, a team, or founding it.** No "founder", no headcount.
+  Claim the work, never the org chart — the same rule that keeps the live title at
+  "Software Engineer · Self-employed".
+
+Everything the open questions gate stays out: the sectors (Q3), multi-agent systems
+and LangGraph (Q7), tracing and guardrails (Q8), CRM/ERP/ticketing (Q8), Salesforce
+(Q6), any client count (Q4).
+
+**This does not close the entry.** Five years and eight months described in two
+lines is still the weakest thing on the profile. It is a floor, not a finish — it
+stops the entry being embarrassing while the questions stay open.
 
 ```
 • Run an independent technology consultancy delivering AI agents, intelligent process automation, and full-stack applications to clients across healthcare, finance, and logistics.
@@ -276,6 +379,17 @@ This is your current role and it now leads the experience section on all three C
 • Delivered supporting automation — an ERP-to-WMS order fulfillment integrator, a deterministic payroll-billing audit engine with a human approval gate, and migrations of n8n no-code workflows into tested Python services.
 • Use Claude Code daily for feature development and code review, reviewing and refining AI-generated code before it reaches the shared test suite and CI.
 ```
+
+> **Skills attached 2026-09-17 — there were none.** Every other role carried 17 to 20
+> skill associations and the current AI role carried **zero**, which is invisible on
+> the page but not to recruiter search: LinkedIn matches on the role↔skill link, not
+> only on the bullet text. Meanwhile 21 skills hung off the FEROQ entry, the least
+> verified role on the profile. Thirteen were attached, each one traceable to a
+> bullet above: LangGraph, AI Agents, Artificial Intelligence (AI), Kubernetes,
+> Python (Programming Language), LangChain, Retrieval-Augmented Generation (RAG),
+> FastAPI, TypeScript, PostgreSQL, n8n, REST APIs, Large Language Models (LLM).
+> There is no five-skill cap on a position, despite what the UI implies.
+> `CI/CD` is not in LinkedIn's picker.
 
 > **Accuracy notes, since these are checkable.** You are 203 of 422 commits on the
 > agent platform and a colleague has 162 — so "co-build" is the honest verb, never
@@ -412,7 +526,7 @@ employer — it is Felipe's own work, not a deliverable of one.
 
 ---
 
-## Skills — top five re-pinned 2026-09-09; the long tail is still untrimmed
+## Skills — top five re-pinned 2026-09-09; list order fixed 2026-09-17
 
 The audit's advice here is right: pin the ones recruiters filter on. LinkedIn shows
 your top 3 pinned skills prominently, so order matters.
@@ -433,8 +547,67 @@ Skills section" and had to be added from LinkedIn's catalogue. That is the sharp
 version of the 59-skills problem: it was not just badly ordered, it was missing the
 three terms the target roles are actually filtered on.
 
-**Still open:** the long tail below the pinned five. Fifty-nine entries, led by Pandas
-and PostgreSQL, both attributed to Fiibo. The list below is the target.
+### 2026-09-17 — the list order, and a trap worth knowing
+
+**The pinned five and the list order are two different things, and the details page
+shows neither.** `/details/skills/` sorts by *most recently touched*, so adding a
+skill silently rewrites what the profile's Skills card displays. Reading that page
+and concluding "Python fell off the top" is a misread — the pinned five live in the
+**About card**, under "Top skills", and were correct the whole time. The real order
+is only visible under *Skills → ⋯ → Reorder*.
+
+That trap has teeth: associating 13 skills with the BasicX role (see below) pushed
+TypeScript and n8n to the top of the Skills card, displacing LangGraph and
+Artificial Intelligence (AI), purely as a side effect.
+
+Fixed on 2026-09-17 by dragging in the Reorder dialog. The list now opens:
+
+```
+Python (Programming Language) · LangGraph · LangChain · Artificial Intelligence (AI)
+· AI Agents · Retrieval-Augmented Generation (RAG) · FastAPI · Kubernetes
+· REST APIs · n8n · TypeScript · Pandas · PostgreSQL
+```
+
+Notes on the mechanics, because they cost an hour:
+
+- **Keyboard reordering does not work** through the extension — the handles carry
+  `aria-roledescription="sortable"` (dnd-kit) but neither Space nor Enter starts a
+  drag. Mouse drag works. Drags of more than ~10 rows fail silently, and a drop
+  above roughly y≈100 in the dialog lands outside the droppable area and is
+  discarded. Move things in stages and re-read the order after every drag.
+- **Moving the unwanted item down beats dragging the wanted item up** — the
+  downward targets are always inside the list.
+- Each drop saves on its own ("Reordered" toast). There is no Save button.
+
+**Deleted:** `Airflow`, an exact duplicate of `Apache Airflow` with no experience
+attached. 70 → 69. Deletion is irreversible and takes the endorsements with it.
+
+**Moved down:** `UiPath`, from 15th to 22nd. It was above TypeScript, FastAPI and
+RAG — see the certifications section for why anchoring to a commercial RPA platform
+works against the whole pivot. It was **not** deleted: it is attributed to Fiibo and
+nothing in `experience-source.md` settles whether that is real. Cadmus's own bullet
+says he built "every automation in Python and its ecosystem rather than on a
+commercial RPA platform", which makes UiPath at least worth a question.
+
+> **`Amazon Web Services (AWS)` is in the skills list, and nobody put it there on
+> purpose.** It sits around position 34. This is the one claim `README.md` and the
+> box at the top of this file both forbid, and it has been live the entire time the
+> "do not add AWS" rule has existed. Removing it is one deletion in
+> *Skills → the entry → Delete skill*, and it is irreversible — **Felipe's call**,
+> which is why it was left standing on 2026-09-17.
+
+**Other duplicates and noise still in the 69**, all confirmed by reading the Reorder
+dialog: `RPA` alongside `Robotic Process Automation (RPA)`; `Python` alongside
+`Python (Programming Language)`; `Support` alongside `Technical Support`; `Selenium`
+alongside `WebDriver Selenium`; `Agile Methodologies` alongside `Agile Project
+Management`; `Performance Dashboards` alongside `Dashboard Building`; `Software`,
+`Programming`, `Program Development` and `Software Development` all four; and
+`Documentação de software`, in Portuguese, on an English profile. Off-message
+entries: WordPress, Bootstrap, PHP, Kotlin, React Native, C#, Java, Hardware
+Architecture, Networking, Mobile Applications, Strapi.js, Robot Programming, PDD,
+Crud.
+
+**Still open:** the long tail. The list below is the target.
 
 **Then keep roughly these 15, in this order:**
 
@@ -486,6 +659,40 @@ section is noise rather than signal.
 
 ---
 
+## Found 2026-09-17, not fixed — each one needs Felipe
+
+Everything here was read off the live profile. None of it was changed, because each
+either contradicts something only Felipe can settle or is irreversible.
+
+- **`Amazon Web Services (AWS)` is listed as a skill.** The one claim this file and
+  `README.md` both forbid. See the Skills section.
+- **Fiibo is tagged `On-site · Fortaleza, Ceará`** for Apr 2024 – Sep 2025, while
+  Felipe lives in São Paulo and the whole positioning is remote-first. If that work
+  was actually remote, the tag is throwing away eighteen months of the strongest
+  evidence a remote employer screens for. If it was genuinely on-site, it stays.
+  **Question, not a correction.**
+- **The LinkedIn contact email is not the CV email.** LinkedIn carries
+  `feliperamosroque@gmail.com`; all five CVs and the recruiter-reply draft carry
+  `feliperoque.dev@gmail.com`. Two inboxes, split by whichever surface the recruiter
+  arrived through. Deliberate or not, it is worth deciding once.
+- **The contact phone has no country code** — `11952690231`. A recruiter in the US
+  cannot dial that. The site publishes the same number in international form.
+- **Education → Tamwood has `Grade: Web Development`.** That is a field of study in
+  the grade field. It renders as "Grade: Web Development" on the entry that carries
+  the English-fluency evidence.
+- **Zero recommendations**, against 2,155+ followers and five employers. For a senior
+  remote hire this is the only section Felipe cannot write himself, and the only one
+  with a multi-day lead time. Two or three requests are worth more than any bullet
+  rewrite left in this file.
+- **Connected apps is public** and shows Gamma, IntelliJ IDEA, HubSpot and Replit
+  Agent between Education and Certifications. HubSpot is unrelated to anything
+  claimed; Replit Agent reads oddly under a senior AI engineering headline.
+- **The two certifications on display are the two off-message ones.** The section
+  shows "Automate the Boring Stuff with Python" and "Blockchain Advanced" before the
+  "Show all 18" link — see the certifications section. Irreversible, so it stands.
+
+---
+
 ## The audit itself, and what I rejected from it
 
 **Source:** COD3RS, `app.coders.com.br/analises/3785`, run 24 Jul 2026 against the
@@ -533,6 +740,8 @@ of the problems this file exists to prevent.
 
 **Accepted but still open:**
 
+- **Projetos & certificações 4/10.** Featured is now live with three cards
+  (2026-09-17), which the audit scored against. The certification trim is still open.
 - **Activity.** 5/10, and the weakest thing left. The profile has never posted —
   "You haven't posted yet" — against 2,155 followers. Nothing in this file can fix
   that; it is not copy to paste.

@@ -127,7 +127,7 @@ export const content: Record<Locale, Dictionary> = {
       subtitle:
         "RPA & Cloud Solutions · Python & TypeScript Developer · Innovating Business Processes",
       pitch:
-        "I build AI agents that run in production — multi-agent systems with retrieval, guardrails and tracing, serving 22 client brands on Kubernetes. Before that, 20+ RPA automations taught me what actually breaks in a business process.",
+        "I build AI agents that run in production — multi-agent systems with retrieval, guardrails and tracing, talking to real customers for 22 brands across healthcare, retail and real estate. Before that, 20+ RPA automations taught me what actually breaks in a business process.",
       viewWork: "View my work",
       getInTouch: "Get in touch",
       downloadCV: "Download CV",
@@ -372,7 +372,7 @@ export const content: Record<Locale, Dictionary> = {
       subtitle:
         "RPA & Soluções em Nuvem · Desenvolvedor Python & TypeScript · Inovando Processos de Negócio",
       pitch:
-        "Construo agentes de IA que rodam em produção — sistemas multiagente com retrieval, guardrails e tracing, atendendo 22 marcas em Kubernetes. Antes disso, mais de 20 automações de RPA me ensinaram o que realmente quebra em um processo de negócio.",
+        "Construo agentes de IA que rodam em produção — sistemas multiagente com retrieval, guardrails e tracing, conversando com clientes reais de 22 marcas em saúde, varejo e mercado imobiliário. Antes disso, mais de 20 automações de RPA me ensinaram o que realmente quebra em um processo de negócio.",
       viewWork: "Ver meu trabalho",
       getInTouch: "Entrar em contato",
       downloadCV: "Baixar CV",

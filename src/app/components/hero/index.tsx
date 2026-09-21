@@ -25,7 +25,7 @@ export default function Hero() {
 
       <div className="mt-8 flex flex-wrap items-center gap-3 sm:mt-10 sm:gap-4">
         <Link
-          href="/#projects"
+          href="/#experience"
           className="rounded-lg bg-accent px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-accent-hover sm:px-6 sm:py-3 sm:text-base"
         >
           {t.hero.viewWork}
